@@ -1,0 +1,1216 @@
+[
+  {
+    "customer_id": "C-4001",
+    "name": "Mona Adel",
+    "client": "SoukMart",
+    "tier": "standard",
+    "phone": "010-2200-1123",
+    "open_tickets": []
+  },
+  {
+    "customer_id": "C-4002",
+    "name": "Youssef Ibrahim",
+    "client": "NileBank",
+    "tier": "priority",
+    "phone": "011-4455-8890",
+    "open_tickets": []
+  },
+  {
+    "customer_id": "C-4003",
+    "name": "Salma Farouk",
+    "client": "MedCare Clinics",
+    "tier": "standard",
+    "phone": "012-7788-3312",
+    "open_tickets": []
+  },
+  {
+    "customer_id": "C-4004",
+    "name": "Karim Nabil",
+    "client": "ConnectTel",
+    "tier": "standard",
+    "phone": "010-9911-4456",
+    "open_tickets": [
+      {
+        "ticket": "T-8801",
+        "issue": "home internet keeps dropping",
+        "status": "resolved",
+        "date": "2026-06-18"
+      }
+    ]
+  },
+  {
+    "customer_id": "C-4005",
+    "name": "Ahmed Saad",
+    "client": "SoukMart",
+    "tier": "standard",
+    "phone": "011-3322-7789",
+    "open_tickets": []
+  },
+  {
+    "customer_id": "C-4006",
+    "name": "Hana Mostafa",
+    "client": "StayEasy Hotels",
+    "tier": "standard",
+    "phone": "012-1100-5567",
+    "open_tickets": []
+  },
+  {
+    "customer_id": "C-4007",
+    "name": "Tarek Fahmy",
+    "client": "NileBank",
+    "tier": "priority",
+    "phone": "010-8899-2234",
+    "open_tickets": []
+  },
+  {
+    "customer_id": "C-4008",
+    "name": "Laila Hassan",
+    "client": "ConnectTel",
+    "tier": "standard",
+    "phone": "011-6677-9901",
+    "open_tickets": []
+  },
+  {
+    "customer_id": "C-4009",
+    "name": "Omar Zaki",
+    "client": "SoukMart",
+    "tier": "standard",
+    "phone": "012-4433-1178",
+    "open_tickets": []
+  },
+  {
+    "customer_id": "C-4010",
+    "name": "Dina Sabry",
+    "client": "MedCare Clinics",
+    "tier": "standard",
+    "phone": "010-5566-8823",
+    "open_tickets": []
+  },
+  {
+    "customer_id": "C-4011",
+    "name": "Sherif Gaber",
+    "client": "ConnectTel",
+    "tier": "standard",
+    "phone": "011-2244-6690",
+    "open_tickets": [
+      {
+        "ticket": "T-8790",
+        "issue": "billed twice for one month",
+        "status": "resolved",
+        "date": "2026-06-20"
+      }
+    ]
+  },
+  {
+    "customer_id": "C-4012",
+    "name": "Rania Kamal",
+    "client": "NileBank",
+    "tier": "standard",
+    "phone": "012-9900-3345",
+    "open_tickets": []
+  },
+  {
+    "customer_id": "C-4013",
+    "name": "Mahmoud Refaat",
+    "client": "SoukMart",
+    "tier": "standard",
+    "phone": "010-3311-7756",
+    "open_tickets": []
+  },
+  {
+    "customer_id": "C-4014",
+    "name": "Aya Sami",
+    "client": "StayEasy Hotels",
+    "tier": "priority",
+    "phone": "011-7788-1120",
+    "open_tickets": []
+  },
+  {
+    "customer_id": "C-4015",
+    "name": "Nour El-Din",
+    "client": "GovServe",
+    "tier": "standard",
+    "phone": "012-2233-9987",
+    "open_tickets": []
+  },
+  {
+    "customer_id": "C-4016",
+    "name": "Heba Fathy",
+    "client": "NileBank",
+    "tier": "priority",
+    "phone": "010-6600-4478",
+    "open_tickets": []
+  },
+  {
+    "customer_id": "C-4017",
+    "name": "Bassem Adly",
+    "client": "ConnectTel",
+    "tier": "standard",
+    "phone": "011-9922-3341",
+    "open_tickets": []
+  },
+  {
+    "customer_id": "C-4018",
+    "name": "Farida Osman",
+    "client": "MedCare Clinics",
+    "tier": "standard",
+    "phone": "012-5544-7768",
+    "open_tickets": []
+  },
+  {
+    "customer_id": "C-4019",
+    "name": "Islam Wagdy",
+    "client": "SoukMart",
+    "tier": "standard",
+    "phone": "010-1122-8834",
+    "open_tickets": []
+  },
+  {
+    "customer_id": "C-4020",
+    "name": "Reem Sabri",
+    "client": "StayEasy Hotels",
+    "tier": "standard",
+    "phone": "011-3344-5567",
+    "open_tickets": []
+  },
+  {
+    "customer_id": "C-4021",
+    "name": "Fady Zahran",
+    "client": "StayEasy Hotels",
+    "tier": "priority",
+    "phone": "012-4111-4025",
+    "open_tickets": []
+  },
+  {
+    "customer_id": "C-4022",
+    "name": "Sherine Attia",
+    "client": "GovServe",
+    "tier": "standard",
+    "phone": "010-8316-5970",
+    "open_tickets": []
+  },
+  {
+    "customer_id": "C-4023",
+    "name": "Mariam Ghali",
+    "client": "ConnectTel",
+    "tier": "standard",
+    "phone": "012-7490-8421",
+    "open_tickets": []
+  },
+  {
+    "customer_id": "C-4024",
+    "name": "Magdy Wahba",
+    "client": "ConnectTel",
+    "tier": "standard",
+    "phone": "012-2034-1975",
+    "open_tickets": []
+  },
+  {
+    "customer_id": "C-4025",
+    "name": "Hossam Halim",
+    "client": "NileBank",
+    "tier": "standard",
+    "phone": "011-6345-8217",
+    "open_tickets": []
+  },
+  {
+    "customer_id": "C-4026",
+    "name": "Dalia Halim",
+    "client": "ConnectTel",
+    "tier": "standard",
+    "phone": "012-5819-9188",
+    "open_tickets": []
+  },
+  {
+    "customer_id": "C-4027",
+    "name": "Amira Ghali",
+    "client": "StayEasy Hotels",
+    "tier": "standard",
+    "phone": "011-2363-5161",
+    "open_tickets": []
+  },
+  {
+    "customer_id": "C-4028",
+    "name": "Tamer Barakat",
+    "client": "ConnectTel",
+    "tier": "standard",
+    "phone": "010-2150-2768",
+    "open_tickets": []
+  },
+  {
+    "customer_id": "C-4029",
+    "name": "Ashraf Rashad",
+    "client": "MedCare Clinics",
+    "tier": "priority",
+    "phone": "010-1276-1008",
+    "open_tickets": []
+  },
+  {
+    "customer_id": "C-4030",
+    "name": "Yara Halim",
+    "client": "SoukMart",
+    "tier": "priority",
+    "phone": "011-7511-7877",
+    "open_tickets": []
+  },
+  {
+    "customer_id": "C-4031",
+    "name": "Nada Halim",
+    "client": "GovServe",
+    "tier": "standard",
+    "phone": "011-2427-6098",
+    "open_tickets": []
+  },
+  {
+    "customer_id": "C-4032",
+    "name": "Tamer Shawky",
+    "client": "StayEasy Hotels",
+    "tier": "standard",
+    "phone": "010-5036-2655",
+    "open_tickets": []
+  },
+  {
+    "customer_id": "C-4033",
+    "name": "Amira Mansour",
+    "client": "StayEasy Hotels",
+    "tier": "priority",
+    "phone": "010-4086-8330",
+    "open_tickets": []
+  },
+  {
+    "customer_id": "C-4034",
+    "name": "Sherine Halim",
+    "client": "GovServe",
+    "tier": "standard",
+    "phone": "011-7287-2908",
+    "open_tickets": []
+  },
+  {
+    "customer_id": "C-4035",
+    "name": "Ashraf Labib",
+    "client": "NileBank",
+    "tier": "standard",
+    "phone": "011-5983-1321",
+    "open_tickets": []
+  },
+  {
+    "customer_id": "C-4036",
+    "name": "Yara Wahba",
+    "client": "StayEasy Hotels",
+    "tier": "standard",
+    "phone": "010-3397-4493",
+    "open_tickets": []
+  },
+  {
+    "customer_id": "C-4037",
+    "name": "Fady Fawzy",
+    "client": "SoukMart",
+    "tier": "standard",
+    "phone": "011-7327-2202",
+    "open_tickets": []
+  },
+  {
+    "customer_id": "C-4038",
+    "name": "Nada Ghali",
+    "client": "NileBank",
+    "tier": "standard",
+    "phone": "010-7040-7089",
+    "open_tickets": []
+  },
+  {
+    "customer_id": "C-4039",
+    "name": "Magdy Darwish",
+    "client": "NileBank",
+    "tier": "priority",
+    "phone": "012-3223-7325",
+    "open_tickets": []
+  },
+  {
+    "customer_id": "C-4040",
+    "name": "Sameh Sobhy",
+    "client": "MedCare Clinics",
+    "tier": "standard",
+    "phone": "012-5087-4109",
+    "open_tickets": []
+  },
+  {
+    "customer_id": "C-4041",
+    "name": "Sameh Zahran",
+    "client": "NileBank",
+    "tier": "priority",
+    "phone": "011-2286-7905",
+    "open_tickets": []
+  },
+  {
+    "customer_id": "C-4042",
+    "name": "Hossam Rashad",
+    "client": "SoukMart",
+    "tier": "standard",
+    "phone": "012-5180-4906",
+    "open_tickets": []
+  },
+  {
+    "customer_id": "C-4043",
+    "name": "Ashraf Fawzy",
+    "client": "StayEasy Hotels",
+    "tier": "priority",
+    "phone": "011-9520-3874",
+    "open_tickets": []
+  },
+  {
+    "customer_id": "C-4044",
+    "name": "Nada Sobhy",
+    "client": "NileBank",
+    "tier": "priority",
+    "phone": "012-2214-5591",
+    "open_tickets": []
+  },
+  {
+    "customer_id": "C-4045",
+    "name": "Yara Halim",
+    "client": "GovServe",
+    "tier": "standard",
+    "phone": "010-5410-7740",
+    "open_tickets": []
+  },
+  {
+    "customer_id": "C-4046",
+    "name": "Fady Barakat",
+    "client": "SoukMart",
+    "tier": "standard",
+    "phone": "010-5619-7042",
+    "open_tickets": []
+  },
+  {
+    "customer_id": "C-4047",
+    "name": "Sherine Sobhy",
+    "client": "SoukMart",
+    "tier": "standard",
+    "phone": "010-8378-6422",
+    "open_tickets": []
+  },
+  {
+    "customer_id": "C-4048",
+    "name": "Sherine Sobhy",
+    "client": "ConnectTel",
+    "tier": "standard",
+    "phone": "010-8779-6856",
+    "open_tickets": []
+  },
+  {
+    "customer_id": "C-4049",
+    "name": "Sara Mansour",
+    "client": "SoukMart",
+    "tier": "standard",
+    "phone": "011-2102-6096",
+    "open_tickets": []
+  },
+  {
+    "customer_id": "C-4050",
+    "name": "Tamer Sobhy",
+    "client": "SoukMart",
+    "tier": "standard",
+    "phone": "011-9947-7025",
+    "open_tickets": []
+  },
+  {
+    "customer_id": "C-4051",
+    "name": "Hossam Sobhy",
+    "client": "MedCare Clinics",
+    "tier": "standard",
+    "phone": "010-8754-2272",
+    "open_tickets": []
+  },
+  {
+    "customer_id": "C-4052",
+    "name": "Malak Shawky",
+    "client": "StayEasy Hotels",
+    "tier": "standard",
+    "phone": "012-7264-7212",
+    "open_tickets": []
+  },
+  {
+    "customer_id": "C-4053",
+    "name": "Dalia Shawky",
+    "client": "ConnectTel",
+    "tier": "standard",
+    "phone": "010-2485-2893",
+    "open_tickets": []
+  },
+  {
+    "customer_id": "C-4054",
+    "name": "Khaled Labib",
+    "client": "GovServe",
+    "tier": "standard",
+    "phone": "011-8499-8217",
+    "open_tickets": []
+  },
+  {
+    "customer_id": "C-4055",
+    "name": "Fady Zahran",
+    "client": "SoukMart",
+    "tier": "standard",
+    "phone": "011-2437-8879",
+    "open_tickets": []
+  },
+  {
+    "customer_id": "C-4056",
+    "name": "Amira Barakat",
+    "client": "GovServe",
+    "tier": "standard",
+    "phone": "011-8967-5191",
+    "open_tickets": []
+  },
+  {
+    "customer_id": "C-4057",
+    "name": "Amira Naguib",
+    "client": "MedCare Clinics",
+    "tier": "standard",
+    "phone": "012-4318-9493",
+    "open_tickets": []
+  },
+  {
+    "customer_id": "C-4058",
+    "name": "Sameh Selim",
+    "client": "GovServe",
+    "tier": "priority",
+    "phone": "011-4956-6356",
+    "open_tickets": []
+  },
+  {
+    "customer_id": "C-4059",
+    "name": "Ashraf Fawzy",
+    "client": "NileBank",
+    "tier": "priority",
+    "phone": "010-4509-7298",
+    "open_tickets": []
+  },
+  {
+    "customer_id": "C-4060",
+    "name": "Ramy Selim",
+    "client": "NileBank",
+    "tier": "standard",
+    "phone": "010-9134-6746",
+    "open_tickets": []
+  },
+  {
+    "customer_id": "C-4061",
+    "name": "Hossam Ghali",
+    "client": "MedCare Clinics",
+    "tier": "standard",
+    "phone": "010-8383-8722",
+    "open_tickets": []
+  },
+  {
+    "customer_id": "C-4062",
+    "name": "Khaled Halim",
+    "client": "StayEasy Hotels",
+    "tier": "priority",
+    "phone": "012-9519-9091",
+    "open_tickets": []
+  },
+  {
+    "customer_id": "C-4063",
+    "name": "Tamer Darwish",
+    "client": "MedCare Clinics",
+    "tier": "standard",
+    "phone": "010-5556-1679",
+    "open_tickets": []
+  },
+  {
+    "customer_id": "C-4064",
+    "name": "Khaled Naguib",
+    "client": "MedCare Clinics",
+    "tier": "standard",
+    "phone": "012-3226-7638",
+    "open_tickets": []
+  },
+  {
+    "customer_id": "C-4065",
+    "name": "Fady Halim",
+    "client": "SoukMart",
+    "tier": "standard",
+    "phone": "010-3308-1769",
+    "open_tickets": []
+  },
+  {
+    "customer_id": "C-4066",
+    "name": "Waleed Darwish",
+    "client": "SoukMart",
+    "tier": "standard",
+    "phone": "010-4244-4266",
+    "open_tickets": []
+  },
+  {
+    "customer_id": "C-4067",
+    "name": "Rana Fawzy",
+    "client": "NileBank",
+    "tier": "standard",
+    "phone": "011-9762-1592",
+    "open_tickets": []
+  },
+  {
+    "customer_id": "C-4068",
+    "name": "Sameh Barakat",
+    "client": "MedCare Clinics",
+    "tier": "standard",
+    "phone": "012-9526-9198",
+    "open_tickets": []
+  },
+  {
+    "customer_id": "C-4069",
+    "name": "Magdy Wahba",
+    "client": "StayEasy Hotels",
+    "tier": "standard",
+    "phone": "010-7725-7356",
+    "open_tickets": []
+  },
+  {
+    "customer_id": "C-4070",
+    "name": "Mariam Darwish",
+    "client": "StayEasy Hotels",
+    "tier": "standard",
+    "phone": "012-1110-7173",
+    "open_tickets": []
+  },
+  {
+    "customer_id": "C-4071",
+    "name": "Hatem Kotb",
+    "client": "MedCare Clinics",
+    "tier": "priority",
+    "phone": "011-4356-2621",
+    "open_tickets": []
+  },
+  {
+    "customer_id": "C-4072",
+    "name": "Waleed Halim",
+    "client": "NileBank",
+    "tier": "priority",
+    "phone": "010-6076-9797",
+    "open_tickets": []
+  },
+  {
+    "customer_id": "C-4073",
+    "name": "Tamer Fawzy",
+    "client": "GovServe",
+    "tier": "standard",
+    "phone": "011-9269-2356",
+    "open_tickets": []
+  },
+  {
+    "customer_id": "C-4074",
+    "name": "Hossam Darwish",
+    "client": "MedCare Clinics",
+    "tier": "priority",
+    "phone": "011-8986-1465",
+    "open_tickets": []
+  },
+  {
+    "customer_id": "C-4075",
+    "name": "Yara Ghali",
+    "client": "StayEasy Hotels",
+    "tier": "standard",
+    "phone": "010-9734-6488",
+    "open_tickets": []
+  },
+  {
+    "customer_id": "C-4076",
+    "name": "Mariam Attia",
+    "client": "NileBank",
+    "tier": "priority",
+    "phone": "011-2409-4627",
+    "open_tickets": []
+  },
+  {
+    "customer_id": "C-4077",
+    "name": "Fady Kotb",
+    "client": "ConnectTel",
+    "tier": "standard",
+    "phone": "012-3692-9565",
+    "open_tickets": []
+  },
+  {
+    "customer_id": "C-4078",
+    "name": "Sherine Zahran",
+    "client": "MedCare Clinics",
+    "tier": "standard",
+    "phone": "012-7245-4411",
+    "open_tickets": []
+  },
+  {
+    "customer_id": "C-4079",
+    "name": "Sara Sobhy",
+    "client": "ConnectTel",
+    "tier": "standard",
+    "phone": "012-9153-4292",
+    "open_tickets": []
+  },
+  {
+    "customer_id": "C-4080",
+    "name": "Malak Zahran",
+    "client": "SoukMart",
+    "tier": "standard",
+    "phone": "012-7177-1454",
+    "open_tickets": []
+  },
+  {
+    "customer_id": "C-4081",
+    "name": "Hatem Mansour",
+    "client": "ConnectTel",
+    "tier": "priority",
+    "phone": "012-2997-9045",
+    "open_tickets": []
+  },
+  {
+    "customer_id": "C-4082",
+    "name": "Nada Wahba",
+    "client": "SoukMart",
+    "tier": "priority",
+    "phone": "011-7621-5410",
+    "open_tickets": []
+  },
+  {
+    "customer_id": "C-4083",
+    "name": "Ramy Attia",
+    "client": "StayEasy Hotels",
+    "tier": "standard",
+    "phone": "011-8105-8807",
+    "open_tickets": []
+  },
+  {
+    "customer_id": "C-4084",
+    "name": "Sherine Selim",
+    "client": "SoukMart",
+    "tier": "standard",
+    "phone": "011-1481-5263",
+    "open_tickets": []
+  },
+  {
+    "customer_id": "C-4085",
+    "name": "Mariam Shawky",
+    "client": "SoukMart",
+    "tier": "standard",
+    "phone": "010-4723-1193",
+    "open_tickets": []
+  },
+  {
+    "customer_id": "C-4086",
+    "name": "Sara Selim",
+    "client": "GovServe",
+    "tier": "standard",
+    "phone": "010-9172-2718",
+    "open_tickets": []
+  },
+  {
+    "customer_id": "C-4087",
+    "name": "Rana Rashad",
+    "client": "ConnectTel",
+    "tier": "standard",
+    "phone": "012-4239-9689",
+    "open_tickets": []
+  },
+  {
+    "customer_id": "C-4088",
+    "name": "Malak Shawky",
+    "client": "StayEasy Hotels",
+    "tier": "priority",
+    "phone": "012-3616-9817",
+    "open_tickets": []
+  },
+  {
+    "customer_id": "C-4089",
+    "name": "Yara Zahran",
+    "client": "GovServe",
+    "tier": "standard",
+    "phone": "012-4541-9895",
+    "open_tickets": []
+  },
+  {
+    "customer_id": "C-4090",
+    "name": "Magdy Sobhy",
+    "client": "NileBank",
+    "tier": "standard",
+    "phone": "010-6175-6160",
+    "open_tickets": []
+  },
+  {
+    "customer_id": "C-4091",
+    "name": "Yara Halim",
+    "client": "NileBank",
+    "tier": "standard",
+    "phone": "010-4921-3171",
+    "open_tickets": []
+  },
+  {
+    "customer_id": "C-4092",
+    "name": "Nada Fawzy",
+    "client": "StayEasy Hotels",
+    "tier": "standard",
+    "phone": "011-7907-9901",
+    "open_tickets": []
+  },
+  {
+    "customer_id": "C-4093",
+    "name": "Mariam Halim",
+    "client": "StayEasy Hotels",
+    "tier": "standard",
+    "phone": "010-4292-6858",
+    "open_tickets": []
+  },
+  {
+    "customer_id": "C-4094",
+    "name": "Nourhan Rashad",
+    "client": "GovServe",
+    "tier": "standard",
+    "phone": "012-4096-2155",
+    "open_tickets": []
+  },
+  {
+    "customer_id": "C-4095",
+    "name": "Rana Rashad",
+    "client": "SoukMart",
+    "tier": "standard",
+    "phone": "012-9434-8885",
+    "open_tickets": []
+  },
+  {
+    "customer_id": "C-4096",
+    "name": "Mariam Halim",
+    "client": "NileBank",
+    "tier": "standard",
+    "phone": "010-3826-3589",
+    "open_tickets": []
+  },
+  {
+    "customer_id": "C-4097",
+    "name": "Sara Rashad",
+    "client": "ConnectTel",
+    "tier": "standard",
+    "phone": "010-8570-2271",
+    "open_tickets": []
+  },
+  {
+    "customer_id": "C-4098",
+    "name": "Waleed Selim",
+    "client": "StayEasy Hotels",
+    "tier": "priority",
+    "phone": "011-9442-6809",
+    "open_tickets": []
+  },
+  {
+    "customer_id": "C-4099",
+    "name": "Malak Halim",
+    "client": "ConnectTel",
+    "tier": "standard",
+    "phone": "010-1669-4281",
+    "open_tickets": []
+  },
+  {
+    "customer_id": "C-4100",
+    "name": "Sameh Labib",
+    "client": "StayEasy Hotels",
+    "tier": "standard",
+    "phone": "012-7065-7640",
+    "open_tickets": []
+  },
+  {
+    "customer_id": "C-4101",
+    "name": "Yara Wahba",
+    "client": "SoukMart",
+    "tier": "standard",
+    "phone": "011-2389-7627",
+    "open_tickets": []
+  },
+  {
+    "customer_id": "C-4102",
+    "name": "Dalia Halim",
+    "client": "ConnectTel",
+    "tier": "standard",
+    "phone": "011-5579-2905",
+    "open_tickets": []
+  },
+  {
+    "customer_id": "C-4103",
+    "name": "Sameh Awad",
+    "client": "NileBank",
+    "tier": "standard",
+    "phone": "012-7059-8072",
+    "open_tickets": []
+  },
+  {
+    "customer_id": "C-4104",
+    "name": "Sameh Awad",
+    "client": "NileBank",
+    "tier": "standard",
+    "phone": "010-6598-5942",
+    "open_tickets": []
+  },
+  {
+    "customer_id": "C-4105",
+    "name": "Rana Rashad",
+    "client": "SoukMart",
+    "tier": "standard",
+    "phone": "012-1812-4802",
+    "open_tickets": []
+  },
+  {
+    "customer_id": "C-4106",
+    "name": "Khaled Rizk",
+    "client": "MedCare Clinics",
+    "tier": "standard",
+    "phone": "012-7654-3981",
+    "open_tickets": []
+  },
+  {
+    "customer_id": "C-4107",
+    "name": "Hatem Ghali",
+    "client": "StayEasy Hotels",
+    "tier": "priority",
+    "phone": "012-4493-2959",
+    "open_tickets": []
+  },
+  {
+    "customer_id": "C-4108",
+    "name": "Ashraf Shawky",
+    "client": "SoukMart",
+    "tier": "standard",
+    "phone": "012-4883-5204",
+    "open_tickets": []
+  },
+  {
+    "customer_id": "C-4109",
+    "name": "Fady Awad",
+    "client": "ConnectTel",
+    "tier": "standard",
+    "phone": "010-7155-1176",
+    "open_tickets": []
+  },
+  {
+    "customer_id": "C-4110",
+    "name": "Waleed Fawzy",
+    "client": "MedCare Clinics",
+    "tier": "standard",
+    "phone": "011-9855-9320",
+    "open_tickets": []
+  },
+  {
+    "customer_id": "C-4111",
+    "name": "Malak Kotb",
+    "client": "ConnectTel",
+    "tier": "standard",
+    "phone": "012-8280-2248",
+    "open_tickets": []
+  },
+  {
+    "customer_id": "C-4112",
+    "name": "Hatem Mansour",
+    "client": "StayEasy Hotels",
+    "tier": "standard",
+    "phone": "011-8729-3770",
+    "open_tickets": []
+  },
+  {
+    "customer_id": "C-4113",
+    "name": "Rana Zahran",
+    "client": "ConnectTel",
+    "tier": "standard",
+    "phone": "011-9102-7892",
+    "open_tickets": []
+  },
+  {
+    "customer_id": "C-4114",
+    "name": "Sara Kotb",
+    "client": "StayEasy Hotels",
+    "tier": "standard",
+    "phone": "011-9690-5681",
+    "open_tickets": []
+  },
+  {
+    "customer_id": "C-4115",
+    "name": "Rana Fawzy",
+    "client": "ConnectTel",
+    "tier": "standard",
+    "phone": "012-5850-1440",
+    "open_tickets": []
+  },
+  {
+    "customer_id": "C-4116",
+    "name": "Amira Barakat",
+    "client": "ConnectTel",
+    "tier": "standard",
+    "phone": "012-3565-7697",
+    "open_tickets": []
+  },
+  {
+    "customer_id": "C-4117",
+    "name": "Ashraf Mansour",
+    "client": "MedCare Clinics",
+    "tier": "priority",
+    "phone": "010-6230-2204",
+    "open_tickets": []
+  },
+  {
+    "customer_id": "C-4118",
+    "name": "Ramy Labib",
+    "client": "GovServe",
+    "tier": "priority",
+    "phone": "011-4992-1744",
+    "open_tickets": []
+  },
+  {
+    "customer_id": "C-4119",
+    "name": "Sherine Rashad",
+    "client": "GovServe",
+    "tier": "priority",
+    "phone": "010-5017-2885",
+    "open_tickets": []
+  },
+  {
+    "customer_id": "C-4120",
+    "name": "Hossam Labib",
+    "client": "StayEasy Hotels",
+    "tier": "standard",
+    "phone": "010-1852-6844",
+    "open_tickets": []
+  },
+  {
+    "customer_id": "C-4121",
+    "name": "Sherine Sobhy",
+    "client": "SoukMart",
+    "tier": "standard",
+    "phone": "011-3290-7831",
+    "open_tickets": []
+  },
+  {
+    "customer_id": "C-4122",
+    "name": "Fady Fawzy",
+    "client": "GovServe",
+    "tier": "priority",
+    "phone": "011-9696-3244",
+    "open_tickets": []
+  },
+  {
+    "customer_id": "C-4123",
+    "name": "Sara Sobhy",
+    "client": "NileBank",
+    "tier": "priority",
+    "phone": "010-9240-6056",
+    "open_tickets": []
+  },
+  {
+    "customer_id": "C-4124",
+    "name": "Sherine Naguib",
+    "client": "MedCare Clinics",
+    "tier": "standard",
+    "phone": "012-4113-5565",
+    "open_tickets": []
+  },
+  {
+    "customer_id": "C-4125",
+    "name": "Ramy Halim",
+    "client": "NileBank",
+    "tier": "standard",
+    "phone": "012-1647-1995",
+    "open_tickets": []
+  },
+  {
+    "customer_id": "C-4126",
+    "name": "Amira Fawzy",
+    "client": "MedCare Clinics",
+    "tier": "priority",
+    "phone": "010-1623-2678",
+    "open_tickets": []
+  },
+  {
+    "customer_id": "C-4127",
+    "name": "Ramy Zahran",
+    "client": "MedCare Clinics",
+    "tier": "standard",
+    "phone": "010-3635-4846",
+    "open_tickets": []
+  },
+  {
+    "customer_id": "C-4128",
+    "name": "Nourhan Attia",
+    "client": "StayEasy Hotels",
+    "tier": "standard",
+    "phone": "010-6541-6631",
+    "open_tickets": []
+  },
+  {
+    "customer_id": "C-4129",
+    "name": "Rana Sobhy",
+    "client": "SoukMart",
+    "tier": "standard",
+    "phone": "011-4492-8280",
+    "open_tickets": []
+  },
+  {
+    "customer_id": "C-4130",
+    "name": "Malak Fawzy",
+    "client": "StayEasy Hotels",
+    "tier": "standard",
+    "phone": "011-3514-6331",
+    "open_tickets": []
+  },
+  {
+    "customer_id": "C-4131",
+    "name": "Sara Zahran",
+    "client": "GovServe",
+    "tier": "standard",
+    "phone": "011-7049-2589",
+    "open_tickets": []
+  },
+  {
+    "customer_id": "C-4132",
+    "name": "Fady Selim",
+    "client": "SoukMart",
+    "tier": "standard",
+    "phone": "011-8943-8594",
+    "open_tickets": []
+  },
+  {
+    "customer_id": "C-4133",
+    "name": "Sara Shawky",
+    "client": "SoukMart",
+    "tier": "standard",
+    "phone": "010-2338-5977",
+    "open_tickets": []
+  },
+  {
+    "customer_id": "C-4134",
+    "name": "Rana Selim",
+    "client": "MedCare Clinics",
+    "tier": "standard",
+    "phone": "010-6862-6358",
+    "open_tickets": []
+  },
+  {
+    "customer_id": "C-4135",
+    "name": "Nourhan Rashad",
+    "client": "MedCare Clinics",
+    "tier": "priority",
+    "phone": "012-5574-8176",
+    "open_tickets": []
+  },
+  {
+    "customer_id": "C-4136",
+    "name": "Sherine Rizk",
+    "client": "StayEasy Hotels",
+    "tier": "standard",
+    "phone": "010-7546-9456",
+    "open_tickets": []
+  },
+  {
+    "customer_id": "C-4137",
+    "name": "Ramy Ghali",
+    "client": "MedCare Clinics",
+    "tier": "standard",
+    "phone": "010-6952-7481",
+    "open_tickets": []
+  },
+  {
+    "customer_id": "C-4138",
+    "name": "Dalia Awad",
+    "client": "NileBank",
+    "tier": "standard",
+    "phone": "011-9856-3536",
+    "open_tickets": []
+  },
+  {
+    "customer_id": "C-4139",
+    "name": "Dalia Wahba",
+    "client": "NileBank",
+    "tier": "standard",
+    "phone": "011-5611-1364",
+    "open_tickets": []
+  },
+  {
+    "customer_id": "C-4140",
+    "name": "Ramy Kotb",
+    "client": "SoukMart",
+    "tier": "standard",
+    "phone": "012-5847-1366",
+    "open_tickets": []
+  },
+  {
+    "customer_id": "C-4141",
+    "name": "Malak Ghali",
+    "client": "ConnectTel",
+    "tier": "standard",
+    "phone": "012-2377-6480",
+    "open_tickets": []
+  },
+  {
+    "customer_id": "C-4142",
+    "name": "Nada Fawzy",
+    "client": "GovServe",
+    "tier": "standard",
+    "phone": "011-2387-1425",
+    "open_tickets": []
+  },
+  {
+    "customer_id": "C-4143",
+    "name": "Mariam Rashad",
+    "client": "GovServe",
+    "tier": "priority",
+    "phone": "010-4611-9011",
+    "open_tickets": []
+  },
+  {
+    "customer_id": "C-4144",
+    "name": "Sherine Selim",
+    "client": "StayEasy Hotels",
+    "tier": "priority",
+    "phone": "011-6534-6455",
+    "open_tickets": []
+  },
+  {
+    "customer_id": "C-4145",
+    "name": "Mariam Attia",
+    "client": "StayEasy Hotels",
+    "tier": "standard",
+    "phone": "012-1757-7727",
+    "open_tickets": []
+  },
+  {
+    "customer_id": "C-4146",
+    "name": "Nourhan Shawky",
+    "client": "StayEasy Hotels",
+    "tier": "standard",
+    "phone": "011-9869-1398",
+    "open_tickets": []
+  },
+  {
+    "customer_id": "C-4147",
+    "name": "Sherine Naguib",
+    "client": "GovServe",
+    "tier": "standard",
+    "phone": "010-7907-7888",
+    "open_tickets": []
+  },
+  {
+    "customer_id": "C-4148",
+    "name": "Mariam Barakat",
+    "client": "GovServe",
+    "tier": "standard",
+    "phone": "012-7152-3746",
+    "open_tickets": []
+  },
+  {
+    "customer_id": "C-4149",
+    "name": "Tamer Halim",
+    "client": "StayEasy Hotels",
+    "tier": "priority",
+    "phone": "012-5784-5489",
+    "open_tickets": []
+  },
+  {
+    "customer_id": "C-4150",
+    "name": "Hossam Attia",
+    "client": "MedCare Clinics",
+    "tier": "standard",
+    "phone": "011-3547-3939",
+    "open_tickets": []
+  }
+]
