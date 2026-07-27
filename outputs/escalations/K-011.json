@@ -1,0 +1,38 @@
+{
+  "call_id": "K-011",
+  "customer_id": "C-1011",
+  "documentation": {
+    "summary": "Synthetic summary for K-011.",
+    "issue": "Synthetic issue description.",
+    "root_cause": "Synthetic root cause.",
+    "resolution": "Synthetic resolution.",
+    "pending_actions": [],
+    "category": "Account Management",
+    "subcategory": "Login Issue",
+    "priority": "LOW",
+    "disposition": "Follow-up Required",
+    "sentiment": "Negative",
+    "keywords": [
+      "invoice",
+      "cancel",
+      "upgrade"
+    ],
+    "tags": [
+      "sla_risk",
+      "callback_requested"
+    ],
+    "confidence": 0.6,
+    "grounding": "handbook_chunk_ref",
+    "escalation_recommended": true
+  },
+  "decision": {
+    "decision": "ESCALATE",
+    "reasons": [
+      "synthetic"
+    ]
+  },
+  "review": {
+    "status": "ESCALATED"
+  },
+  "timestamp": "2026-01-06T16:00:00"
+}

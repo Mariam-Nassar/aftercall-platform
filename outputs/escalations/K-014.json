@@ -1,0 +1,38 @@
+{
+  "call_id": "K-014",
+  "customer_id": "C-1014",
+  "documentation": {
+    "summary": "Synthetic summary for K-014.",
+    "issue": "Synthetic issue description.",
+    "root_cause": "Synthetic root cause.",
+    "resolution": "Synthetic resolution.",
+    "pending_actions": [],
+    "category": "Account Management",
+    "subcategory": "Password Reset",
+    "priority": "LOW",
+    "disposition": "Resolved",
+    "sentiment": "Negative",
+    "keywords": [
+      "invoice",
+      "refund",
+      "cancel"
+    ],
+    "tags": [
+      "first_contact",
+      "vip"
+    ],
+    "confidence": 0.98,
+    "grounding": "handbook_chunk_ref",
+    "escalation_recommended": true
+  },
+  "decision": {
+    "decision": "ESCALATE",
+    "reasons": [
+      "synthetic"
+    ]
+  },
+  "review": {
+    "status": "ESCALATED"
+  },
+  "timestamp": "2026-01-03T14:00:00"
+}
