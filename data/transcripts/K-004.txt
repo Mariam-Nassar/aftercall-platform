@@ -1,0 +1,10 @@
+Call ID: K-004
+Customer ID: C-4008
+Channel: voice
+Date: 2026-07-01
+
+Agent: ConnectTel support.
+Customer: I can't log into my account, it keeps saying wrong password.
+Agent: I've sent a reset link to your registered number. Try it now.
+Customer: Okay... yes, I'm in now.
+Agent: Great. Anything else? — No, thanks.

@@ -1,0 +1,9 @@
+Call ID: K-017
+Customer ID: C-4002
+Channel: voice
+Date: 2026-07-01
+
+Agent: NileBank support.
+Customer: There are three withdrawals on my account I did not make. I think someone has access to my account.
+Agent: That's serious — I'm escalating this to our fraud team immediately and flagging the account.
+Customer: Please hurry.

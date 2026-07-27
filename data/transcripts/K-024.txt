@@ -1,0 +1,9 @@
+Call ID: K-024
+Customer ID: C-4006
+Channel: voice
+Date: 2026-07-01
+
+Agent: StayEasy Hotels, how can I help?
+Customer: I'm a bit annoyed — check-in took nearly an hour last time and no one apologised.
+Agent: I'm sorry that happened. I've logged the feedback and added a late-checkout on your next stay as a gesture. Is that alright?
+Customer: Yes, that's fair, thank you.

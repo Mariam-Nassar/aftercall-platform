@@ -1,0 +1,9 @@
+Call ID: K-006
+Customer ID: C-4013
+Channel: voice
+Date: 2026-07-01
+
+Agent: SoukMart, how can I help?
+Customer: Do you have the 65-inch TV in stock and what's the price?
+Agent: We do — it's 18,900 pounds, in stock at the Maadi branch and online.
+Customer: Great, I'll order online then. Thanks.

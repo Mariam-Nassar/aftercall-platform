@@ -1,0 +1,9 @@
+Call ID: K-014
+Customer ID: C-4017
+Channel: voice
+Date: 2026-07-01
+
+Agent: ConnectTel billing.
+Customer: I've fallen behind on my bill. Money's very tight since I lost my job. Is there a payment plan?
+Agent: I'm sorry to hear that. Yes, we can look at a plan — let me note your situation and our hardship team will set one up and call you.
+Customer: Okay, thank you.

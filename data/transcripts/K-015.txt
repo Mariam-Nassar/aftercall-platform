@@ -1,0 +1,10 @@
+Call ID: K-015
+Customer ID: C-4005
+Channel: voice
+Date: 2026-07-01
+
+Agent: SoukMart, how can I help?
+Customer: I asked about my order earlier and someone said they'd sort it. Just wanted to check.
+Agent: I can see a note but I can't tell if anything was actioned. Let me flag it.
+Customer: Okay... so is it done or not?
+Agent: I'm not certain, I'll have it checked.

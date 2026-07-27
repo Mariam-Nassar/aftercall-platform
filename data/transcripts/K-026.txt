@@ -1,0 +1,9 @@
+Call ID: K-026
+Customer ID: C-4012
+Channel: voice
+Date: 2026-07-01
+
+Agent: NileBank support.
+Customer: There's a 300-pound charge on my statement I don't recognise and I want it taken off.
+Agent: Let me check... it's a subscription you enabled in March. It's a valid charge, not an error, so I can't remove it, but I can show you how to cancel it going forward.
+Customer: Ugh, fine, cancel it then.

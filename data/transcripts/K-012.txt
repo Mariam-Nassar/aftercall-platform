@@ -1,0 +1,10 @@
+Call ID: K-012
+Customer ID: C-4003
+Channel: voice
+Date: 2026-07-01
+
+Agent: MedCare Clinics, how can I help?
+Customer: I need to move my follow-up appointment after my surgery next week.
+Agent: Of course. I've moved it to the following Tuesday at 10am.
+Customer: Thank you, and will the same doctor see me?
+Agent: Yes, same consultant.

@@ -1,0 +1,10 @@
+Call ID: K-007
+Customer ID: C-4009
+Channel: voice
+Date: 2026-07-01
+
+Agent: SoukMart.
+Customer: My delivery is three days late and no one has updated me.
+Agent: I'm sorry about that. I can see it's stuck at the courier. I've raised a ticket with logistics and they'll chase it — I can't give you a new date on this call yet.
+Customer: Fine, but please sort it out.
+Agent: Understood, we're on it.

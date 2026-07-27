@@ -1,0 +1,10 @@
+Call ID: K-011
+Customer ID: C-4007
+Channel: voice
+Date: 2026-07-01
+
+Agent: NileBank support.
+Customer: I want to change the phone number on my account.
+Agent: I can help, but I first need to verify your identity — can you confirm your card's last four digits?
+Customer: I don't have my card on me right now.
+Agent: Then I can't make the change today, we'd need to verify you first.

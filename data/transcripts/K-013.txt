@@ -1,0 +1,9 @@
+Call ID: K-013
+Customer ID: C-4014
+Channel: voice
+Date: 2026-07-01
+
+Agent: StayEasy Hotels.
+Customer: Hi, I'm not a guest — I run a travel blog and I'd like to discuss a partnership and maybe a free stay.
+Agent: That's not something I can handle on this line, but I can take your details for the marketing team.
+Customer: Sure, here's my email...

@@ -1,0 +1,10 @@
+Call ID: K-003
+Customer ID: C-4005
+Channel: voice
+Date: 2026-07-01
+
+Agent: SoukMart, how can I help?
+Customer: Just checking where my order is, number 55231.
+Agent: It shipped yesterday and it's due Thursday by end of day.
+Customer: Thursday, okay. Thanks.
+Agent: Anything else? — No — Have a good day.

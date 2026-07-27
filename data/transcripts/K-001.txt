@@ -1,0 +1,11 @@
+Call ID: K-001
+Customer ID: C-4001
+Channel: voice
+Date: 2026-07-01
+
+Agent: Thanks for calling SoukMart support, how can I help?
+Customer: I returned a blender last week and I'm calling about my refund.
+Agent: I can see the return was received. I've just processed the refund of 850 pounds to your card now.
+Customer: Oh brilliant, that was quick. Thank you!
+Agent: You're welcome, it'll show in two to three days. Anything else?
+Customer: No, that's everything. Thanks again.

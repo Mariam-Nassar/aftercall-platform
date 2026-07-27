@@ -1,0 +1,9 @@
+Call ID: K-016
+Customer ID: C-4009
+Channel: voice
+Date: 2026-07-01
+
+Agent: SoukMart, how can I help?
+Customer: This is the third time my order's arrived broken and I've had enough. If it's not fixed today I'm taking this to the consumer protection agency and my lawyer.
+Agent: I completely understand, let me get this to a supervisor right away.
+Customer: You'd better.

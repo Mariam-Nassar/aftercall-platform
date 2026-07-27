@@ -1,0 +1,9 @@
+Call ID: K-008
+Customer ID: C-4001
+Channel: voice
+Date: 2026-07-01
+
+Agent: SoukMart, how can I help?
+Customer: I want to change the email on my account. I've confirmed my name, phone and last order already with your colleague.
+Agent: Thanks, identity confirmed. I've updated your email to the new address now.
+Customer: Great, thank you.

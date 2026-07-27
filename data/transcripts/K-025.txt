@@ -1,0 +1,9 @@
+Call ID: K-025
+Customer ID: C-4013
+Channel: voice
+Date: 2026-07-01
+
+Agent: SoukMart, how can I help?
+Customer: I'd like to cancel my subscription box, please. Nothing wrong, I just don't need it anymore.
+Agent: No problem, I've cancelled it effective at the end of this cycle. You'll get a confirmation.
+Customer: Great, thanks.

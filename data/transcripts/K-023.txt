@@ -1,0 +1,9 @@
+Call ID: K-023
+Customer ID: unknown
+Channel: voice
+Date: 2026-07-01
+
+Agent: Kalam support, how can I help?
+Agent: Hello? Can you hear me?
+Agent: I'll give it a moment... Hello?
+[no response — line silent, then disconnects]

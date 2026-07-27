@@ -1,0 +1,9 @@
+Call ID: K-022
+Customer ID: unknown
+Channel: voice
+Date: 2026-07-01
+
+Agent: Kalam support, how can I help?
+Customer: Oh — sorry, I think I've dialled the wrong number. Is this the pharmacy?
+Agent: No, this is customer support. No problem.
+Customer: Sorry, bye.

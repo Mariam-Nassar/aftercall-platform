@@ -1,0 +1,9 @@
+Call ID: K-019
+Customer ID: C-4004
+Channel: voice
+Date: 2026-07-01
+
+Agent: ConnectTel support.
+Customer: My internet is dropping again. You marked this fixed last week and it is clearly not fixed.
+Agent: You're right, I can see the earlier ticket was closed. I'm escalating this to our network team as a recurring fault.
+Customer: Please do, this is getting ridiculous.

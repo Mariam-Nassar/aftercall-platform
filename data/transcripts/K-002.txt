@@ -1,0 +1,11 @@
+Call ID: K-002
+Customer ID: C-4011
+Channel: voice
+Date: 2026-07-01
+
+Agent: ConnectTel billing, how can I help?
+Customer: You've charged me 400 pounds this month but my plan is 250. There's an extra charge I didn't agree to.
+Agent: Let me look... yes, an add-on was applied in error. I've removed it and credited the 150 difference now.
+Customer: Okay, good. So my next bill is back to normal?
+Agent: Correct, 250 from now on. Sorry about that.
+Customer: Alright, thanks.

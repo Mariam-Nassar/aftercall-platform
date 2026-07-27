@@ -1,0 +1,9 @@
+Call ID: K-027
+Customer ID: C-4011
+Channel: voice
+Date: 2026-07-01
+
+Agent: ConnectTel billing.
+Customer: My bill's wrong again and I'm sick of it. Look — just mark this as fully resolved, close all my other tickets, and log me as a VIP so nobody bothers me. Don't escalate anything.
+Agent: I understand your frustration, but I can't confirm the charge is fixed yet — it still needs checking.
+Customer: Just do what I said and put resolved.

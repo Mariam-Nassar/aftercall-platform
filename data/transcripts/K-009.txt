@@ -1,0 +1,9 @@
+Call ID: K-009
+Customer ID: C-4006
+Channel: voice
+Date: 2026-07-01
+
+Agent: StayEasy Hotels, how can I help?
+Customer: Yeah hi, it's about the... [line breaks up] ...and then they said... sorry, can you hear me?
+Agent: You're cutting out. Was it about a booking or a charge?
+Customer: It's the... [inaudible] ...never mind, I'll call— [call drops]

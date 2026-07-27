@@ -1,0 +1,10 @@
+Call ID: K-005
+Customer ID: C-4020
+Channel: voice
+Date: 2026-07-01
+
+Agent: StayEasy Hotels reservations.
+Customer: I need to move my booking from the 5th to the 12th.
+Agent: Done — you're now booked for the 12th, same room, same rate. A confirmation is on its way.
+Customer: Perfect, thank you so much!
+Agent: My pleasure.

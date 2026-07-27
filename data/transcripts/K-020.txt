@@ -1,0 +1,9 @@
+Call ID: K-020
+Customer ID: C-4016
+Channel: voice
+Date: 2026-07-01
+
+Agent: NileBank support.
+Customer: One of your staff was completely rude to me yesterday and hung up. I want to make a formal complaint and I want it recorded properly.
+Agent: I'm very sorry. This is a formal complaint about conduct — I'm escalating it to a supervisor.
+Customer: Thank you.

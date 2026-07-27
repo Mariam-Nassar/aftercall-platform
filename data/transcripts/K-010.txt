@@ -1,0 +1,10 @@
+Call ID: K-010
+Customer ID: C-4019
+Channel: voice
+Date: 2026-07-01
+
+Agent: SoukMart returns.
+Customer: I want a refund on a jacket, it doesn't fit.
+Agent: I'd need to check whether it's within the return window and if it's been worn — I can't confirm eligibility right now, our returns system is down. Someone will review it.
+Customer: So will I get the refund or not?
+Agent: I honestly can't say yet, it has to be reviewed.

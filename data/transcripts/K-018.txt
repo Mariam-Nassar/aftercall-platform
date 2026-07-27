@@ -1,0 +1,9 @@
+Call ID: K-018
+Customer ID: C-4018
+Channel: voice
+Date: 2026-07-01
+
+Agent: MedCare Clinics, how can I help?
+Customer: I don't know who else to call. I'm really not coping, I've been having very dark thoughts and I missed my appointment.
+Agent: Thank you for telling me. I'm going to connect you with someone who can help you properly right now.
+Customer: Okay... thank you.
