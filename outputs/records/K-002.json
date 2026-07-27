@@ -1,0 +1,38 @@
+{
+  "call_id": "K-002",
+  "customer_id": "C-1002",
+  "documentation": {
+    "summary": "Synthetic summary for K-002.",
+    "issue": "Synthetic issue description.",
+    "root_cause": "Synthetic root cause.",
+    "resolution": "Synthetic resolution.",
+    "pending_actions": [],
+    "category": "Billing",
+    "subcategory": "Refund",
+    "priority": "MEDIUM",
+    "disposition": "Resolved",
+    "sentiment": "Negative",
+    "keywords": [
+      "refund",
+      "upgrade",
+      "invoice"
+    ],
+    "tags": [
+      "callback_requested",
+      "first_contact"
+    ],
+    "confidence": 0.65,
+    "grounding": "handbook_chunk_ref",
+    "escalation_recommended": false
+  },
+  "decision": {
+    "decision": "AUTO_SAVE",
+    "reasons": [
+      "synthetic"
+    ]
+  },
+  "review": {
+    "status": "READY_TO_SAVE"
+  },
+  "timestamp": "2026-01-03T09:00:00"
+}

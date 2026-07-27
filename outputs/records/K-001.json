@@ -1,0 +1,38 @@
+{
+  "call_id": "K-001",
+  "customer_id": "C-1001",
+  "documentation": {
+    "summary": "Synthetic summary for K-001.",
+    "issue": "Synthetic issue description.",
+    "root_cause": "Synthetic root cause.",
+    "resolution": "Synthetic resolution.",
+    "pending_actions": [],
+    "category": "Billing",
+    "subcategory": "Upgrade",
+    "priority": "MEDIUM",
+    "disposition": "Resolved",
+    "sentiment": "Positive",
+    "keywords": [
+      "invoice",
+      "cancel",
+      "billing"
+    ],
+    "tags": [
+      "callback_requested",
+      "vip"
+    ],
+    "confidence": 0.81,
+    "grounding": "handbook_chunk_ref",
+    "escalation_recommended": false
+  },
+  "decision": {
+    "decision": "AUTO_SAVE",
+    "reasons": [
+      "synthetic"
+    ]
+  },
+  "review": {
+    "status": "READY_TO_SAVE"
+  },
+  "timestamp": "2026-01-02T10:00:00"
+}
