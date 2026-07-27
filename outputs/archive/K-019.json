@@ -1,0 +1,38 @@
+{
+  "call_id": "K-019",
+  "customer_id": "C-1019",
+  "documentation": {
+    "summary": "Synthetic summary for K-019.",
+    "issue": "Synthetic issue description.",
+    "root_cause": "Synthetic root cause.",
+    "resolution": "Synthetic resolution.",
+    "pending_actions": [],
+    "category": "Account Management",
+    "subcategory": "Cancellation",
+    "priority": "CRITICAL",
+    "disposition": "Unresolved",
+    "sentiment": "Negative",
+    "keywords": [
+      "refund",
+      "cancel",
+      "billing"
+    ],
+    "tags": [
+      "vip",
+      "callback_requested"
+    ],
+    "confidence": 0.73,
+    "grounding": "handbook_chunk_ref",
+    "escalation_recommended": false
+  },
+  "decision": {
+    "decision": "NON_INTERACTION",
+    "reasons": [
+      "synthetic"
+    ]
+  },
+  "review": {
+    "status": "ARCHIVED"
+  },
+  "timestamp": "2026-01-02T15:00:00"
+}
