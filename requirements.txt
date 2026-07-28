@@ -1,32 +1,24 @@
-# Kalam CX — AI-Powered After-Call Automation Platform
-# Python 3.10+ required (codebase uses PEP 604 "X | None" type hints).
-#
-# Install with:
-#   pip install -r requirements.txt
+# AI-Powered After-Call Automation Platform — dependencies
+# Generated for Python 3.12+
 
-# --- Environment / configuration -------------------------------------------
-python-dotenv>=1.0.0          # loads GOOGLE_API_KEY from .env (app/main.py)
+# --- RAG / handbook retrieval (app/handbook_search.py) ---
+langchain-core>=1.5,<2.0
+langchain-text-splitters>=1.1,<2.0
+langchain-google-genai>=4.3,<5.0
+langchain-chroma>=1.1,<2.0
+chromadb>=1.5,<2.0
 
-# --- Generative AI (documentation_engine.py) --------------------------------
-google-generativeai>=0.8.0    # Gemini client used for structured extraction
-                               # NOTE: Google has deprecated this package in
-                               # favor of `google-genai`; it still works but
-                               # prints a FutureWarning. Migrating is listed
-                               # as a follow-up in README.md.
+# --- LLM generation (app/documentation_engine.py) ---
+google-generativeai>=0.8,<0.9
 
-# --- Retrieval / handbook search (handbook_search.py) -----------------------
-langchain-core>=0.3.0
-langchain-chroma>=0.1.4
-langchain-google-genai>=2.0.0
-langchain-text-splitters>=0.3.0
-chromadb>=0.5.0                # vector store backing langchain-chroma
+# --- Evaluation (app/evaluation.py) ---
+rapidfuzz>=3.14,<4.0
 
-# --- Evaluation (evaluation.py) ---------------------------------------------
-rapidfuzz>=3.9.0               # fuzzy text-similarity for summary scoring
-                                # (falls back to stdlib difflib if absent)
+# --- Dashboard (app/dashboard.py) ---
+matplotlib>=3.10,<4.0
 
-# --- Dashboard (dashboard.py) ------------------------------------------------
-matplotlib>=3.8.0               # chart generation (bar/pie/line/histogram)
+# --- Configuration (app/main.py, app/documentation_engine.py, app/handbook_search.py) ---
+python-dotenv>=1.2,<2.0
 
-# --- Testing ------------------------------------------------------------------
-pytest>=8.0.0                   # run with: pytest tests/ -v
+# --- Testing (tests/) ---
+pytest>=9.1,<10.0
