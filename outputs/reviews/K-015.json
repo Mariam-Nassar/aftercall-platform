@@ -1,0 +1,108 @@
+{
+  "metadata": {
+    "call_id": "K-015",
+    "created_at": "2026-07-28T09:47:04.940326+00:00",
+    "pipeline_version": "1.0"
+  },
+  "documentation": {
+    "summary": "The customer called to follow up on a previous order inquiry. The agent saw a note on file but could not confirm if action had been taken, so the agent flagged the issue to be checked.",
+    "issue": "The customer is following up on an order issue raised earlier to see if it has been resolved.",
+    "root_cause": "Not stated",
+    "resolution": "Not stated",
+    "pending_actions": [
+      "Flag and check the status of the customer's previous order inquiry."
+    ],
+    "category": "Not stated",
+    "subcategory": "Not stated",
+    "priority": "High",
+    "disposition": "Unresolved — pending",
+    "sentiment": "Not stated",
+    "keywords": [
+      "order",
+      "check",
+      "flag",
+      "note"
+    ],
+    "tags": [
+      "repeat_contact",
+      "order_inquiry",
+      "unresolved"
+    ],
+    "escalation_recommended": false,
+    "confidence": 0.95,
+    "grounding": {
+      "summary": [
+        "Transcript Line 7",
+        "Transcript Line 8",
+        "Transcript Line 10"
+      ],
+      "issue": [
+        "Transcript Line 7"
+      ],
+      "root_cause": [
+        "Handbook Rule 5"
+      ],
+      "resolution": [
+        "Handbook Rule 1",
+        "Handbook Rule 5"
+      ],
+      "pending_actions": [
+        "Transcript Line 8",
+        "Transcript Line 10"
+      ],
+      "category": [
+        "Handbook Rule 5"
+      ],
+      "subcategory": [
+        "Handbook Rule 5"
+      ],
+      "priority": [
+        "Handbook Rule 3",
+        "Handbook Rule 4",
+        "Transcript Line 7",
+        "Transcript Line 8"
+      ],
+      "disposition": [
+        "Handbook Rule 1",
+        "Transcript Line 8",
+        "Transcript Line 10"
+      ],
+      "sentiment": [
+        "Handbook Rule 5"
+      ],
+      "keywords": [
+        "Transcript Line 7",
+        "Transcript Line 8"
+      ],
+      "tags": [
+        "Handbook Rule 3",
+        "Transcript Line 7"
+      ],
+      "escalation_recommended": [
+        "Handbook Rule 4"
+      ],
+      "confidence": [
+        "Handbook Rule 2"
+      ]
+    }
+  },
+  "decision": {
+    "decision": "HUMAN_REVIEW",
+    "reason": "Missing required content for: category, sentiment.",
+    "triggered_rules": [
+      "Rule 2"
+    ],
+    "confidence": 0.95,
+    "timestamp": "2026-07-28T09:47:04.939216+00:00"
+  },
+  "review": {
+    "review_id": "0cdb665e-2741-4885-8686-eab14d245161",
+    "status": "PENDING_REVIEW",
+    "queue": "REVIEW_QUEUE",
+    "review_required": true,
+    "review_reason": "Missing required content for: category, sentiment.",
+    "assigned_to": null,
+    "created_at": "2026-07-28T09:47:04.939604+00:00",
+    "updated_at": "2026-07-28T09:47:04.939604+00:00"
+  }
+}

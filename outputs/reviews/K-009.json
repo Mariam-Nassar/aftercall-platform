@@ -1,38 +1,107 @@
 {
-  "call_id": "K-009",
-  "customer_id": "C-1009",
+  "metadata": {
+    "call_id": "K-009",
+    "created_at": "2026-07-28T09:45:00.854697+00:00",
+    "pipeline_version": "1.0"
+  },
   "documentation": {
-    "summary": "Synthetic summary for K-009.",
-    "issue": "Synthetic issue description.",
-    "root_cause": "Synthetic root cause.",
-    "resolution": "Synthetic resolution.",
+    "summary": "The customer called but the line was breaking up and inaudible. The agent asked if the issue was about a booking or a charge, but the call dropped before the customer could state their request.",
+    "issue": "Not stated",
+    "root_cause": "Not stated",
+    "resolution": "Not stated",
     "pending_actions": [],
-    "category": "Technical Support",
-    "subcategory": "Upgrade",
-    "priority": "MEDIUM",
-    "disposition": "Resolved",
-    "sentiment": "Negative",
+    "category": "Not stated",
+    "subcategory": "Not stated",
+    "priority": "Not stated",
+    "disposition": "Non-interaction",
+    "sentiment": "Not stated",
     "keywords": [
-      "upgrade",
-      "cancel",
-      "outage"
+      "cutting out",
+      "inaudible",
+      "call drops",
+      "booking",
+      "charge"
     ],
     "tags": [
-      "first_contact",
-      "callback_requested"
+      "dropped call",
+      "audio issue",
+      "non-interaction"
     ],
-    "confidence": 0.71,
-    "grounding": "handbook_chunk_ref",
-    "escalation_recommended": false
+    "escalation_recommended": false,
+    "confidence": 0.2,
+    "grounding": {
+      "summary": [
+        "Transcript Line 7",
+        "Transcript Line 8",
+        "Transcript Line 9"
+      ],
+      "issue": [
+        "Transcript Line 7",
+        "Transcript Line 9"
+      ],
+      "root_cause": [
+        "Transcript Line 7",
+        "Transcript Line 9"
+      ],
+      "resolution": [
+        "Transcript Line 9"
+      ],
+      "pending_actions": [
+        "Transcript Line 9"
+      ],
+      "category": [
+        "Handbook Rule 1"
+      ],
+      "subcategory": [
+        "Handbook Rule 1"
+      ],
+      "priority": [
+        "Handbook Rule 4"
+      ],
+      "disposition": [
+        "Transcript Line 9",
+        "Handbook Rule 1",
+        "Handbook Rule 4"
+      ],
+      "sentiment": [
+        "Transcript Line 7",
+        "Transcript Line 9"
+      ],
+      "keywords": [
+        "Transcript Line 8",
+        "Transcript Line 9"
+      ],
+      "tags": [
+        "Transcript Line 7",
+        "Transcript Line 9",
+        "Handbook Rule 1"
+      ],
+      "escalation_recommended": [
+        "Handbook Rule 2",
+        "Handbook Rule 4"
+      ],
+      "confidence": [
+        "Handbook Rule 3"
+      ]
+    }
   },
   "decision": {
     "decision": "HUMAN_REVIEW",
-    "reasons": [
-      "synthetic"
-    ]
+    "reason": "Missing required content for: issue, category, priority, sentiment.",
+    "triggered_rules": [
+      "Rule 2"
+    ],
+    "confidence": 0.2,
+    "timestamp": "2026-07-28T09:45:00.848157+00:00"
   },
   "review": {
-    "status": "PENDING_REVIEW"
-  },
-  "timestamp": "2026-01-04T16:00:00"
+    "review_id": "081d0602-9144-457d-bd1d-96efd06ad861",
+    "status": "PENDING_REVIEW",
+    "queue": "REVIEW_QUEUE",
+    "review_required": true,
+    "review_reason": "Missing required content for: issue, category, priority, sentiment.",
+    "assigned_to": null,
+    "created_at": "2026-07-28T09:45:00.851336+00:00",
+    "updated_at": "2026-07-28T09:45:00.851336+00:00"
+  }
 }

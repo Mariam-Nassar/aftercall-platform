@@ -1,0 +1,92 @@
+{
+  "metadata": {
+    "call_id": "K-025",
+    "created_at": "2026-07-28T10:49:32.026850+00:00",
+    "pipeline_version": "1.0"
+  },
+  "documentation": {
+    "summary": "The customer requested to cancel their subscription box because they no longer need it. The agent processed the cancellation effective at the end of the current billing cycle and confirmed a confirmation would be sent.",
+    "issue": "The customer wants to cancel their subscription box.",
+    "root_cause": "The customer no longer needs the subscription box.",
+    "resolution": "The agent cancelled the subscription effective at the end of the current cycle.",
+    "pending_actions": [],
+    "category": "Cancellation",
+    "subcategory": "cancel service",
+    "priority": "Not stated",
+    "disposition": "Resolved",
+    "sentiment": "Positive",
+    "keywords": [
+      "cancel",
+      "subscription box",
+      "confirmation"
+    ],
+    "tags": [
+      "subscription",
+      "cancellation"
+    ],
+    "escalation_recommended": false,
+    "confidence": 0.95,
+    "grounding": {
+      "summary": [
+        "Transcript Line 7",
+        "Transcript Line 8"
+      ],
+      "issue": [
+        "Transcript Line 7"
+      ],
+      "root_cause": [
+        "Transcript Line 7"
+      ],
+      "resolution": [
+        "Transcript Line 8"
+      ],
+      "pending_actions": [],
+      "category": [
+        "Handbook Rule 2"
+      ],
+      "subcategory": [
+        "Handbook Rule 2"
+      ],
+      "priority": [],
+      "disposition": [
+        "Transcript Line 8",
+        "Handbook Rule 5"
+      ],
+      "sentiment": [
+        "Transcript Line 7",
+        "Transcript Line 9"
+      ],
+      "keywords": [
+        "Transcript Line 7",
+        "Transcript Line 8"
+      ],
+      "tags": [
+        "Transcript Line 7"
+      ],
+      "escalation_recommended": [
+        "Handbook Rule 1",
+        "Handbook Rule 5"
+      ]
+    }
+  },
+  "decision": {
+    "decision": "HUMAN_REVIEW",
+    "reason": "Missing required content for: priority. Ambiguous (zero-evidence) grounding for: priority.",
+    "triggered_rules": [
+      "Rule 2",
+      "Rule 7"
+    ],
+    "confidence": 0.95,
+    "timestamp": "2026-07-28T10:49:32.021897+00:00"
+  },
+  "review": {
+    "review_id": "596bbd68-42cd-42e0-8ce8-287cee0bddf0",
+    "status": "PENDING_REVIEW",
+    "queue": "REVIEW_QUEUE",
+    "review_required": true,
+    "review_reason": "Missing required content for: priority. Ambiguous (zero-evidence) grounding for: priority.",
+    "assigned_to": null,
+    "created_at": "2026-07-28T10:49:32.023817+00:00",
+    "updated_at": "2026-07-28T10:49:32.023817+00:00"
+  }
+}

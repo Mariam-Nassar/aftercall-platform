@@ -1,0 +1,87 @@
+{
+  "metadata": {
+    "call_id": "K-023",
+    "created_at": "2026-07-28T11:11:51.444280+00:00",
+    "pipeline_version": "1.0"
+  },
+  "documentation": {
+    "summary": "The caller disconnected without speaking. The agent greeted the caller multiple times but received no response.",
+    "issue": "Not stated",
+    "root_cause": "Not stated",
+    "resolution": "Not stated",
+    "pending_actions": [],
+    "category": "Not stated",
+    "subcategory": "Not stated",
+    "priority": "Not stated",
+    "disposition": "Non-interaction",
+    "sentiment": "Not stated",
+    "keywords": [
+      "silent",
+      "disconnect",
+      "no response"
+    ],
+    "tags": [
+      "silent-call",
+      "dropped-call"
+    ],
+    "escalation_recommended": false,
+    "confidence": 1.0,
+    "grounding": {
+      "summary": [
+        "Transcript Line 6",
+        "Transcript Line 7",
+        "Transcript Line 8",
+        "Transcript Line 9"
+      ],
+      "issue": [],
+      "root_cause": [],
+      "resolution": [],
+      "pending_actions": [],
+      "category": [],
+      "subcategory": [],
+      "priority": [],
+      "disposition": [
+        "Handbook Rule 1",
+        "Handbook Rule 5",
+        "Transcript Line 9"
+      ],
+      "sentiment": [],
+      "keywords": [
+        "Transcript Line 8",
+        "Transcript Line 9"
+      ],
+      "tags": [
+        "Handbook Rule 1",
+        "Transcript Line 9"
+      ],
+      "escalation_recommended": [
+        "Handbook Rule 1",
+        "Handbook Rule 5"
+      ],
+      "confidence": [
+        "Handbook Rule 1",
+        "Transcript Line 9"
+      ]
+    }
+  },
+  "decision": {
+    "decision": "HUMAN_REVIEW",
+    "reason": "Missing required content for: issue, category, priority, sentiment. Ambiguous (zero-evidence) grounding for: issue, category, priority, sentiment.",
+    "triggered_rules": [
+      "Rule 2",
+      "Rule 7"
+    ],
+    "confidence": 1.0,
+    "timestamp": "2026-07-28T11:11:51.440016+00:00"
+  },
+  "review": {
+    "review_id": "71e851b4-f5ec-4a21-a365-b63ab468956e",
+    "status": "PENDING_REVIEW",
+    "queue": "REVIEW_QUEUE",
+    "review_required": true,
+    "review_reason": "Missing required content for: issue, category, priority, sentiment. Ambiguous (zero-evidence) grounding for: issue, category, priority, sentiment.",
+    "assigned_to": null,
+    "created_at": "2026-07-28T11:11:51.441733+00:00",
+    "updated_at": "2026-07-28T11:11:51.441733+00:00"
+  }
+}

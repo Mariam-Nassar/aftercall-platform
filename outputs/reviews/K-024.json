@@ -1,0 +1,108 @@
+{
+  "metadata": {
+    "call_id": "K-024",
+    "created_at": "2026-07-28T10:49:04.023913+00:00",
+    "pipeline_version": "1.0"
+  },
+  "documentation": {
+    "summary": "Hana Mostafa called to express annoyance regarding a previous stay where check-in took nearly an hour and no apology was offered. The agent apologized, logged the feedback, and added a late-checkout to her next stay as a gesture of goodwill. The customer accepted this resolution.",
+    "issue": "The customer experienced a check-in delay of nearly an hour during a previous stay and did not receive an apology.",
+    "root_cause": "Not stated",
+    "resolution": "The agent apologized, logged the feedback, and added a late-checkout to the customer's next stay.",
+    "pending_actions": [],
+    "category": "Not stated",
+    "subcategory": "Not stated",
+    "priority": "Not stated",
+    "disposition": "Resolved",
+    "sentiment": "Negative",
+    "keywords": [
+      "check-in",
+      "annoyed",
+      "apologised",
+      "late-checkout",
+      "feedback"
+    ],
+    "tags": [
+      "check-in delay",
+      "goodwill gesture",
+      "customer feedback"
+    ],
+    "escalation_recommended": false,
+    "confidence": 1.0,
+    "grounding": {
+      "summary": [
+        "Transcript Line 7",
+        "Transcript Line 8",
+        "Transcript Line 9",
+        "Customer Record"
+      ],
+      "issue": [
+        "Transcript Line 7"
+      ],
+      "root_cause": [
+        "Transcript Lines 1-9"
+      ],
+      "resolution": [
+        "Transcript Line 8",
+        "Transcript Line 9"
+      ],
+      "pending_actions": [
+        "Transcript Lines 1-9"
+      ],
+      "category": [
+        "Handbook Rule 4"
+      ],
+      "subcategory": [
+        "Handbook Rule 4"
+      ],
+      "priority": [
+        "Handbook Rule 5"
+      ],
+      "disposition": [
+        "Handbook Rule 5",
+        "Transcript Line 8",
+        "Transcript Line 9"
+      ],
+      "sentiment": [
+        "Handbook Rule 1",
+        "Handbook Rule 2",
+        "Transcript Line 7"
+      ],
+      "keywords": [
+        "Transcript Line 7",
+        "Transcript Line 8"
+      ],
+      "tags": [
+        "Transcript Line 7",
+        "Transcript Line 8"
+      ],
+      "escalation_recommended": [
+        "Handbook Rule 5"
+      ],
+      "confidence": [
+        "Handbook Rule 1",
+        "Handbook Rule 2",
+        "Handbook Rule 5"
+      ]
+    }
+  },
+  "decision": {
+    "decision": "HUMAN_REVIEW",
+    "reason": "Missing required content for: category, priority.",
+    "triggered_rules": [
+      "Rule 2"
+    ],
+    "confidence": 1.0,
+    "timestamp": "2026-07-28T10:49:04.017031+00:00"
+  },
+  "review": {
+    "review_id": "cdddaaee-bf4f-43e4-bdbc-942b3b08ad99",
+    "status": "PENDING_REVIEW",
+    "queue": "REVIEW_QUEUE",
+    "review_required": true,
+    "review_reason": "Missing required content for: category, priority.",
+    "assigned_to": null,
+    "created_at": "2026-07-28T10:49:04.020046+00:00",
+    "updated_at": "2026-07-28T10:49:04.020046+00:00"
+  }
+}
