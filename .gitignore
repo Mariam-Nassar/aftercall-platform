@@ -1,44 +1,39 @@
-# Python
+# --- Environment / secrets ---
+.env
+*.env
+!.env.example
+
+# --- Python ---
 __pycache__/
 *.py[cod]
 *$py.class
+*.egg-info/
+.eggs/
+build/
+dist/
 
-# Virtual environments
+# --- Virtual environments ---
 .venv/
 venv/
 env/
+ENV/
 
-# Environment variables
-.env
-
-# IDE
-.vscode/
-.idea/
-
-# Pytest
+# --- Testing / tooling caches ---
 .pytest_cache/
-
-# Logs
-*.log
-
-# OS
-.DS_Store
-Thumbs.db
-
-# Output artifacts
-outputs/
-
-# Local databases
-*.sqlite3
-*.db
-vector_store/
-chroma_db/
-
-# Coverage
+.mypy_cache/
+.ruff_cache/
 .coverage
 htmlcov/
 
-# Build
-dist/
-build/
-*.egg-info/
+# --- Generated / pipeline output (regenerable, should not be committed) ---
+outputs/
+data/vector_db/
+
+# --- IDE ---
+.vscode/
+.idea/
+*.swp
+
+# --- OS ---
+.DS_Store
+Thumbs.db
