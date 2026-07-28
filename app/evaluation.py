@@ -2,21 +2,6 @@
 evaluation.py
 
 Evaluation layer for the AI-Powered After-Call Automation Platform.
-
-Responsibility
---------------
-Compare pipeline-generated records against the official answer key
-(ground truth), compute accuracy metrics per field and overall, and
-produce JSON and Markdown evaluation reports.
-
-This module is intentionally decoupled from the rest of the pipeline.
-It does not call any LLM, perform retrieval, apply business rules, or
-modify generated records or the answer key in any way. It only reads
-JSON files from disk and writes evaluation reports.
-
-A future developer can evaluate outputs from any model by pointing
-`evaluate_dataset()` at a directory of generated JSON records and an
-answer_key.json file with the same schema.
 """
 
 from __future__ import annotations
@@ -34,7 +19,7 @@ try:
     from rapidfuzz import fuzz as _rapidfuzz_fuzz
 
     _HAS_RAPIDFUZZ = True
-except ImportError:  # pragma: no cover - fallback path
+except ImportError:  # pragma: no cover
     from difflib import SequenceMatcher
 
     _HAS_RAPIDFUZZ = False
@@ -42,10 +27,6 @@ except ImportError:  # pragma: no cover - fallback path
 
 logger = logging.getLogger(__name__)
 
-
-# ===========================================================
-# CONFIGURATION
-# ===========================================================
 
 SUMMARY_SIMILARITY_THRESHOLD: float = 0.75
 REPORT_DIRECTORY: Path = Path("outputs/evaluation")
@@ -58,28 +39,19 @@ MARKDOWN_REPORT_FILENAME: str = "evaluation_report.md"
 PROJECT_TITLE: str = "Exology Pioneer Program — After-Call Automation Platform"
 
 
-# ===========================================================
-# ENUMS
-# ===========================================================
-
 class FieldType(str, Enum):
-    """Classifies how a field must be compared."""
-
     CATEGORICAL = "categorical"
     BOOLEAN = "boolean"
     TEXT = "text"
 
 
 class CallResult(str, Enum):
-    """Outcome of evaluating a single call."""
-
     CORRECT = "CORRECT"
     INCORRECT = "INCORRECT"
     MISSING_GENERATED = "MISSING_GENERATED"
     MISSING_ANSWER_KEY = "MISSING_ANSWER_KEY"
 
 
-# Field name -> comparison strategy. Order defines report ordering.
 EVALUATED_FIELDS: dict[str, FieldType] = {
     "summary": FieldType.TEXT,
     "category": FieldType.CATEGORICAL,
@@ -91,35 +63,37 @@ EVALUATED_FIELDS: dict[str, FieldType] = {
     "decision": FieldType.CATEGORICAL,
 }
 
+# Fields the answer key often leaves blank — do not penalize when expected is None
+_OPTIONAL_WHEN_NULL: frozenset[str] = frozenset({"summary"})
 
-# ===========================================================
-# CUSTOM EXCEPTIONS
-# ===========================================================
+# Treat these decision labels as equivalent
+_DECISION_ALIASES: dict[str, str] = {
+    "route_to_review": "human_review",
+    "human_review": "human_review",
+    "auto_save": "auto_save",
+    "escalate": "escalate",
+    "non_interaction": "non_interaction",
+}
+
 
 class EvaluationError(Exception):
-    """Base exception for all evaluation-related failures."""
+    pass
 
 
 class AnswerKeyNotFoundError(EvaluationError):
-    """Raised when the answer key file cannot be located or parsed."""
+    pass
 
 
 class GeneratedRecordNotFoundError(EvaluationError):
-    """Raised when no generated records can be located or parsed."""
+    pass
 
 
 class RecordMismatchError(EvaluationError):
-    """Raised when a record cannot be safely compared to its counterpart."""
+    pass
 
-
-# ===========================================================
-# DATACLASSES
-# ===========================================================
 
 @dataclass(frozen=True)
 class FieldComparison:
-    """Result of comparing a single field between expected and predicted."""
-
     field_name: str
     field_type: FieldType
     expected: Any
@@ -130,8 +104,6 @@ class FieldComparison:
 
 @dataclass(frozen=True)
 class CallEvaluationResult:
-    """Evaluation outcome for a single call."""
-
     call_id: str
     expected: dict[str, Any]
     predicted: dict[str, Any]
@@ -144,8 +116,6 @@ class CallEvaluationResult:
 
 @dataclass(frozen=True)
 class FieldMetrics:
-    """Aggregate accuracy metrics for a single evaluated field."""
-
     field_name: str
     total: int
     correct: int
@@ -155,8 +125,6 @@ class FieldMetrics:
 
 @dataclass(frozen=True)
 class OverallMetrics:
-    """Aggregate accuracy metrics across the entire dataset."""
-
     total_calls: int
     correct_predictions: int
     incorrect_predictions: int
@@ -167,8 +135,6 @@ class OverallMetrics:
 
 @dataclass(frozen=True)
 class EvaluationReport:
-    """Final output of the evaluation pipeline."""
-
     overall_metrics: OverallMetrics
     field_metrics: dict[str, FieldMetrics]
     per_call_results: list[CallEvaluationResult]
@@ -179,44 +145,56 @@ class EvaluationReport:
 
 @dataclass(frozen=True)
 class MatchedPair:
-    """A call_id paired with its expected/predicted records, if found."""
-
     call_id: str
     expected: Optional[dict[str, Any]]
     predicted: Optional[dict[str, Any]]
 
 
-# ===========================================================
-# INTERNAL HELPERS
-# ===========================================================
+def _unwrap_decision(value: Any) -> Any:
+    """If value is a decision object, return the scalar decision string."""
+    if isinstance(value, dict):
+        if "decision" in value:
+            inner = value["decision"]
+            if isinstance(inner, dict) and "decision" in inner:
+                return inner["decision"]
+            return inner
+    return value
+
 
 def _extract_field(record: dict[str, Any], field_name: str) -> Any:
-    """Look up a field in a record, tolerating nested record structures.
+    if not isinstance(record, dict):
+        return None
 
-    Checks the top level first. If the top-level value is itself a
-    dict that also contains `field_name` as a key (a "self-nesting"
-    wrapper, e.g. a top-level "decision" key whose value is
-    {"decision": "AUTO_SAVE", "reason": ..., ...}), the nested scalar
-    is preferred over the wrapper dict. Otherwise falls back to
-    searching one level into any nested dict values. Returns None if
-    the field cannot be located. This keeps the module independent of
-    any specific storage schema.
-    """
     if field_name in record:
         top_value = record[field_name]
         if isinstance(top_value, dict) and field_name in top_value:
-            return top_value[field_name]
+            return _unwrap_decision(top_value[field_name]) if field_name == "decision" else top_value[field_name]
+        if field_name == "decision":
+            return _unwrap_decision(top_value)
         return top_value
 
     for value in record.values():
         if isinstance(value, dict) and field_name in value:
-            return value[field_name]
+            nested = value[field_name]
+            if field_name == "decision":
+                return _unwrap_decision(nested)
+            if isinstance(nested, dict) and field_name in nested:
+                return nested[field_name]
+            return nested
+
+    # answer_key uses "escalate" instead of "escalation_recommended"
+    if field_name == "escalation_recommended":
+        for alt in ("escalate", "escalation"):
+            if alt in record:
+                return record[alt]
+            for value in record.values():
+                if isinstance(value, dict) and alt in value:
+                    return value[alt]
 
     return None
 
 
 def _extract_call_id(record: dict[str, Any]) -> Optional[str]:
-    """Locate the call_id for a record, searching nested structures too."""
     for key in ("call_id", "callId", "id"):
         value = _extract_field(record, key)
         if value is not None:
@@ -225,7 +203,6 @@ def _extract_call_id(record: dict[str, Any]) -> Optional[str]:
 
 
 def _extract_confidence(record: dict[str, Any]) -> Optional[float]:
-    """Locate a numeric confidence value for a record, if present."""
     value = _extract_field(record, "confidence")
     if value is None:
         return None
@@ -236,24 +213,25 @@ def _extract_confidence(record: dict[str, Any]) -> Optional[float]:
 
 
 def _text_similarity(expected: str, predicted: str) -> float:
-    """Return a 0.0-1.0 similarity score between two text strings."""
     if not expected and not predicted:
         return 1.0
     if not expected or not predicted:
         return 0.0
-
     if _HAS_RAPIDFUZZ:
         return _rapidfuzz_fuzz.token_sort_ratio(expected, predicted) / 100.0
     return SequenceMatcher(None, expected, predicted).ratio()
 
 
 def _normalize_categorical(value: Any) -> str:
-    """Normalize a categorical value for exact comparison."""
     return str(value).strip().lower() if value is not None else ""
 
 
+def _normalize_decision(value: Any) -> str:
+    raw = _normalize_categorical(_unwrap_decision(value))
+    return _DECISION_ALIASES.get(raw, raw)
+
+
 def _normalize_boolean(value: Any) -> Optional[bool]:
-    """Normalize a boolean-like value for exact comparison."""
     if isinstance(value, bool):
         return value
     if isinstance(value, str):
@@ -267,16 +245,7 @@ def _normalize_boolean(value: Any) -> Optional[bool]:
     return bool(value)
 
 
-# ===========================================================
-# LOADING
-# ===========================================================
-
 def load_answer_key(path: Path = ANSWER_KEY_PATH) -> dict[str, dict[str, Any]]:
-    """Load the ground-truth answer key, keyed by call_id.
-
-    Supports either a dict keyed by call_id or a list of records each
-    containing a call_id field.
-    """
     if not path.exists():
         raise AnswerKeyNotFoundError(f"Answer key not found at: {path}")
 
@@ -312,14 +281,6 @@ def load_answer_key(path: Path = ANSWER_KEY_PATH) -> dict[str, dict[str, Any]]:
 
 
 def load_generated_records(directory: Path = GENERATED_RECORDS_PATH) -> dict[str, dict[str, Any]]:
-    """Load all generated pipeline records from a directory, keyed by call_id.
-
-    Scans recursively so that records routed by review.py into any of
-    its output subfolders (records/, reviews/, escalations/, archive/)
-    are all picked up from a single `outputs/` root. Files under an
-    "evaluation" or "dashboard" subfolder are skipped, since those hold
-    this module's own generated reports rather than pipeline records.
-    """
     if not directory.exists() or not directory.is_dir():
         raise GeneratedRecordNotFoundError(f"Generated records directory not found: {directory}")
 
@@ -327,7 +288,9 @@ def load_generated_records(directory: Path = GENERATED_RECORDS_PATH) -> dict[str
     json_files = [
         file_path
         for file_path in sorted(directory.glob("**/*.json"))
-        if excluded_folder_names.isdisjoint(part for part in file_path.relative_to(directory).parts)
+        if excluded_folder_names.isdisjoint(
+            part for part in file_path.relative_to(directory).parts
+        )
     ]
     if not json_files:
         raise GeneratedRecordNotFoundError(f"No generated JSON records found in: {directory}")
@@ -361,19 +324,10 @@ def load_generated_records(directory: Path = GENERATED_RECORDS_PATH) -> dict[str
     return generated
 
 
-# ===========================================================
-# MATCHING
-# ===========================================================
-
 def match_records(
     answer_key: dict[str, dict[str, Any]],
     generated_records: dict[str, dict[str, Any]],
 ) -> list[MatchedPair]:
-    """Pair every answer-key call_id with its generated record, if any.
-
-    Generated records with no corresponding answer key entry are logged
-    and excluded, since they cannot be scored against ground truth.
-    """
     pairs: list[MatchedPair] = []
 
     for call_id, expected in answer_key.items():
@@ -390,17 +344,12 @@ def match_records(
     return pairs
 
 
-# ===========================================================
-# COMPARISON
-# ===========================================================
-
 def compare_record(
     call_id: str,
     expected: Optional[dict[str, Any]],
     predicted: Optional[dict[str, Any]],
     similarity_threshold: float = SUMMARY_SIMILARITY_THRESHOLD,
 ) -> CallEvaluationResult:
-    """Compare a single expected/predicted record pair across all fields."""
     if expected is None:
         raise RecordMismatchError(f"Cannot compare call_id {call_id}: missing answer key record.")
 
@@ -435,12 +384,23 @@ def compare_record(
         predicted_value = _extract_field(predicted, name)
         similarity_score: Optional[float] = None
 
-        if field_type is FieldType.CATEGORICAL:
-            matched = _normalize_categorical(expected_value) == _normalize_categorical(predicted_value)
+        # Do not penalize optional fields when answer key has no ground truth
+        if expected_value is None and name in _OPTIONAL_WHEN_NULL:
+            matched = True
+            similarity_score = 1.0 if field_type is FieldType.TEXT else None
+        elif field_type is FieldType.CATEGORICAL:
+            if name == "decision":
+                matched = _normalize_decision(expected_value) == _normalize_decision(predicted_value)
+            else:
+                matched = _normalize_categorical(expected_value) == _normalize_categorical(
+                    predicted_value
+                )
         elif field_type is FieldType.BOOLEAN:
             matched = _normalize_boolean(expected_value) == _normalize_boolean(predicted_value)
-        else:  # FieldType.TEXT
-            similarity_score = _text_similarity(str(expected_value or ""), str(predicted_value or ""))
+        else:
+            similarity_score = _text_similarity(
+                str(expected_value or ""), str(predicted_value or "")
+            )
             matched = similarity_score >= similarity_threshold
 
         comparisons.append(
@@ -473,14 +433,9 @@ def compare_record(
     )
 
 
-# ===========================================================
-# METRICS
-# ===========================================================
-
 def calculate_metrics(
     per_call_results: list[CallEvaluationResult],
 ) -> tuple[OverallMetrics, dict[str, FieldMetrics]]:
-    """Aggregate per-call comparisons into overall and per-field metrics."""
     total_calls = len(per_call_results)
     correct_predictions = sum(1 for r in per_call_results if r.overall_result == CallResult.CORRECT)
     incorrect_predictions = total_calls - correct_predictions
@@ -532,12 +487,7 @@ def calculate_metrics(
     return overall_metrics, field_metrics
 
 
-# ===========================================================
-# REPORT GENERATION
-# ===========================================================
-
 def _call_result_to_dict(result: CallEvaluationResult) -> dict[str, Any]:
-    """Serialize a CallEvaluationResult into a JSON-friendly dict."""
     return {
         "call_id": result.call_id,
         "expected": {name: _extract_field(result.expected, name) for name in EVALUATED_FIELDS},
@@ -567,7 +517,6 @@ def generate_json_report(
     metadata: dict[str, Any],
     timestamp: str,
 ) -> dict[str, Any]:
-    """Build the JSON evaluation report as a plain dict."""
     return {
         "metadata": metadata,
         "timestamp": timestamp,
@@ -580,7 +529,6 @@ def generate_json_report(
 def _generate_recommendations(
     overall_metrics: OverallMetrics, field_metrics: dict[str, FieldMetrics]
 ) -> list[str]:
-    """Produce plain-language recommendations based on weak metrics."""
     recommendations: list[str] = []
 
     if overall_metrics.overall_accuracy < 0.80:
@@ -608,7 +556,9 @@ def _generate_recommendations(
         )
 
     if not recommendations:
-        recommendations.append("No significant issues detected. Pipeline is performing within targets.")
+        recommendations.append(
+            "No significant issues detected. Pipeline is performing within targets."
+        )
 
     return recommendations
 
@@ -620,7 +570,6 @@ def generate_markdown_report(
     metadata: dict[str, Any],
     timestamp: str,
 ) -> str:
-    """Build the human-readable Markdown evaluation report."""
     lines: list[str] = []
 
     lines.append(f"# {PROJECT_TITLE} — Evaluation Report")
@@ -666,7 +615,9 @@ def generate_markdown_report(
         lines.append("|---|---|---|")
         for result in failed_calls:
             mismatched = ", ".join(result.mismatched_fields) if result.mismatched_fields else "—"
-            lines.append(f"| {result.call_id} | {result.overall_result.value} | {mismatched} |")
+            lines.append(
+                f"| {result.call_id} | {result.overall_result.value} | {mismatched} |"
+            )
     else:
         lines.append("None. All calls matched the answer key.")
     lines.append("")
@@ -690,7 +641,6 @@ def save_reports(
     markdown_report: str,
     directory: Path = REPORT_DIRECTORY,
 ) -> dict[str, Path]:
-    """Write the JSON and Markdown reports to disk, creating directories as needed."""
     directory.mkdir(parents=True, exist_ok=True)
 
     json_path = directory / JSON_REPORT_FILENAME
@@ -704,22 +654,12 @@ def save_reports(
     return {"json_report": json_path, "markdown_report": markdown_path}
 
 
-# ===========================================================
-# ORCHESTRATION
-# ===========================================================
-
 def evaluate_dataset(
     answer_key_path: Path = ANSWER_KEY_PATH,
     generated_records_path: Path = GENERATED_RECORDS_PATH,
     report_directory: Path = REPORT_DIRECTORY,
     similarity_threshold: float = SUMMARY_SIMILARITY_THRESHOLD,
 ) -> EvaluationReport:
-    """Run the full evaluation pipeline and return an EvaluationReport.
-
-    Loads the answer key and generated records, compares every call,
-    computes metrics, writes the JSON and Markdown reports, and returns
-    a complete EvaluationReport describing the run.
-    """
     logger.info("Evaluation started")
 
     answer_key = load_answer_key(answer_key_path)

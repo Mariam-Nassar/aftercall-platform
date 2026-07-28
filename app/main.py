@@ -39,8 +39,11 @@ from dataclasses import dataclass
 from pathlib import Path
 from typing import Any, Callable, TypeVar
 
+from dotenv import load_dotenv
+load_dotenv()
+
 from app.business_rules import BusinessDecision, CONFIDENCE_THRESHOLD, evaluate_record
-from app.customer_lookup import Customer, get_customer
+from app.customer_lookup import Customer, get_customer, CustomerNotFoundError
 from app.documentation_engine import (
     DEFAULT_MODEL_NAME,
     DocumentationRecord,
@@ -178,19 +181,41 @@ def _stage_intake(transcript_path: Path) -> TranscriptInput:
 
 
 def _stage_customer_lookup(transcript: TranscriptInput, customers_file: Path) -> Customer:
-    """Run the customer lookup stage: resolve the customer referenced by the transcript."""
-    if not transcript.customer_id:
-        raise PipelineStageError(
-            "customer_lookup", "Transcript does not contain a customer_id."
+    """Resolve customer; allow unknown/missing for non-interaction calls."""
+    cid = (transcript.customer_id or "").strip()
+
+    if not cid or cid.lower() in ("unknown", "n/a", "none", "null"):
+        logger.warning("No valid customer_id (%r); using placeholder customer", cid)
+        return Customer(
+            customer_id=cid or "unknown",
+            name=None,
+            email=None,
+            phone=None,
+            plan=None,
+            extra={},
         )
 
-    customer = _execute_stage(
-        "customer_lookup",
-        lambda: get_customer(customers_file, transcript.customer_id),  # type: ignore[arg-type]
-    )
+    try:
+        customer = _execute_stage(
+            "customer_lookup",
+            lambda: get_customer(customers_file, cid),
+        )
+    except PipelineStageError as exc:
+        # CustomerNotFoundError comes through as stage error
+        if "not found" in str(exc).lower():
+            logger.warning("Customer %s not found; using placeholder", cid)
+            return Customer(
+                customer_id=cid,
+                name=None,
+                email=None,
+                phone=None,
+                plan=None,
+                extra={},
+            )
+        raise
+
     logger.info("Customer found: %s", customer.customer_id)
     return customer
-
 
 def _stage_handbook_search(
     transcript: TranscriptInput,
@@ -254,7 +279,9 @@ def _stage_review(
     """Run the review stage: route the record to its queue based on the decision."""
     review_result = _execute_stage("review", lambda: route_record(documentation, decision))
     logger.info(
-        "Record routed: queue=%s status=%s", review_result.queue.value, review_result.status.value
+        "Record routed: queue=%s status=%s",
+        review_result.queue.value,
+        review_result.status.value,
     )
     return review_result
 
@@ -429,6 +456,13 @@ def print_summary(result: PipelineResult) -> None:
         print(f"Decision:        {result.decision.decision.value}")
         print(f"Reason:          {result.decision.reason}")
         print(f"Triggered rules: {', '.join(result.decision.triggered_rules)}")
+
+    if result.review is not None:
+        print(f"Queue:           {result.review.queue.value}")
+        print(f"Review status:   {result.review.status.value}")
+
+    if result.storage_path is not None:
+        print(f"Saved to:        {result.storage_path}")
 
     print("=" * 60)
 

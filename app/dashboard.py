@@ -287,15 +287,6 @@ def _normalize_record(raw: Dict[str, Any], source_folder: str, file_path: Path) 
     except (TypeError, ValueError):
         confidence = None
 
-    metadata_block = raw.get("metadata", {}) if isinstance(raw, dict) else {}
-    timestamp = (
-        raw.get("timestamp")
-        or documentation.get("timestamp")
-        or (metadata_block.get("created_at") if isinstance(metadata_block, dict) else None)
-        or (decision_block.get("timestamp") if isinstance(decision_block, dict) else None)
-        or (review_block.get("created_at") if isinstance(review_block, dict) else None)
-    )
-
     return LoadedRecord(
         call_id=str(call_id),
         source_folder=source_folder,
@@ -311,7 +302,7 @@ def _normalize_record(raw: Dict[str, Any], source_folder: str, file_path: Path) 
         escalation_recommended=bool(documentation.get("escalation_recommended", False)),
         decision=str(decision_value),
         review_status=str(review_status_value),
-        timestamp=timestamp,
+        timestamp=raw.get("timestamp") or documentation.get("timestamp"),
         raw=raw,
     )
 
