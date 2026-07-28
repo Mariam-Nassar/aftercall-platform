@@ -12,14 +12,17 @@ This module contains:
     - NO AI logic (that lives in documentation_engine.py)
     - NO retrieval logic (that lives in handbook_search.py)
     - NO validation logic (that lives in intake.py / customer_lookup.py)
+    - NO routing logic (that lives in review.py)
+    - NO persistence logic (that lives in storage.py)
 
 It only calls, in order, the public entry points already exposed by:
     intake.py -> customer_lookup.py -> handbook_search.py ->
-    documentation_engine.py -> business_rules.py
+    documentation_engine.py -> business_rules.py -> review.py -> storage.py
 
 Pipeline:
     Transcript -> Intake -> Customer Lookup -> Handbook Search ->
-    Documentation Engine -> Business Rules -> PipelineResult
+    Documentation Engine -> Business Rules -> Review -> Storage ->
+    PipelineResult
 
 Usage:
     python app/main.py
@@ -45,9 +48,8 @@ from app.documentation_engine import (
 )
 from app.handbook_search import retrieve_rules
 from app.intake import TranscriptInput, load_transcript
-
-from dotenv import load_dotenv
-load_dotenv()
+from app.review import ReviewResult, route_record
+from app.storage import DEFAULT_BASE_DIR as DEFAULT_STORAGE_DIR, save_record
 
 logging.basicConfig(
     level=logging.INFO,
@@ -66,6 +68,7 @@ DEFAULT_TRANSCRIPT_PATH: Path = Path("data/transcripts/K-001.txt")
 DEFAULT_CUSTOMERS_FILE: Path = Path("data/customers.json")
 DEFAULT_HANDBOOK_DIR: Path = Path("data/handbook")
 DEFAULT_VECTOR_STORE_DIR: Path = Path("data/vector_db")
+DEFAULT_OUTPUTS_DIR: Path = DEFAULT_STORAGE_DIR
 DEFAULT_TOP_K: int = 5
 
 _STATUS_SUCCESS: str = "SUCCESS"
@@ -115,6 +118,10 @@ class PipelineResult:
             generation did not complete.
         decision: The final business routing decision, or None if
             evaluation did not complete.
+        review: The routing outcome (queue, status, assignment), or
+            None if routing did not complete.
+        storage_path: Path of the persisted JSON record, or None if
+            persistence did not complete.
         execution_time: Total wall-clock time for the run, in seconds.
         status: "SUCCESS" if every stage completed, otherwise a string
             describing which stage failed and why.
@@ -125,6 +132,8 @@ class PipelineResult:
     handbook_context: list[dict[str, Any]] | None
     documentation: DocumentationRecord | None
     decision: BusinessDecision | None
+    review: ReviewResult | None
+    storage_path: Path | None
     execution_time: float
     status: str
 
@@ -238,6 +247,32 @@ def _stage_business_rules(
     return decision
 
 
+def _stage_review(
+    documentation: DocumentationRecord,
+    decision: BusinessDecision,
+) -> ReviewResult:
+    """Run the review stage: route the record to its queue based on the decision."""
+    review_result = _execute_stage("review", lambda: route_record(documentation, decision))
+    logger.info(
+        "Record routed: queue=%s status=%s", review_result.queue.value, review_result.status.value
+    )
+    return review_result
+
+
+def _stage_storage(
+    review_result: ReviewResult,
+    call_id: str | None,
+    outputs_dir: Path,
+) -> Path:
+    """Run the storage stage: persist the routed record as JSON under outputs_dir."""
+    storage_path = _execute_stage(
+        "storage",
+        lambda: save_record(review_result, call_id=call_id, base_dir=outputs_dir),
+    )
+    logger.info("Record saved: %s", storage_path)
+    return storage_path
+
+
 # --------------------------------------------------------------------------
 # Orchestration
 # --------------------------------------------------------------------------
@@ -249,6 +284,7 @@ def run_pipeline(
     customers_file: Path = DEFAULT_CUSTOMERS_FILE,
     handbook_dir: Path = DEFAULT_HANDBOOK_DIR,
     vector_store_dir: Path = DEFAULT_VECTOR_STORE_DIR,
+    outputs_dir: Path = DEFAULT_OUTPUTS_DIR,
     top_k: int = DEFAULT_TOP_K,
     model_name: str = DEFAULT_MODEL_NAME,
     api_key: str | None = None,
@@ -258,15 +294,18 @@ def run_pipeline(
     Run the complete after-call automation pipeline for one transcript.
 
     Executes intake, customer lookup, handbook search, documentation
-    generation, and business rule evaluation in sequence. Execution
-    stops at the first stage that fails; any results already obtained
-    from earlier stages are preserved in the returned PipelineResult.
+    generation, business rule evaluation, review routing, and
+    persistence in sequence. Execution stops at the first stage that
+    fails; any results already obtained from earlier stages are
+    preserved in the returned PipelineResult.
 
     Args:
         transcript_path: Path to the transcript file to process.
         customers_file: Path to the customers JSON file.
         handbook_dir: Path to the handbook Markdown directory.
         vector_store_dir: Path to the persisted handbook vector store.
+        outputs_dir: Root directory under which the routed record is
+            persisted (records/reviews/escalations/archive).
         top_k: Number of handbook chunks to retrieve.
         model_name: Gemini model name used for documentation generation.
         api_key: Optional explicit Gemini API key.
@@ -285,6 +324,8 @@ def run_pipeline(
     handbook_context: list[dict[str, Any]] | None = None
     documentation: DocumentationRecord | None = None
     decision: BusinessDecision | None = None
+    review_result: ReviewResult | None = None
+    storage_path: Path | None = None
 
     try:
         transcript = _stage_intake(transcript_path)
@@ -296,6 +337,8 @@ def run_pipeline(
             transcript, customer, handbook_context, model_name, api_key
         )
         decision = _stage_business_rules(documentation, confidence_threshold)
+        review_result = _stage_review(documentation, decision)
+        storage_path = _stage_storage(review_result, transcript.call_id, outputs_dir)
     except PipelineStageError as exc:
         execution_time = time.perf_counter() - started_at
         status = f"FAILED: {exc.stage} - {exc.message}"
@@ -307,6 +350,8 @@ def run_pipeline(
             handbook_context=handbook_context,
             documentation=documentation,
             decision=decision,
+            review=review_result,
+            storage_path=storage_path,
             execution_time=execution_time,
             status=status,
         )
@@ -321,6 +366,8 @@ def run_pipeline(
         handbook_context=handbook_context,
         documentation=documentation,
         decision=decision,
+        review=review_result,
+        storage_path=storage_path,
         execution_time=execution_time,
         status=_STATUS_SUCCESS,
     )
