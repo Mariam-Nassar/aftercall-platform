@@ -1,0 +1,104 @@
+{
+  "metadata": {
+    "call_id": "K-019",
+    "created_at": "2026-07-28T10:48:12.965529+00:00",
+    "pipeline_version": "1.0"
+  },
+  "documentation": {
+    "summary": "The customer reported that their internet connection is dropping again after being marked as resolved last week. The agent acknowledged the recurring fault and escalated the issue to the network team. The customer expressed frustration with the ongoing problem.",
+    "issue": "The customer's internet connection is dropping repeatedly after previously being marked as resolved.",
+    "root_cause": "Not stated",
+    "resolution": "Not stated",
+    "pending_actions": [
+      "Escalate the issue to the network team as a recurring fault"
+    ],
+    "category": "Technical Support",
+    "subcategory": "service outage",
+    "priority": "High",
+    "disposition": "Escalated",
+    "sentiment": "negative",
+    "keywords": [
+      "internet dropping",
+      "fixed last week",
+      "recurring fault",
+      "escalating",
+      "network team"
+    ],
+    "tags": [
+      "internet dropping",
+      "repeat contact",
+      "network team escalation"
+    ],
+    "escalation_recommended": true,
+    "confidence": 1.0,
+    "grounding": {
+      "summary": [
+        "Transcript Line 7",
+        "Transcript Line 8",
+        "Transcript Line 9"
+      ],
+      "issue": [
+        "Transcript Line 7"
+      ],
+      "root_cause": [],
+      "resolution": [],
+      "pending_actions": [
+        "Transcript Line 8"
+      ],
+      "category": [
+        "Handbook Rule 4"
+      ],
+      "subcategory": [
+        "Handbook Rule 4"
+      ],
+      "priority": [
+        "Handbook Rule 1",
+        "Handbook Rule 3",
+        "Handbook Rule 5",
+        "Transcript Line 7",
+        "Transcript Line 8"
+      ],
+      "disposition": [
+        "Handbook Rule 2",
+        "Transcript Line 7",
+        "Transcript Line 8"
+      ],
+      "sentiment": [
+        "Transcript Line 7",
+        "Transcript Line 9"
+      ],
+      "keywords": [
+        "Transcript Line 7",
+        "Transcript Line 8"
+      ],
+      "tags": [
+        "Transcript Line 7",
+        "Transcript Line 8"
+      ],
+      "escalation_recommended": [
+        "Handbook Rule 2",
+        "Transcript Line 7",
+        "Transcript Line 8"
+      ]
+    }
+  },
+  "decision": {
+    "decision": "ESCALATE",
+    "reason": "Escalating because escalation is required by the handbook or model recommendation.",
+    "triggered_rules": [
+      "Rule 5"
+    ],
+    "confidence": 1.0,
+    "timestamp": "2026-07-28T10:48:12.957853+00:00"
+  },
+  "review": {
+    "review_id": "ccafbb96-e9d6-4191-a4b1-717eff2c83cb",
+    "status": "ESCALATED",
+    "queue": "ESCALATION_QUEUE",
+    "review_required": true,
+    "review_reason": "Escalating because escalation is required by the handbook or model recommendation.",
+    "assigned_to": "Escalation Team",
+    "created_at": "2026-07-28T10:48:12.960744+00:00",
+    "updated_at": "2026-07-28T10:48:12.960744+00:00"
+  }
+}

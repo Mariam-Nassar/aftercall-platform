@@ -1,0 +1,99 @@
+{
+  "metadata": {
+    "call_id": "K-011",
+    "created_at": "2026-07-28T09:45:44.199239+00:00",
+    "pipeline_version": "1.0"
+  },
+  "documentation": {
+    "summary": "The customer requested to change the phone number on their account. The agent asked to verify identity using the last four digits of the customer's card, but the customer did not have the card. The agent informed the customer that the change could not be completed without identity verification.",
+    "issue": "Customer requested to change the phone number on their account.",
+    "root_cause": "Customer did not have their card available to complete identity verification.",
+    "resolution": "Not stated",
+    "pending_actions": [],
+    "category": "Not stated",
+    "subcategory": "Not stated",
+    "priority": "Not stated",
+    "disposition": "Not stated",
+    "sentiment": "Not stated",
+    "keywords": [
+      "change phone number",
+      "verify identity",
+      "card"
+    ],
+    "tags": [
+      "phone_number_change",
+      "unverified_identity"
+    ],
+    "escalation_recommended": true,
+    "confidence": 1.0,
+    "grounding": {
+      "summary": [
+        "Transcript Line 7",
+        "Transcript Line 8",
+        "Transcript Line 9",
+        "Transcript Line 10"
+      ],
+      "issue": [
+        "Transcript Line 7"
+      ],
+      "root_cause": [
+        "Transcript Line 9"
+      ],
+      "resolution": [
+        "Transcript Line 10"
+      ],
+      "pending_actions": [
+        "Transcript Line 10"
+      ],
+      "category": [
+        "Handbook Rule 5"
+      ],
+      "subcategory": [
+        "Handbook Rule 5"
+      ],
+      "priority": [
+        "Handbook Rule 5"
+      ],
+      "disposition": [
+        "Handbook Rule 5"
+      ],
+      "sentiment": [
+        "Handbook Rule 5"
+      ],
+      "keywords": [
+        "Transcript Line 7",
+        "Transcript Line 8",
+        "Transcript Line 9"
+      ],
+      "tags": [
+        "Transcript Line 7",
+        "Handbook Rule 1"
+      ],
+      "escalation_recommended": [
+        "Handbook Rule 1"
+      ],
+      "confidence": [
+        "Handbook Rule 5"
+      ]
+    }
+  },
+  "decision": {
+    "decision": "ESCALATE",
+    "reason": "Escalating because escalation is required by the handbook or model recommendation.",
+    "triggered_rules": [
+      "Rule 5"
+    ],
+    "confidence": 1.0,
+    "timestamp": "2026-07-28T09:45:44.196248+00:00"
+  },
+  "review": {
+    "review_id": "97719c8e-7d09-46f8-89cc-dbfc4019ce23",
+    "status": "ESCALATED",
+    "queue": "ESCALATION_QUEUE",
+    "review_required": true,
+    "review_reason": "Escalating because escalation is required by the handbook or model recommendation.",
+    "assigned_to": "Escalation Team",
+    "created_at": "2026-07-28T09:45:44.197452+00:00",
+    "updated_at": "2026-07-28T09:45:44.197452+00:00"
+  }
+}

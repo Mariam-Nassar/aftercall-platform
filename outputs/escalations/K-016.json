@@ -1,0 +1,111 @@
+{
+  "metadata": {
+    "call_id": "K-016",
+    "created_at": "2026-07-28T09:47:25.571507+00:00",
+    "pipeline_version": "1.0"
+  },
+  "documentation": {
+    "summary": "The customer called stating that their order arrived broken for the third time. They threatened to take the issue to a consumer protection agency and their lawyer if it was not resolved today. The agent immediately offered to transfer/escalate the matter to a supervisor.",
+    "issue": "Order arrived broken for the third time.",
+    "root_cause": "Not stated",
+    "resolution": "Not stated",
+    "pending_actions": [
+      "Escalate call/ticket to a supervisor right away"
+    ],
+    "category": "Complaint",
+    "subcategory": "Not stated",
+    "priority": "Urgent",
+    "disposition": "Escalated",
+    "sentiment": "At-risk",
+    "keywords": [
+      "order arrived broken",
+      "third time",
+      "consumer protection agency",
+      "lawyer",
+      "supervisor"
+    ],
+    "tags": [
+      "Damaged Goods",
+      "Repeat Contact",
+      "Legal Threat",
+      "Supervisor Escalation"
+    ],
+    "escalation_recommended": true,
+    "confidence": 0.95,
+    "grounding": {
+      "summary": [
+        "Transcript Line 7",
+        "Transcript Line 8"
+      ],
+      "issue": [
+        "Transcript Line 7"
+      ],
+      "root_cause": [
+        "Transcript Line 7"
+      ],
+      "resolution": [
+        "Transcript Line 8",
+        "Transcript Line 9"
+      ],
+      "pending_actions": [
+        "Transcript Line 8"
+      ],
+      "category": [
+        "Handbook Rule 1",
+        "Handbook Rule 2"
+      ],
+      "subcategory": [
+        "Handbook Rule 2"
+      ],
+      "priority": [
+        "Handbook Rule 1",
+        "Handbook Rule 3",
+        "Transcript Line 7"
+      ],
+      "disposition": [
+        "Handbook Rule 1",
+        "Transcript Line 7"
+      ],
+      "sentiment": [
+        "Handbook Rule 5",
+        "Transcript Line 7"
+      ],
+      "keywords": [
+        "Transcript Line 7",
+        "Transcript Line 8"
+      ],
+      "tags": [
+        "Transcript Line 7",
+        "Handbook Rule 1"
+      ],
+      "escalation_recommended": [
+        "Handbook Rule 1",
+        "Transcript Line 7"
+      ],
+      "confidence": [
+        "Handbook Rule 1",
+        "Handbook Rule 5"
+      ]
+    }
+  },
+  "decision": {
+    "decision": "ESCALATE",
+    "reason": "Escalating because sensitive content was detected, and escalation is required by the handbook or model recommendation.",
+    "triggered_rules": [
+      "Rule 4",
+      "Rule 5"
+    ],
+    "confidence": 0.95,
+    "timestamp": "2026-07-28T09:47:25.566912+00:00"
+  },
+  "review": {
+    "review_id": "ee2c4e0c-aa4e-411b-888f-8fc8a177c653",
+    "status": "ESCALATED",
+    "queue": "ESCALATION_QUEUE",
+    "review_required": true,
+    "review_reason": "Escalating because sensitive content was detected, and escalation is required by the handbook or model recommendation.",
+    "assigned_to": "Escalation Team",
+    "created_at": "2026-07-28T09:47:25.568610+00:00",
+    "updated_at": "2026-07-28T09:47:25.568610+00:00"
+  }
+}

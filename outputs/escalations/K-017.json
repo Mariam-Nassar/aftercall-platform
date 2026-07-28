@@ -1,0 +1,108 @@
+{
+  "metadata": {
+    "call_id": "K-017",
+    "created_at": "2026-07-28T09:47:43.889229+00:00",
+    "pipeline_version": "1.0"
+  },
+  "documentation": {
+    "summary": "The customer reported three unauthorized withdrawals on their account and suspected that someone else had gained access. The agent escalated the call immediately to the fraud team and flagged the account.",
+    "issue": "Three unrecognized withdrawals on the customer's account and suspected unauthorized account access.",
+    "root_cause": "Not stated",
+    "resolution": "Not stated",
+    "pending_actions": [
+      "Escalate case to the fraud team",
+      "Flag customer account"
+    ],
+    "category": "Fraud",
+    "subcategory": "Unauthorized Transactions",
+    "priority": "Urgent",
+    "disposition": "Escalated",
+    "sentiment": "Negative",
+    "keywords": [
+      "withdrawals",
+      "account access",
+      "fraud team",
+      "flagging"
+    ],
+    "tags": [
+      "fraud",
+      "unauthorized_activity",
+      "banking",
+      "escalated"
+    ],
+    "escalation_recommended": true,
+    "confidence": 1.0,
+    "grounding": {
+      "summary": [
+        "Transcript Line 7",
+        "Transcript Line 8"
+      ],
+      "issue": [
+        "Transcript Line 7"
+      ],
+      "root_cause": [],
+      "resolution": [
+        "Transcript Line 8"
+      ],
+      "pending_actions": [
+        "Transcript Line 8"
+      ],
+      "category": [
+        "Handbook Rule 1",
+        "Handbook Rule 4",
+        "Transcript Line 7"
+      ],
+      "subcategory": [
+        "Transcript Line 7"
+      ],
+      "priority": [
+        "Handbook Rule 4"
+      ],
+      "disposition": [
+        "Handbook Rule 1",
+        "Transcript Line 7",
+        "Transcript Line 8"
+      ],
+      "sentiment": [
+        "Handbook Rule 5",
+        "Transcript Line 7",
+        "Transcript Line 9"
+      ],
+      "keywords": [
+        "Transcript Line 7",
+        "Transcript Line 8"
+      ],
+      "tags": [
+        "Handbook Rule 1",
+        "Handbook Rule 4",
+        "Transcript Line 7"
+      ],
+      "escalation_recommended": [
+        "Handbook Rule 1",
+        "Transcript Line 7",
+        "Transcript Line 8"
+      ],
+      "confidence": []
+    }
+  },
+  "decision": {
+    "decision": "ESCALATE",
+    "reason": "Escalating because sensitive content was detected, and escalation is required by the handbook or model recommendation.",
+    "triggered_rules": [
+      "Rule 4",
+      "Rule 5"
+    ],
+    "confidence": 1.0,
+    "timestamp": "2026-07-28T09:47:43.887174+00:00"
+  },
+  "review": {
+    "review_id": "b6aeb2e4-bdda-43a1-b160-9b86585fafd4",
+    "status": "ESCALATED",
+    "queue": "ESCALATION_QUEUE",
+    "review_required": true,
+    "review_reason": "Escalating because sensitive content was detected, and escalation is required by the handbook or model recommendation.",
+    "assigned_to": "Escalation Team",
+    "created_at": "2026-07-28T09:47:43.888057+00:00",
+    "updated_at": "2026-07-28T09:47:43.888057+00:00"
+  }
+}

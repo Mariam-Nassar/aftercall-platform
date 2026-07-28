@@ -1,0 +1,103 @@
+{
+  "metadata": {
+    "call_id": "K-021",
+    "created_at": "2026-07-28T10:48:39.357490+00:00",
+    "pipeline_version": "1.0"
+  },
+  "documentation": {
+    "summary": "The customer, Laila Hassan, called expressing extreme frustration about being messed around for weeks and threatened to cancel her service and post about it on social media. The agent offered to bring in a retention specialist immediately. The customer agreed to speak with the specialist, stating it was the company's last chance.",
+    "issue": "The customer wants to cancel her service and is threatening public exposure on social media due to poor service over several weeks.",
+    "root_cause": "Not stated",
+    "resolution": "Not stated",
+    "pending_actions": [
+      "Transfer the customer to a retention specialist"
+    ],
+    "category": "Cancellation",
+    "subcategory": "retention",
+    "priority": "High",
+    "disposition": "Escalated",
+    "sentiment": "Negative",
+    "keywords": [
+      "cancel",
+      "social media",
+      "retention specialist",
+      "messed around"
+    ],
+    "tags": [
+      "cancellation threat",
+      "social media threat",
+      "retention transfer"
+    ],
+    "escalation_recommended": true,
+    "confidence": 0.95,
+    "grounding": {
+      "summary": [
+        "Transcript Line 7",
+        "Transcript Line 8",
+        "Transcript Line 9",
+        "Customer Record"
+      ],
+      "issue": [
+        "Transcript Line 7"
+      ],
+      "root_cause": [],
+      "resolution": [
+        "Transcript Line 8",
+        "Transcript Line 9"
+      ],
+      "pending_actions": [
+        "Transcript Line 8",
+        "Transcript Line 9"
+      ],
+      "category": [
+        "Handbook Rule 4"
+      ],
+      "subcategory": [
+        "Handbook Rule 4",
+        "Transcript Line 8"
+      ],
+      "priority": [
+        "Handbook Rule 1"
+      ],
+      "disposition": [
+        "Handbook Rule 1",
+        "Transcript Line 7"
+      ],
+      "sentiment": [
+        "Transcript Line 7"
+      ],
+      "keywords": [
+        "Transcript Line 7",
+        "Transcript Line 8"
+      ],
+      "tags": [
+        "Transcript Line 7",
+        "Transcript Line 8"
+      ],
+      "escalation_recommended": [
+        "Handbook Rule 1",
+        "Transcript Line 7"
+      ]
+    }
+  },
+  "decision": {
+    "decision": "ESCALATE",
+    "reason": "Escalating because sensitive content was detected, and escalation is required by the handbook or model recommendation.",
+    "triggered_rules": [
+      "Rule 4",
+      "Rule 5"
+    ],
+    "confidence": 0.95,
+    "timestamp": "2026-07-28T10:48:39.349723+00:00"
+  },
+  "review": {
+    "review_id": "fe58a94c-9d1c-4416-a368-91848527bb45",
+    "status": "ESCALATED",
+    "queue": "ESCALATION_QUEUE",
+    "review_required": true,
+    "review_reason": "Escalating because sensitive content was detected, and escalation is required by the handbook or model recommendation.",
+    "assigned_to": "Escalation Team",
+    "created_at": "2026-07-28T10:48:39.352830+00:00",
+    "updated_at": "2026-07-28T10:48:39.352830+00:00"
+  }
+}

@@ -1,0 +1,111 @@
+{
+  "metadata": {
+    "call_id": "K-026",
+    "created_at": "2026-07-28T10:49:57.321240+00:00",
+    "pipeline_version": "1.0"
+  },
+  "documentation": {
+    "summary": "The customer called to dispute an unrecognized 300-pound charge on their statement. The agent identified it as a valid subscription enabled in March and declined the refund, offering instead to cancel the subscription. The customer agreed to cancel the subscription, but identity verification was not completed on the call.",
+    "issue": "Customer disputed an unrecognized 300-pound charge on their statement and requested a refund.",
+    "root_cause": "The charge was for a valid subscription that the customer enabled in March.",
+    "resolution": "Not stated",
+    "pending_actions": [
+      "Verify customer identity",
+      "Process subscription cancellation"
+    ],
+    "category": "Cancellation",
+    "subcategory": "cancel service",
+    "priority": "High",
+    "disposition": "Unresolved — pending",
+    "sentiment": "negative",
+    "keywords": [
+      "charge",
+      "statement",
+      "subscription",
+      "cancel"
+    ],
+    "tags": [
+      "disputed-charge",
+      "subscription-cancellation",
+      "unverified-identity",
+      "nilebank"
+    ],
+    "escalation_recommended": true,
+    "confidence": 0.95,
+    "grounding": {
+      "summary": [
+        "Transcript Line 7",
+        "Transcript Line 8",
+        "Transcript Line 9"
+      ],
+      "issue": [
+        "Transcript Line 7"
+      ],
+      "root_cause": [
+        "Transcript Line 8"
+      ],
+      "resolution": [
+        "Transcript Line 8",
+        "Transcript Line 9",
+        "Handbook Rule 2 Clause 4.4",
+        "Handbook Rule 4 Clause 6.2"
+      ],
+      "pending_actions": [
+        "Transcript Line 9",
+        "Handbook Rule 2 Clause 4.4",
+        "Handbook Rule 4 Clause 6.2"
+      ],
+      "category": [
+        "Handbook Rule 3 Clause 1.6"
+      ],
+      "subcategory": [
+        "Handbook Rule 3 Clause 1.6"
+      ],
+      "priority": [
+        "Handbook Rule 4 Clause 6.2"
+      ],
+      "disposition": [
+        "Handbook Rule 5 Clause 2.1",
+        "Handbook Rule 2 Clause 4.4"
+      ],
+      "sentiment": [
+        "Transcript Line 7",
+        "Transcript Line 9"
+      ],
+      "keywords": [
+        "Transcript Line 7",
+        "Transcript Line 8",
+        "Transcript Line 9"
+      ],
+      "tags": [
+        "Transcript Line 6",
+        "Transcript Line 7",
+        "Transcript Line 9",
+        "Handbook Rule 4 Clause 6.2"
+      ],
+      "escalation_recommended": [
+        "Handbook Rule 4 Clause 6.2",
+        "Handbook Rule 2 Clause 4.3"
+      ]
+    }
+  },
+  "decision": {
+    "decision": "ESCALATE",
+    "reason": "Escalating because escalation is required by the handbook or model recommendation.",
+    "triggered_rules": [
+      "Rule 5"
+    ],
+    "confidence": 0.95,
+    "timestamp": "2026-07-28T10:49:57.318257+00:00"
+  },
+  "review": {
+    "review_id": "93a566eb-496a-4ef6-aaea-6035f5aabb32",
+    "status": "ESCALATED",
+    "queue": "ESCALATION_QUEUE",
+    "review_required": true,
+    "review_reason": "Escalating because escalation is required by the handbook or model recommendation.",
+    "assigned_to": "Escalation Team",
+    "created_at": "2026-07-28T10:49:57.319553+00:00",
+    "updated_at": "2026-07-28T10:49:57.319553+00:00"
+  }
+}

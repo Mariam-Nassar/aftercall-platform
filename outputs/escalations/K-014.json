@@ -1,0 +1,111 @@
+{
+  "metadata": {
+    "call_id": "K-014",
+    "created_at": "2026-07-28T09:46:44.281059+00:00",
+    "pipeline_version": "1.0"
+  },
+  "documentation": {
+    "summary": "The customer contacted billing after falling behind on payments due to job loss and inquired about a payment plan. The agent logged the details and advised that the hardship team would set up a plan and call them back. The customer acknowledged and thanked the agent.",
+    "issue": "Customer fell behind on bill payments due to financial hardship following job loss and requested a payment plan.",
+    "root_cause": "Customer lost their job, causing tight financial circumstances.",
+    "resolution": "Not stated",
+    "pending_actions": [
+      "Hardship team to set up a payment plan and call the customer."
+    ],
+    "category": "Billing",
+    "subcategory": "Financial Hardship",
+    "priority": "Medium",
+    "disposition": "Unresolved - Pending Hardship Team Action",
+    "sentiment": "Neutral",
+    "keywords": [
+      "bill",
+      "payment plan",
+      "job loss",
+      "hardship team",
+      "ConnectTel billing"
+    ],
+    "tags": [
+      "financial_hardship",
+      "payment_plan",
+      "sensitive",
+      "callback_required"
+    ],
+    "escalation_recommended": true,
+    "confidence": 0.95,
+    "grounding": {
+      "summary": [
+        "Transcript Line 6",
+        "Transcript Line 7",
+        "Transcript Line 8",
+        "Transcript Line 9"
+      ],
+      "issue": [
+        "Transcript Line 7"
+      ],
+      "root_cause": [
+        "Transcript Line 7"
+      ],
+      "resolution": [
+        "Handbook Rule 4 Clause 5.1",
+        "Transcript Line 8"
+      ],
+      "pending_actions": [
+        "Transcript Line 8"
+      ],
+      "category": [
+        "Transcript Line 6"
+      ],
+      "subcategory": [
+        "Transcript Line 7",
+        "Handbook Rule 1 Clause 4.3"
+      ],
+      "priority": [
+        "Handbook Rule 1 Clause 4.3"
+      ],
+      "disposition": [
+        "Transcript Line 8",
+        "Handbook Rule 2 Clause 6.3"
+      ],
+      "sentiment": [
+        "Handbook Rule 5 Clause 3.2",
+        "Transcript Line 7",
+        "Transcript Line 9"
+      ],
+      "keywords": [
+        "Transcript Line 6",
+        "Transcript Line 7",
+        "Transcript Line 8"
+      ],
+      "tags": [
+        "Transcript Line 7",
+        "Transcript Line 8",
+        "Handbook Rule 1 Clause 4.3"
+      ],
+      "escalation_recommended": [
+        "Handbook Rule 1 Clause 4.3"
+      ],
+      "confidence": [
+        "Handbook Rule 4 Clause 5.1"
+      ]
+    }
+  },
+  "decision": {
+    "decision": "ESCALATE",
+    "reason": "Escalating because escalation is required by the handbook or model recommendation.",
+    "triggered_rules": [
+      "Rule 5"
+    ],
+    "confidence": 0.95,
+    "timestamp": "2026-07-28T09:46:44.275813+00:00"
+  },
+  "review": {
+    "review_id": "eb0d142c-8070-4cd7-a734-8e5a9e33f3d9",
+    "status": "ESCALATED",
+    "queue": "ESCALATION_QUEUE",
+    "review_required": true,
+    "review_reason": "Escalating because escalation is required by the handbook or model recommendation.",
+    "assigned_to": "Escalation Team",
+    "created_at": "2026-07-28T09:46:44.277993+00:00",
+    "updated_at": "2026-07-28T09:46:44.277993+00:00"
+  }
+}
