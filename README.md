@@ -217,6 +217,13 @@ external dependency — no real Gemini calls, no network — except the
 them through the real `storage.py` to catch schema-mismatch bugs that
 flat mock dictionaries can't.
 
+## Human Review UI
+
+Interactive review screen + operational summary (required by the brief).
+
+```bash
+streamlit run app/ui.py 
+
 ## Known notes
 
 - `google.generativeai` (used by `documentation_engine.py`) is Google's
