@@ -223,6 +223,7 @@ Interactive review screen + operational summary (required by the brief).
 
 ```bash
 streamlit run app/ui.py 
+```
 
 ## Known notes
 
