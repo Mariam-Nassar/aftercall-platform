@@ -47,7 +47,7 @@ Strict overall accuracy remains low because one mismatched field fails the whole
 - Priority/subcategory taxonomy alignment with the handbook enums.
 - Occasional shortened categories (e.g. "Billing" vs "Billing & Payments").
 - K-023 (silent/dropped style non-interaction) routed to review due to incomplete fields rather than `NON_INTERACTION` — safe, but stricter non-interaction detection could help.
-- No interactive human review UI yet (next deliverable for the live demo).
+- Decision label mismatch between answer key (`ROUTE_TO_REVIEW`) and pipeline (`HUMAN_REVIEW`) lowers measured decision accuracy even when routing is correct.
 
 ## Conclusion
 
