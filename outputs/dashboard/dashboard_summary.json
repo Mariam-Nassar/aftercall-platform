@@ -1,0 +1,3308 @@
+{
+  "generated_at": "2026-07-28T12:51:18",
+  "record_count": 19,
+  "metrics": {
+    "total_calls_processed": 19,
+    "auto_saved": 11,
+    "pending_human_review": 2,
+    "escalated_calls": 6,
+    "archived_calls": 0,
+    "average_confidence": 0.9395,
+    "overall_accuracy": null,
+    "category_accuracy": null,
+    "priority_accuracy": null,
+    "disposition_accuracy": null,
+    "sentiment_accuracy": null,
+    "escalation_accuracy": null,
+    "decision_accuracy": null
+  },
+  "statistics": {
+    "category_distribution": {
+      "Not stated": 3,
+      "Complaint": 2,
+      "Healthcare": 2,
+      "Order & Delivery": 2,
+      "Returns & Refunds": 2,
+      "Account Management": 1,
+      "Billing": 1,
+      "Fraud": 1,
+      "Other": 1,
+      "Product & Service Inquiry": 1,
+      "Reservations": 1,
+      "Retail & e-commerce": 1,
+      "Technical Support": 1
+    },
+    "subcategory_distribution": {
+      "Not stated": 5,
+      "refund request": 2,
+      "Account Changes": 1,
+      "Appointment": 1,
+      "Booking Modification": 1,
+      "Financial Hardship": 1,
+      "Mental Health Crisis": 1,
+      "Unauthorized Transactions": 1,
+      "add or remove service": 1,
+      "availability": 1,
+      "cannot log in": 1,
+      "delivery delay": 1,
+      "order status": 1,
+      "staff conduct": 1
+    },
+    "priority_distribution": {
+      "Low": 5,
+      "Medium": 3,
+      "Not stated": 3,
+      "Routine": 3,
+      "Urgent": 3,
+      "High": 2
+    },
+    "disposition_distribution": {
+      "Resolved": 8,
+      "Escalated": 4,
+      "Unresolved \u2014 pending": 4,
+      "Non-interaction": 1,
+      "Not stated": 1,
+      "Unresolved - Pending Hardship Team Action": 1
+    },
+    "sentiment_distribution": {
+      "Positive": 5,
+      "Neutral": 4,
+      "Negative": 3,
+      "Not stated": 3,
+      "At-risk": 1,
+      "Distressed": 1,
+      "Satisfied": 1,
+      "frustrated": 1
+    },
+    "decision_distribution": {
+      "AUTO_SAVE": 11,
+      "ESCALATE": 6,
+      "HUMAN_REVIEW": 2
+    },
+    "review_status_distribution": {
+      "READY_TO_SAVE": 11,
+      "ESCALATED": 6,
+      "PENDING_REVIEW": 2
+    },
+    "top_keywords": [
+      [
+        "refund",
+        2
+      ],
+      [
+        "card",
+        2
+      ],
+      [
+        "charge",
+        2
+      ],
+      [
+        "booking",
+        2
+      ],
+      [
+        "MedCare Clinics",
+        2
+      ],
+      [
+        "supervisor",
+        2
+      ],
+      [
+        "returned",
+        1
+      ],
+      [
+        "blender",
+        1
+      ],
+      [
+        "850 pounds",
+        1
+      ],
+      [
+        "billing",
+        1
+      ],
+      [
+        "400 pounds",
+        1
+      ],
+      [
+        "250 plan",
+        1
+      ],
+      [
+        "add-on",
+        1
+      ],
+      [
+        "credited",
+        1
+      ],
+      [
+        "order 55231",
+        1
+      ]
+    ],
+    "top_tags": [
+      [
+        "soukmart",
+        2
+      ],
+      [
+        "escalation",
+        2
+      ],
+      [
+        "Returns",
+        1
+      ],
+      [
+        "Refunds",
+        1
+      ],
+      [
+        "Blender",
+        1
+      ],
+      [
+        "billing_dispute",
+        1
+      ],
+      [
+        "add_on_error",
+        1
+      ],
+      [
+        "credit_issued",
+        1
+      ],
+      [
+        "order_status",
+        1
+      ],
+      [
+        "delivery",
+        1
+      ],
+      [
+        "login_failure",
+        1
+      ],
+      [
+        "password_reset",
+        1
+      ],
+      [
+        "booking_change",
+        1
+      ],
+      [
+        "reservations",
+        1
+      ],
+      [
+        "date_modification",
+        1
+      ]
+    ],
+    "min_confidence": 0.2,
+    "max_confidence": 1.0,
+    "calls_per_day": {},
+    "calls_per_hour": {},
+    "escalations_over_time": {},
+    "review_queue_growth": {}
+  },
+  "evaluation": {
+    "metadata": {
+      "project": "Exology Pioneer Program \u2014 After-Call Automation Platform",
+      "answer_key_path": "data\\answer_key.json",
+      "generated_records_path": "outputs\\records",
+      "similarity_threshold": 0.75,
+      "evaluated_fields": [
+        "summary",
+        "category",
+        "subcategory",
+        "priority",
+        "disposition",
+        "sentiment",
+        "escalation_recommended",
+        "decision"
+      ],
+      "similarity_backend": "rapidfuzz"
+    },
+    "timestamp": "2026-07-28T12:50:50",
+    "overall_metrics": {
+      "total_calls": 27,
+      "correct_predictions": 0,
+      "incorrect_predictions": 27,
+      "overall_accuracy": 0.0,
+      "summary_similarity_score": 0.0,
+      "average_confidence": 0.9818181818181819
+    },
+    "field_metrics": {
+      "summary": {
+        "field_name": "summary",
+        "total": 27,
+        "correct": 0,
+        "incorrect": 27,
+        "accuracy": 0.0
+      },
+      "category": {
+        "field_name": "category",
+        "total": 27,
+        "correct": 7,
+        "incorrect": 20,
+        "accuracy": 0.25925925925925924
+      },
+      "subcategory": {
+        "field_name": "subcategory",
+        "total": 27,
+        "correct": 5,
+        "incorrect": 22,
+        "accuracy": 0.18518518518518517
+      },
+      "priority": {
+        "field_name": "priority",
+        "total": 27,
+        "correct": 5,
+        "incorrect": 22,
+        "accuracy": 0.18518518518518517
+      },
+      "disposition": {
+        "field_name": "disposition",
+        "total": 27,
+        "correct": 11,
+        "incorrect": 16,
+        "accuracy": 0.4074074074074074
+      },
+      "sentiment": {
+        "field_name": "sentiment",
+        "total": 27,
+        "correct": 7,
+        "incorrect": 20,
+        "accuracy": 0.25925925925925924
+      },
+      "escalation_recommended": {
+        "field_name": "escalation_recommended",
+        "total": 27,
+        "correct": 0,
+        "incorrect": 27,
+        "accuracy": 0.0
+      },
+      "decision": {
+        "field_name": "decision",
+        "total": 27,
+        "correct": 0,
+        "incorrect": 27,
+        "accuracy": 0.0
+      }
+    },
+    "per_call_results": [
+      {
+        "call_id": "K-001",
+        "expected": {
+          "summary": null,
+          "category": "Returns & Refunds",
+          "subcategory": "refund request",
+          "priority": "Low",
+          "disposition": "Resolved",
+          "sentiment": "Positive",
+          "escalation_recommended": null,
+          "decision": "AUTO_SAVE"
+        },
+        "predicted": {
+          "summary": "The customer called to check on the status of a refund for a returned blender. The agent verified receipt of the return and processed an 850-pound refund directly to the customer's card during the call.",
+          "category": "Returns & Refunds",
+          "subcategory": "refund request",
+          "priority": "Routine",
+          "disposition": "Resolved",
+          "sentiment": "Positive",
+          "escalation_recommended": false,
+          "decision": {
+            "decision": "AUTO_SAVE",
+            "reason": "Documentation is complete, grounded, unambiguous, and free of escalation or sensitive-content triggers.",
+            "triggered_rules": [
+              "Rule 1",
+              "Rule 3",
+              "Rule 10"
+            ],
+            "confidence": 1.0,
+            "timestamp": "2026-07-28T09:42:35.692950+00:00"
+          }
+        },
+        "matched_fields": [
+          "category",
+          "subcategory",
+          "disposition",
+          "sentiment"
+        ],
+        "mismatched_fields": [
+          "summary",
+          "priority",
+          "escalation_recommended",
+          "decision"
+        ],
+        "confidence": 1.0,
+        "overall_result": "INCORRECT",
+        "field_comparisons": [
+          {
+            "field_name": "summary",
+            "field_type": "text",
+            "expected": null,
+            "predicted": "The customer called to check on the status of a refund for a returned blender. The agent verified receipt of the return and processed an 850-pound refund directly to the customer's card during the call.",
+            "matched": false,
+            "similarity_score": 0.0
+          },
+          {
+            "field_name": "category",
+            "field_type": "categorical",
+            "expected": "Returns & Refunds",
+            "predicted": "Returns & Refunds",
+            "matched": true,
+            "similarity_score": null
+          },
+          {
+            "field_name": "subcategory",
+            "field_type": "categorical",
+            "expected": "refund request",
+            "predicted": "refund request",
+            "matched": true,
+            "similarity_score": null
+          },
+          {
+            "field_name": "priority",
+            "field_type": "categorical",
+            "expected": "Low",
+            "predicted": "Routine",
+            "matched": false,
+            "similarity_score": null
+          },
+          {
+            "field_name": "disposition",
+            "field_type": "categorical",
+            "expected": "Resolved",
+            "predicted": "Resolved",
+            "matched": true,
+            "similarity_score": null
+          },
+          {
+            "field_name": "sentiment",
+            "field_type": "categorical",
+            "expected": "Positive",
+            "predicted": "Positive",
+            "matched": true,
+            "similarity_score": null
+          },
+          {
+            "field_name": "escalation_recommended",
+            "field_type": "boolean",
+            "expected": null,
+            "predicted": false,
+            "matched": false,
+            "similarity_score": null
+          },
+          {
+            "field_name": "decision",
+            "field_type": "categorical",
+            "expected": "AUTO_SAVE",
+            "predicted": {
+              "decision": "AUTO_SAVE",
+              "reason": "Documentation is complete, grounded, unambiguous, and free of escalation or sensitive-content triggers.",
+              "triggered_rules": [
+                "Rule 1",
+                "Rule 3",
+                "Rule 10"
+              ],
+              "confidence": 1.0,
+              "timestamp": "2026-07-28T09:42:35.692950+00:00"
+            },
+            "matched": false,
+            "similarity_score": null
+          }
+        ]
+      },
+      {
+        "call_id": "K-002",
+        "expected": {
+          "summary": null,
+          "category": "Billing & Payments",
+          "subcategory": "incorrect charge",
+          "priority": "Medium",
+          "disposition": "Resolved",
+          "sentiment": "Neutral",
+          "escalation_recommended": null,
+          "decision": "AUTO_SAVE"
+        },
+        "predicted": {
+          "summary": "The customer called after being charged \u00a3400 instead of their normal \u00a3250 monthly plan amount. The agent found an add-on applied in error, removed it, and credited the \u00a3150 difference immediately. The customer was confirmed to have a \u00a3250 monthly charge going forward.",
+          "category": "Account Management",
+          "subcategory": "add or remove service",
+          "priority": "Routine",
+          "disposition": "Resolved",
+          "sentiment": "Satisfied",
+          "escalation_recommended": false,
+          "decision": {
+            "decision": "AUTO_SAVE",
+            "reason": "Documentation is complete, grounded, unambiguous, and free of escalation or sensitive-content triggers.",
+            "triggered_rules": [
+              "Rule 1",
+              "Rule 3",
+              "Rule 10"
+            ],
+            "confidence": 1.0,
+            "timestamp": "2026-07-28T09:42:55.734049+00:00"
+          }
+        },
+        "matched_fields": [
+          "disposition"
+        ],
+        "mismatched_fields": [
+          "summary",
+          "category",
+          "subcategory",
+          "priority",
+          "sentiment",
+          "escalation_recommended",
+          "decision"
+        ],
+        "confidence": 1.0,
+        "overall_result": "INCORRECT",
+        "field_comparisons": [
+          {
+            "field_name": "summary",
+            "field_type": "text",
+            "expected": null,
+            "predicted": "The customer called after being charged \u00a3400 instead of their normal \u00a3250 monthly plan amount. The agent found an add-on applied in error, removed it, and credited the \u00a3150 difference immediately. The customer was confirmed to have a \u00a3250 monthly charge going forward.",
+            "matched": false,
+            "similarity_score": 0.0
+          },
+          {
+            "field_name": "category",
+            "field_type": "categorical",
+            "expected": "Billing & Payments",
+            "predicted": "Account Management",
+            "matched": false,
+            "similarity_score": null
+          },
+          {
+            "field_name": "subcategory",
+            "field_type": "categorical",
+            "expected": "incorrect charge",
+            "predicted": "add or remove service",
+            "matched": false,
+            "similarity_score": null
+          },
+          {
+            "field_name": "priority",
+            "field_type": "categorical",
+            "expected": "Medium",
+            "predicted": "Routine",
+            "matched": false,
+            "similarity_score": null
+          },
+          {
+            "field_name": "disposition",
+            "field_type": "categorical",
+            "expected": "Resolved",
+            "predicted": "Resolved",
+            "matched": true,
+            "similarity_score": null
+          },
+          {
+            "field_name": "sentiment",
+            "field_type": "categorical",
+            "expected": "Neutral",
+            "predicted": "Satisfied",
+            "matched": false,
+            "similarity_score": null
+          },
+          {
+            "field_name": "escalation_recommended",
+            "field_type": "boolean",
+            "expected": null,
+            "predicted": false,
+            "matched": false,
+            "similarity_score": null
+          },
+          {
+            "field_name": "decision",
+            "field_type": "categorical",
+            "expected": "AUTO_SAVE",
+            "predicted": {
+              "decision": "AUTO_SAVE",
+              "reason": "Documentation is complete, grounded, unambiguous, and free of escalation or sensitive-content triggers.",
+              "triggered_rules": [
+                "Rule 1",
+                "Rule 3",
+                "Rule 10"
+              ],
+              "confidence": 1.0,
+              "timestamp": "2026-07-28T09:42:55.734049+00:00"
+            },
+            "matched": false,
+            "similarity_score": null
+          }
+        ]
+      },
+      {
+        "call_id": "K-003",
+        "expected": {
+          "summary": null,
+          "category": "Order & Delivery",
+          "subcategory": "order status",
+          "priority": "Low",
+          "disposition": "Resolved",
+          "sentiment": "Neutral",
+          "escalation_recommended": null,
+          "decision": "AUTO_SAVE"
+        },
+        "predicted": {
+          "summary": "The customer called to check the status of order 55231. The agent informed them that the order shipped yesterday and is expected by Thursday end of day. The customer acknowledged the update and ended the call.",
+          "category": "Order & Delivery",
+          "subcategory": "order status",
+          "priority": "Low",
+          "disposition": "Resolved",
+          "sentiment": "Neutral",
+          "escalation_recommended": false,
+          "decision": {
+            "decision": "AUTO_SAVE",
+            "reason": "Documentation is complete, grounded, unambiguous, and free of escalation or sensitive-content triggers.",
+            "triggered_rules": [
+              "Rule 1",
+              "Rule 3",
+              "Rule 10"
+            ],
+            "confidence": 1.0,
+            "timestamp": "2026-07-28T09:43:10.539817+00:00"
+          }
+        },
+        "matched_fields": [
+          "category",
+          "subcategory",
+          "priority",
+          "disposition",
+          "sentiment"
+        ],
+        "mismatched_fields": [
+          "summary",
+          "escalation_recommended",
+          "decision"
+        ],
+        "confidence": 1.0,
+        "overall_result": "INCORRECT",
+        "field_comparisons": [
+          {
+            "field_name": "summary",
+            "field_type": "text",
+            "expected": null,
+            "predicted": "The customer called to check the status of order 55231. The agent informed them that the order shipped yesterday and is expected by Thursday end of day. The customer acknowledged the update and ended the call.",
+            "matched": false,
+            "similarity_score": 0.0
+          },
+          {
+            "field_name": "category",
+            "field_type": "categorical",
+            "expected": "Order & Delivery",
+            "predicted": "Order & Delivery",
+            "matched": true,
+            "similarity_score": null
+          },
+          {
+            "field_name": "subcategory",
+            "field_type": "categorical",
+            "expected": "order status",
+            "predicted": "order status",
+            "matched": true,
+            "similarity_score": null
+          },
+          {
+            "field_name": "priority",
+            "field_type": "categorical",
+            "expected": "Low",
+            "predicted": "Low",
+            "matched": true,
+            "similarity_score": null
+          },
+          {
+            "field_name": "disposition",
+            "field_type": "categorical",
+            "expected": "Resolved",
+            "predicted": "Resolved",
+            "matched": true,
+            "similarity_score": null
+          },
+          {
+            "field_name": "sentiment",
+            "field_type": "categorical",
+            "expected": "Neutral",
+            "predicted": "Neutral",
+            "matched": true,
+            "similarity_score": null
+          },
+          {
+            "field_name": "escalation_recommended",
+            "field_type": "boolean",
+            "expected": null,
+            "predicted": false,
+            "matched": false,
+            "similarity_score": null
+          },
+          {
+            "field_name": "decision",
+            "field_type": "categorical",
+            "expected": "AUTO_SAVE",
+            "predicted": {
+              "decision": "AUTO_SAVE",
+              "reason": "Documentation is complete, grounded, unambiguous, and free of escalation or sensitive-content triggers.",
+              "triggered_rules": [
+                "Rule 1",
+                "Rule 3",
+                "Rule 10"
+              ],
+              "confidence": 1.0,
+              "timestamp": "2026-07-28T09:43:10.539817+00:00"
+            },
+            "matched": false,
+            "similarity_score": null
+          }
+        ]
+      },
+      {
+        "call_id": "K-004",
+        "expected": {
+          "summary": null,
+          "category": "Technical Support",
+          "subcategory": "cannot log in",
+          "priority": "Medium",
+          "disposition": "Resolved",
+          "sentiment": "Neutral",
+          "escalation_recommended": null,
+          "decision": "AUTO_SAVE"
+        },
+        "predicted": {
+          "summary": "The customer reported an inability to log into her account due to a wrong password error. The agent sent a password reset link to her registered number. The customer used the link and confirmed she was able to log in successfully.",
+          "category": "Technical Support",
+          "subcategory": "cannot log in",
+          "priority": "Low",
+          "disposition": "Resolved",
+          "sentiment": "Neutral",
+          "escalation_recommended": false,
+          "decision": {
+            "decision": "AUTO_SAVE",
+            "reason": "Documentation is complete, grounded, unambiguous, and free of escalation or sensitive-content triggers.",
+            "triggered_rules": [
+              "Rule 1",
+              "Rule 3",
+              "Rule 10"
+            ],
+            "confidence": 1.0,
+            "timestamp": "2026-07-28T09:43:28.414632+00:00"
+          }
+        },
+        "matched_fields": [
+          "category",
+          "subcategory",
+          "disposition",
+          "sentiment"
+        ],
+        "mismatched_fields": [
+          "summary",
+          "priority",
+          "escalation_recommended",
+          "decision"
+        ],
+        "confidence": 1.0,
+        "overall_result": "INCORRECT",
+        "field_comparisons": [
+          {
+            "field_name": "summary",
+            "field_type": "text",
+            "expected": null,
+            "predicted": "The customer reported an inability to log into her account due to a wrong password error. The agent sent a password reset link to her registered number. The customer used the link and confirmed she was able to log in successfully.",
+            "matched": false,
+            "similarity_score": 0.0
+          },
+          {
+            "field_name": "category",
+            "field_type": "categorical",
+            "expected": "Technical Support",
+            "predicted": "Technical Support",
+            "matched": true,
+            "similarity_score": null
+          },
+          {
+            "field_name": "subcategory",
+            "field_type": "categorical",
+            "expected": "cannot log in",
+            "predicted": "cannot log in",
+            "matched": true,
+            "similarity_score": null
+          },
+          {
+            "field_name": "priority",
+            "field_type": "categorical",
+            "expected": "Medium",
+            "predicted": "Low",
+            "matched": false,
+            "similarity_score": null
+          },
+          {
+            "field_name": "disposition",
+            "field_type": "categorical",
+            "expected": "Resolved",
+            "predicted": "Resolved",
+            "matched": true,
+            "similarity_score": null
+          },
+          {
+            "field_name": "sentiment",
+            "field_type": "categorical",
+            "expected": "Neutral",
+            "predicted": "Neutral",
+            "matched": true,
+            "similarity_score": null
+          },
+          {
+            "field_name": "escalation_recommended",
+            "field_type": "boolean",
+            "expected": null,
+            "predicted": false,
+            "matched": false,
+            "similarity_score": null
+          },
+          {
+            "field_name": "decision",
+            "field_type": "categorical",
+            "expected": "AUTO_SAVE",
+            "predicted": {
+              "decision": "AUTO_SAVE",
+              "reason": "Documentation is complete, grounded, unambiguous, and free of escalation or sensitive-content triggers.",
+              "triggered_rules": [
+                "Rule 1",
+                "Rule 3",
+                "Rule 10"
+              ],
+              "confidence": 1.0,
+              "timestamp": "2026-07-28T09:43:28.414632+00:00"
+            },
+            "matched": false,
+            "similarity_score": null
+          }
+        ]
+      },
+      {
+        "call_id": "K-005",
+        "expected": {
+          "summary": null,
+          "category": "Appointments & Bookings",
+          "subcategory": "reschedule",
+          "priority": "Low",
+          "disposition": "Resolved",
+          "sentiment": "Positive",
+          "escalation_recommended": null,
+          "decision": "AUTO_SAVE"
+        },
+        "predicted": {
+          "summary": "The customer contacted StayEasy Hotels reservations to change their booking date from the 5th to the 12th. The agent updated the reservation for the 12th with the same room type and rate, and advised that a confirmation was on its way.",
+          "category": "Reservations",
+          "subcategory": "Booking Modification",
+          "priority": "Low",
+          "disposition": "Resolved",
+          "sentiment": "Positive",
+          "escalation_recommended": false,
+          "decision": {
+            "decision": "AUTO_SAVE",
+            "reason": "Documentation is complete, grounded, unambiguous, and free of escalation or sensitive-content triggers.",
+            "triggered_rules": [
+              "Rule 1",
+              "Rule 3",
+              "Rule 10"
+            ],
+            "confidence": 1.0,
+            "timestamp": "2026-07-28T09:43:50.811889+00:00"
+          }
+        },
+        "matched_fields": [
+          "priority",
+          "disposition",
+          "sentiment"
+        ],
+        "mismatched_fields": [
+          "summary",
+          "category",
+          "subcategory",
+          "escalation_recommended",
+          "decision"
+        ],
+        "confidence": 1.0,
+        "overall_result": "INCORRECT",
+        "field_comparisons": [
+          {
+            "field_name": "summary",
+            "field_type": "text",
+            "expected": null,
+            "predicted": "The customer contacted StayEasy Hotels reservations to change their booking date from the 5th to the 12th. The agent updated the reservation for the 12th with the same room type and rate, and advised that a confirmation was on its way.",
+            "matched": false,
+            "similarity_score": 0.0
+          },
+          {
+            "field_name": "category",
+            "field_type": "categorical",
+            "expected": "Appointments & Bookings",
+            "predicted": "Reservations",
+            "matched": false,
+            "similarity_score": null
+          },
+          {
+            "field_name": "subcategory",
+            "field_type": "categorical",
+            "expected": "reschedule",
+            "predicted": "Booking Modification",
+            "matched": false,
+            "similarity_score": null
+          },
+          {
+            "field_name": "priority",
+            "field_type": "categorical",
+            "expected": "Low",
+            "predicted": "Low",
+            "matched": true,
+            "similarity_score": null
+          },
+          {
+            "field_name": "disposition",
+            "field_type": "categorical",
+            "expected": "Resolved",
+            "predicted": "Resolved",
+            "matched": true,
+            "similarity_score": null
+          },
+          {
+            "field_name": "sentiment",
+            "field_type": "categorical",
+            "expected": "Positive",
+            "predicted": "Positive",
+            "matched": true,
+            "similarity_score": null
+          },
+          {
+            "field_name": "escalation_recommended",
+            "field_type": "boolean",
+            "expected": null,
+            "predicted": false,
+            "matched": false,
+            "similarity_score": null
+          },
+          {
+            "field_name": "decision",
+            "field_type": "categorical",
+            "expected": "AUTO_SAVE",
+            "predicted": {
+              "decision": "AUTO_SAVE",
+              "reason": "Documentation is complete, grounded, unambiguous, and free of escalation or sensitive-content triggers.",
+              "triggered_rules": [
+                "Rule 1",
+                "Rule 3",
+                "Rule 10"
+              ],
+              "confidence": 1.0,
+              "timestamp": "2026-07-28T09:43:50.811889+00:00"
+            },
+            "matched": false,
+            "similarity_score": null
+          }
+        ]
+      },
+      {
+        "call_id": "K-006",
+        "expected": {
+          "summary": null,
+          "category": "Product & Service Inquiry",
+          "subcategory": "pricing",
+          "priority": "Low",
+          "disposition": "Resolved",
+          "sentiment": "Neutral",
+          "escalation_recommended": null,
+          "decision": "AUTO_SAVE"
+        },
+        "predicted": {
+          "summary": "The customer called to ask if the 65-inch TV was in stock and requested its price. The agent confirmed that it is available online and at the Maadi branch for 18,900 pounds. The customer decided to place the order online.",
+          "category": "Product & Service Inquiry",
+          "subcategory": "availability",
+          "priority": "Low",
+          "disposition": "Resolved",
+          "sentiment": "Positive",
+          "escalation_recommended": false,
+          "decision": {
+            "decision": "AUTO_SAVE",
+            "reason": "Documentation is complete, grounded, unambiguous, and free of escalation or sensitive-content triggers.",
+            "triggered_rules": [
+              "Rule 1",
+              "Rule 3",
+              "Rule 10"
+            ],
+            "confidence": 1.0,
+            "timestamp": "2026-07-28T09:44:08.050972+00:00"
+          }
+        },
+        "matched_fields": [
+          "category",
+          "priority",
+          "disposition"
+        ],
+        "mismatched_fields": [
+          "summary",
+          "subcategory",
+          "sentiment",
+          "escalation_recommended",
+          "decision"
+        ],
+        "confidence": 1.0,
+        "overall_result": "INCORRECT",
+        "field_comparisons": [
+          {
+            "field_name": "summary",
+            "field_type": "text",
+            "expected": null,
+            "predicted": "The customer called to ask if the 65-inch TV was in stock and requested its price. The agent confirmed that it is available online and at the Maadi branch for 18,900 pounds. The customer decided to place the order online.",
+            "matched": false,
+            "similarity_score": 0.0
+          },
+          {
+            "field_name": "category",
+            "field_type": "categorical",
+            "expected": "Product & Service Inquiry",
+            "predicted": "Product & Service Inquiry",
+            "matched": true,
+            "similarity_score": null
+          },
+          {
+            "field_name": "subcategory",
+            "field_type": "categorical",
+            "expected": "pricing",
+            "predicted": "availability",
+            "matched": false,
+            "similarity_score": null
+          },
+          {
+            "field_name": "priority",
+            "field_type": "categorical",
+            "expected": "Low",
+            "predicted": "Low",
+            "matched": true,
+            "similarity_score": null
+          },
+          {
+            "field_name": "disposition",
+            "field_type": "categorical",
+            "expected": "Resolved",
+            "predicted": "Resolved",
+            "matched": true,
+            "similarity_score": null
+          },
+          {
+            "field_name": "sentiment",
+            "field_type": "categorical",
+            "expected": "Neutral",
+            "predicted": "Positive",
+            "matched": false,
+            "similarity_score": null
+          },
+          {
+            "field_name": "escalation_recommended",
+            "field_type": "boolean",
+            "expected": null,
+            "predicted": false,
+            "matched": false,
+            "similarity_score": null
+          },
+          {
+            "field_name": "decision",
+            "field_type": "categorical",
+            "expected": "AUTO_SAVE",
+            "predicted": {
+              "decision": "AUTO_SAVE",
+              "reason": "Documentation is complete, grounded, unambiguous, and free of escalation or sensitive-content triggers.",
+              "triggered_rules": [
+                "Rule 1",
+                "Rule 3",
+                "Rule 10"
+              ],
+              "confidence": 1.0,
+              "timestamp": "2026-07-28T09:44:08.050972+00:00"
+            },
+            "matched": false,
+            "similarity_score": null
+          }
+        ]
+      },
+      {
+        "call_id": "K-007",
+        "expected": {
+          "summary": null,
+          "category": "Order & Delivery",
+          "subcategory": "delivery delay",
+          "priority": "Medium",
+          "disposition": "Unresolved \u2014 pending",
+          "sentiment": "Negative",
+          "escalation_recommended": null,
+          "decision": "AUTO_SAVE"
+        },
+        "predicted": {
+          "summary": "The customer called to inquire about a delivery that is three days late with no status updates. The agent confirmed that the package is stuck at the courier and opened a ticket with logistics to chase it. The agent was unable to provide a new delivery date on the call.",
+          "category": "Order & Delivery",
+          "subcategory": "delivery delay",
+          "priority": "Medium",
+          "disposition": "Unresolved \u2014 pending",
+          "sentiment": "Negative",
+          "escalation_recommended": false,
+          "decision": {
+            "decision": "AUTO_SAVE",
+            "reason": "Documentation is complete, grounded, unambiguous, and free of escalation or sensitive-content triggers.",
+            "triggered_rules": [
+              "Rule 1",
+              "Rule 3",
+              "Rule 10"
+            ],
+            "confidence": 0.95,
+            "timestamp": "2026-07-28T09:44:23.927910+00:00"
+          }
+        },
+        "matched_fields": [
+          "category",
+          "subcategory",
+          "priority",
+          "disposition",
+          "sentiment"
+        ],
+        "mismatched_fields": [
+          "summary",
+          "escalation_recommended",
+          "decision"
+        ],
+        "confidence": 0.95,
+        "overall_result": "INCORRECT",
+        "field_comparisons": [
+          {
+            "field_name": "summary",
+            "field_type": "text",
+            "expected": null,
+            "predicted": "The customer called to inquire about a delivery that is three days late with no status updates. The agent confirmed that the package is stuck at the courier and opened a ticket with logistics to chase it. The agent was unable to provide a new delivery date on the call.",
+            "matched": false,
+            "similarity_score": 0.0
+          },
+          {
+            "field_name": "category",
+            "field_type": "categorical",
+            "expected": "Order & Delivery",
+            "predicted": "Order & Delivery",
+            "matched": true,
+            "similarity_score": null
+          },
+          {
+            "field_name": "subcategory",
+            "field_type": "categorical",
+            "expected": "delivery delay",
+            "predicted": "delivery delay",
+            "matched": true,
+            "similarity_score": null
+          },
+          {
+            "field_name": "priority",
+            "field_type": "categorical",
+            "expected": "Medium",
+            "predicted": "Medium",
+            "matched": true,
+            "similarity_score": null
+          },
+          {
+            "field_name": "disposition",
+            "field_type": "categorical",
+            "expected": "Unresolved \u2014 pending",
+            "predicted": "Unresolved \u2014 pending",
+            "matched": true,
+            "similarity_score": null
+          },
+          {
+            "field_name": "sentiment",
+            "field_type": "categorical",
+            "expected": "Negative",
+            "predicted": "Negative",
+            "matched": true,
+            "similarity_score": null
+          },
+          {
+            "field_name": "escalation_recommended",
+            "field_type": "boolean",
+            "expected": null,
+            "predicted": false,
+            "matched": false,
+            "similarity_score": null
+          },
+          {
+            "field_name": "decision",
+            "field_type": "categorical",
+            "expected": "AUTO_SAVE",
+            "predicted": {
+              "decision": "AUTO_SAVE",
+              "reason": "Documentation is complete, grounded, unambiguous, and free of escalation or sensitive-content triggers.",
+              "triggered_rules": [
+                "Rule 1",
+                "Rule 3",
+                "Rule 10"
+              ],
+              "confidence": 0.95,
+              "timestamp": "2026-07-28T09:44:23.927910+00:00"
+            },
+            "matched": false,
+            "similarity_score": null
+          }
+        ]
+      },
+      {
+        "call_id": "K-008",
+        "expected": {
+          "summary": null,
+          "category": "Account Management",
+          "subcategory": "update details",
+          "priority": "Low",
+          "disposition": "Resolved",
+          "sentiment": "Neutral",
+          "escalation_recommended": null,
+          "decision": "AUTO_SAVE"
+        },
+        "predicted": {
+          "summary": "The customer contacted SoukMart to update the email address associated with her account. Having verified her identity, the agent successfully updated her email address during the call.",
+          "category": "Retail & e-commerce",
+          "subcategory": "Account Changes",
+          "priority": "Routine",
+          "disposition": "Resolved",
+          "sentiment": "Positive",
+          "escalation_recommended": false,
+          "decision": {
+            "decision": "AUTO_SAVE",
+            "reason": "Documentation is complete, grounded, unambiguous, and free of escalation or sensitive-content triggers.",
+            "triggered_rules": [
+              "Rule 1",
+              "Rule 3",
+              "Rule 10"
+            ],
+            "confidence": 1.0,
+            "timestamp": "2026-07-28T09:44:42.623981+00:00"
+          }
+        },
+        "matched_fields": [
+          "disposition"
+        ],
+        "mismatched_fields": [
+          "summary",
+          "category",
+          "subcategory",
+          "priority",
+          "sentiment",
+          "escalation_recommended",
+          "decision"
+        ],
+        "confidence": 1.0,
+        "overall_result": "INCORRECT",
+        "field_comparisons": [
+          {
+            "field_name": "summary",
+            "field_type": "text",
+            "expected": null,
+            "predicted": "The customer contacted SoukMart to update the email address associated with her account. Having verified her identity, the agent successfully updated her email address during the call.",
+            "matched": false,
+            "similarity_score": 0.0
+          },
+          {
+            "field_name": "category",
+            "field_type": "categorical",
+            "expected": "Account Management",
+            "predicted": "Retail & e-commerce",
+            "matched": false,
+            "similarity_score": null
+          },
+          {
+            "field_name": "subcategory",
+            "field_type": "categorical",
+            "expected": "update details",
+            "predicted": "Account Changes",
+            "matched": false,
+            "similarity_score": null
+          },
+          {
+            "field_name": "priority",
+            "field_type": "categorical",
+            "expected": "Low",
+            "predicted": "Routine",
+            "matched": false,
+            "similarity_score": null
+          },
+          {
+            "field_name": "disposition",
+            "field_type": "categorical",
+            "expected": "Resolved",
+            "predicted": "Resolved",
+            "matched": true,
+            "similarity_score": null
+          },
+          {
+            "field_name": "sentiment",
+            "field_type": "categorical",
+            "expected": "Neutral",
+            "predicted": "Positive",
+            "matched": false,
+            "similarity_score": null
+          },
+          {
+            "field_name": "escalation_recommended",
+            "field_type": "boolean",
+            "expected": null,
+            "predicted": false,
+            "matched": false,
+            "similarity_score": null
+          },
+          {
+            "field_name": "decision",
+            "field_type": "categorical",
+            "expected": "AUTO_SAVE",
+            "predicted": {
+              "decision": "AUTO_SAVE",
+              "reason": "Documentation is complete, grounded, unambiguous, and free of escalation or sensitive-content triggers.",
+              "triggered_rules": [
+                "Rule 1",
+                "Rule 3",
+                "Rule 10"
+              ],
+              "confidence": 1.0,
+              "timestamp": "2026-07-28T09:44:42.623981+00:00"
+            },
+            "matched": false,
+            "similarity_score": null
+          }
+        ]
+      },
+      {
+        "call_id": "K-009",
+        "expected": {
+          "summary": null,
+          "category": "Other",
+          "subcategory": "unclear",
+          "priority": "Low",
+          "disposition": "Unresolved \u2014 pending",
+          "sentiment": "Neutral",
+          "escalation_recommended": null,
+          "decision": "HUMAN_REVIEW"
+        },
+        "predicted": {
+          "summary": null,
+          "category": null,
+          "subcategory": null,
+          "priority": null,
+          "disposition": null,
+          "sentiment": null,
+          "escalation_recommended": null,
+          "decision": null
+        },
+        "matched_fields": [],
+        "mismatched_fields": [
+          "summary",
+          "category",
+          "subcategory",
+          "priority",
+          "disposition",
+          "sentiment",
+          "escalation_recommended",
+          "decision"
+        ],
+        "confidence": null,
+        "overall_result": "MISSING_GENERATED",
+        "field_comparisons": [
+          {
+            "field_name": "summary",
+            "field_type": "text",
+            "expected": null,
+            "predicted": null,
+            "matched": false,
+            "similarity_score": null
+          },
+          {
+            "field_name": "category",
+            "field_type": "categorical",
+            "expected": "Other",
+            "predicted": null,
+            "matched": false,
+            "similarity_score": null
+          },
+          {
+            "field_name": "subcategory",
+            "field_type": "categorical",
+            "expected": "unclear",
+            "predicted": null,
+            "matched": false,
+            "similarity_score": null
+          },
+          {
+            "field_name": "priority",
+            "field_type": "categorical",
+            "expected": "Low",
+            "predicted": null,
+            "matched": false,
+            "similarity_score": null
+          },
+          {
+            "field_name": "disposition",
+            "field_type": "categorical",
+            "expected": "Unresolved \u2014 pending",
+            "predicted": null,
+            "matched": false,
+            "similarity_score": null
+          },
+          {
+            "field_name": "sentiment",
+            "field_type": "categorical",
+            "expected": "Neutral",
+            "predicted": null,
+            "matched": false,
+            "similarity_score": null
+          },
+          {
+            "field_name": "escalation_recommended",
+            "field_type": "boolean",
+            "expected": null,
+            "predicted": null,
+            "matched": false,
+            "similarity_score": null
+          },
+          {
+            "field_name": "decision",
+            "field_type": "categorical",
+            "expected": "HUMAN_REVIEW",
+            "predicted": null,
+            "matched": false,
+            "similarity_score": null
+          }
+        ]
+      },
+      {
+        "call_id": "K-010",
+        "expected": {
+          "summary": null,
+          "category": "Returns & Refunds",
+          "subcategory": "refund request",
+          "priority": "Medium",
+          "disposition": "Unresolved \u2014 pending",
+          "sentiment": "Negative",
+          "escalation_recommended": null,
+          "decision": "HUMAN_REVIEW"
+        },
+        "predicted": {
+          "summary": "The customer requested a refund for a jacket that did not fit. The agent was unable to confirm return eligibility because the returns system was down. The issue remains pending review by another team member.",
+          "category": "Returns & Refunds",
+          "subcategory": "refund request",
+          "priority": "High",
+          "disposition": "Unresolved \u2014 pending",
+          "sentiment": "frustrated",
+          "escalation_recommended": false,
+          "decision": {
+            "decision": "AUTO_SAVE",
+            "reason": "Documentation is complete, grounded, unambiguous, and free of escalation or sensitive-content triggers.",
+            "triggered_rules": [
+              "Rule 1",
+              "Rule 3",
+              "Rule 10"
+            ],
+            "confidence": 0.95,
+            "timestamp": "2026-07-28T09:45:22.398558+00:00"
+          }
+        },
+        "matched_fields": [
+          "category",
+          "subcategory",
+          "disposition"
+        ],
+        "mismatched_fields": [
+          "summary",
+          "priority",
+          "sentiment",
+          "escalation_recommended",
+          "decision"
+        ],
+        "confidence": 0.95,
+        "overall_result": "INCORRECT",
+        "field_comparisons": [
+          {
+            "field_name": "summary",
+            "field_type": "text",
+            "expected": null,
+            "predicted": "The customer requested a refund for a jacket that did not fit. The agent was unable to confirm return eligibility because the returns system was down. The issue remains pending review by another team member.",
+            "matched": false,
+            "similarity_score": 0.0
+          },
+          {
+            "field_name": "category",
+            "field_type": "categorical",
+            "expected": "Returns & Refunds",
+            "predicted": "Returns & Refunds",
+            "matched": true,
+            "similarity_score": null
+          },
+          {
+            "field_name": "subcategory",
+            "field_type": "categorical",
+            "expected": "refund request",
+            "predicted": "refund request",
+            "matched": true,
+            "similarity_score": null
+          },
+          {
+            "field_name": "priority",
+            "field_type": "categorical",
+            "expected": "Medium",
+            "predicted": "High",
+            "matched": false,
+            "similarity_score": null
+          },
+          {
+            "field_name": "disposition",
+            "field_type": "categorical",
+            "expected": "Unresolved \u2014 pending",
+            "predicted": "Unresolved \u2014 pending",
+            "matched": true,
+            "similarity_score": null
+          },
+          {
+            "field_name": "sentiment",
+            "field_type": "categorical",
+            "expected": "Negative",
+            "predicted": "frustrated",
+            "matched": false,
+            "similarity_score": null
+          },
+          {
+            "field_name": "escalation_recommended",
+            "field_type": "boolean",
+            "expected": null,
+            "predicted": false,
+            "matched": false,
+            "similarity_score": null
+          },
+          {
+            "field_name": "decision",
+            "field_type": "categorical",
+            "expected": "HUMAN_REVIEW",
+            "predicted": {
+              "decision": "AUTO_SAVE",
+              "reason": "Documentation is complete, grounded, unambiguous, and free of escalation or sensitive-content triggers.",
+              "triggered_rules": [
+                "Rule 1",
+                "Rule 3",
+                "Rule 10"
+              ],
+              "confidence": 0.95,
+              "timestamp": "2026-07-28T09:45:22.398558+00:00"
+            },
+            "matched": false,
+            "similarity_score": null
+          }
+        ]
+      },
+      {
+        "call_id": "K-011",
+        "expected": {
+          "summary": null,
+          "category": "Account Management",
+          "subcategory": "security concern",
+          "priority": "High",
+          "disposition": "Unresolved \u2014 pending",
+          "sentiment": "Neutral",
+          "escalation_recommended": null,
+          "decision": "HUMAN_REVIEW"
+        },
+        "predicted": {
+          "summary": null,
+          "category": null,
+          "subcategory": null,
+          "priority": null,
+          "disposition": null,
+          "sentiment": null,
+          "escalation_recommended": null,
+          "decision": null
+        },
+        "matched_fields": [],
+        "mismatched_fields": [
+          "summary",
+          "category",
+          "subcategory",
+          "priority",
+          "disposition",
+          "sentiment",
+          "escalation_recommended",
+          "decision"
+        ],
+        "confidence": null,
+        "overall_result": "MISSING_GENERATED",
+        "field_comparisons": [
+          {
+            "field_name": "summary",
+            "field_type": "text",
+            "expected": null,
+            "predicted": null,
+            "matched": false,
+            "similarity_score": null
+          },
+          {
+            "field_name": "category",
+            "field_type": "categorical",
+            "expected": "Account Management",
+            "predicted": null,
+            "matched": false,
+            "similarity_score": null
+          },
+          {
+            "field_name": "subcategory",
+            "field_type": "categorical",
+            "expected": "security concern",
+            "predicted": null,
+            "matched": false,
+            "similarity_score": null
+          },
+          {
+            "field_name": "priority",
+            "field_type": "categorical",
+            "expected": "High",
+            "predicted": null,
+            "matched": false,
+            "similarity_score": null
+          },
+          {
+            "field_name": "disposition",
+            "field_type": "categorical",
+            "expected": "Unresolved \u2014 pending",
+            "predicted": null,
+            "matched": false,
+            "similarity_score": null
+          },
+          {
+            "field_name": "sentiment",
+            "field_type": "categorical",
+            "expected": "Neutral",
+            "predicted": null,
+            "matched": false,
+            "similarity_score": null
+          },
+          {
+            "field_name": "escalation_recommended",
+            "field_type": "boolean",
+            "expected": null,
+            "predicted": null,
+            "matched": false,
+            "similarity_score": null
+          },
+          {
+            "field_name": "decision",
+            "field_type": "categorical",
+            "expected": "HUMAN_REVIEW",
+            "predicted": null,
+            "matched": false,
+            "similarity_score": null
+          }
+        ]
+      },
+      {
+        "call_id": "K-012",
+        "expected": {
+          "summary": null,
+          "category": "Appointments & Bookings",
+          "subcategory": "reschedule",
+          "priority": "Low",
+          "disposition": "Resolved",
+          "sentiment": "Positive",
+          "escalation_recommended": null,
+          "decision": "HUMAN_REVIEW"
+        },
+        "predicted": {
+          "summary": "Salma Farouk called MedCare Clinics to reschedule her post-surgery follow-up appointment. The agent moved the appointment to the following Tuesday at 10:00 AM. The agent confirmed that the customer will be seen by the same consultant.",
+          "category": "Healthcare",
+          "subcategory": "Appointment",
+          "priority": "Medium",
+          "disposition": "Resolved",
+          "sentiment": "Positive",
+          "escalation_recommended": false,
+          "decision": {
+            "decision": "AUTO_SAVE",
+            "reason": "Documentation is complete, grounded, unambiguous, and free of escalation or sensitive-content triggers.",
+            "triggered_rules": [
+              "Rule 1",
+              "Rule 3",
+              "Rule 10"
+            ],
+            "confidence": 0.95,
+            "timestamp": "2026-07-28T09:46:04.036555+00:00"
+          }
+        },
+        "matched_fields": [
+          "disposition",
+          "sentiment"
+        ],
+        "mismatched_fields": [
+          "summary",
+          "category",
+          "subcategory",
+          "priority",
+          "escalation_recommended",
+          "decision"
+        ],
+        "confidence": 0.95,
+        "overall_result": "INCORRECT",
+        "field_comparisons": [
+          {
+            "field_name": "summary",
+            "field_type": "text",
+            "expected": null,
+            "predicted": "Salma Farouk called MedCare Clinics to reschedule her post-surgery follow-up appointment. The agent moved the appointment to the following Tuesday at 10:00 AM. The agent confirmed that the customer will be seen by the same consultant.",
+            "matched": false,
+            "similarity_score": 0.0
+          },
+          {
+            "field_name": "category",
+            "field_type": "categorical",
+            "expected": "Appointments & Bookings",
+            "predicted": "Healthcare",
+            "matched": false,
+            "similarity_score": null
+          },
+          {
+            "field_name": "subcategory",
+            "field_type": "categorical",
+            "expected": "reschedule",
+            "predicted": "Appointment",
+            "matched": false,
+            "similarity_score": null
+          },
+          {
+            "field_name": "priority",
+            "field_type": "categorical",
+            "expected": "Low",
+            "predicted": "Medium",
+            "matched": false,
+            "similarity_score": null
+          },
+          {
+            "field_name": "disposition",
+            "field_type": "categorical",
+            "expected": "Resolved",
+            "predicted": "Resolved",
+            "matched": true,
+            "similarity_score": null
+          },
+          {
+            "field_name": "sentiment",
+            "field_type": "categorical",
+            "expected": "Positive",
+            "predicted": "Positive",
+            "matched": true,
+            "similarity_score": null
+          },
+          {
+            "field_name": "escalation_recommended",
+            "field_type": "boolean",
+            "expected": null,
+            "predicted": false,
+            "matched": false,
+            "similarity_score": null
+          },
+          {
+            "field_name": "decision",
+            "field_type": "categorical",
+            "expected": "HUMAN_REVIEW",
+            "predicted": {
+              "decision": "AUTO_SAVE",
+              "reason": "Documentation is complete, grounded, unambiguous, and free of escalation or sensitive-content triggers.",
+              "triggered_rules": [
+                "Rule 1",
+                "Rule 3",
+                "Rule 10"
+              ],
+              "confidence": 0.95,
+              "timestamp": "2026-07-28T09:46:04.036555+00:00"
+            },
+            "matched": false,
+            "similarity_score": null
+          }
+        ]
+      },
+      {
+        "call_id": "K-013",
+        "expected": {
+          "summary": null,
+          "category": "Other",
+          "subcategory": "partnership",
+          "priority": "Low",
+          "disposition": "Unresolved \u2014 pending",
+          "sentiment": "Neutral",
+          "escalation_recommended": null,
+          "decision": "HUMAN_REVIEW"
+        },
+        "predicted": {
+          "summary": "A caller representing a travel blog asked about establishing a partnership and requesting a free stay. The agent explained that partnership inquiries cannot be handled on that phone line and offered to gather details for the marketing team. The customer agreed and began sharing their contact information.",
+          "category": "Other",
+          "subcategory": "Not stated",
+          "priority": "Low",
+          "disposition": "Unresolved \u2014 pending",
+          "sentiment": "Neutral",
+          "escalation_recommended": false,
+          "decision": {
+            "decision": "AUTO_SAVE",
+            "reason": "Documentation is complete, grounded, unambiguous, and free of escalation or sensitive-content triggers.",
+            "triggered_rules": [
+              "Rule 1",
+              "Rule 3",
+              "Rule 10"
+            ],
+            "confidence": 0.95,
+            "timestamp": "2026-07-28T09:46:21.583039+00:00"
+          }
+        },
+        "matched_fields": [
+          "category",
+          "priority",
+          "disposition",
+          "sentiment"
+        ],
+        "mismatched_fields": [
+          "summary",
+          "subcategory",
+          "escalation_recommended",
+          "decision"
+        ],
+        "confidence": 0.95,
+        "overall_result": "INCORRECT",
+        "field_comparisons": [
+          {
+            "field_name": "summary",
+            "field_type": "text",
+            "expected": null,
+            "predicted": "A caller representing a travel blog asked about establishing a partnership and requesting a free stay. The agent explained that partnership inquiries cannot be handled on that phone line and offered to gather details for the marketing team. The customer agreed and began sharing their contact information.",
+            "matched": false,
+            "similarity_score": 0.0
+          },
+          {
+            "field_name": "category",
+            "field_type": "categorical",
+            "expected": "Other",
+            "predicted": "Other",
+            "matched": true,
+            "similarity_score": null
+          },
+          {
+            "field_name": "subcategory",
+            "field_type": "categorical",
+            "expected": "partnership",
+            "predicted": "Not stated",
+            "matched": false,
+            "similarity_score": null
+          },
+          {
+            "field_name": "priority",
+            "field_type": "categorical",
+            "expected": "Low",
+            "predicted": "Low",
+            "matched": true,
+            "similarity_score": null
+          },
+          {
+            "field_name": "disposition",
+            "field_type": "categorical",
+            "expected": "Unresolved \u2014 pending",
+            "predicted": "Unresolved \u2014 pending",
+            "matched": true,
+            "similarity_score": null
+          },
+          {
+            "field_name": "sentiment",
+            "field_type": "categorical",
+            "expected": "Neutral",
+            "predicted": "Neutral",
+            "matched": true,
+            "similarity_score": null
+          },
+          {
+            "field_name": "escalation_recommended",
+            "field_type": "boolean",
+            "expected": null,
+            "predicted": false,
+            "matched": false,
+            "similarity_score": null
+          },
+          {
+            "field_name": "decision",
+            "field_type": "categorical",
+            "expected": "HUMAN_REVIEW",
+            "predicted": {
+              "decision": "AUTO_SAVE",
+              "reason": "Documentation is complete, grounded, unambiguous, and free of escalation or sensitive-content triggers.",
+              "triggered_rules": [
+                "Rule 1",
+                "Rule 3",
+                "Rule 10"
+              ],
+              "confidence": 0.95,
+              "timestamp": "2026-07-28T09:46:21.583039+00:00"
+            },
+            "matched": false,
+            "similarity_score": null
+          }
+        ]
+      },
+      {
+        "call_id": "K-014",
+        "expected": {
+          "summary": null,
+          "category": "Billing & Payments",
+          "subcategory": "billing dispute",
+          "priority": "Medium",
+          "disposition": "Unresolved \u2014 pending",
+          "sentiment": "Neutral",
+          "escalation_recommended": null,
+          "decision": "HUMAN_REVIEW"
+        },
+        "predicted": {
+          "summary": null,
+          "category": null,
+          "subcategory": null,
+          "priority": null,
+          "disposition": null,
+          "sentiment": null,
+          "escalation_recommended": null,
+          "decision": null
+        },
+        "matched_fields": [],
+        "mismatched_fields": [
+          "summary",
+          "category",
+          "subcategory",
+          "priority",
+          "disposition",
+          "sentiment",
+          "escalation_recommended",
+          "decision"
+        ],
+        "confidence": null,
+        "overall_result": "MISSING_GENERATED",
+        "field_comparisons": [
+          {
+            "field_name": "summary",
+            "field_type": "text",
+            "expected": null,
+            "predicted": null,
+            "matched": false,
+            "similarity_score": null
+          },
+          {
+            "field_name": "category",
+            "field_type": "categorical",
+            "expected": "Billing & Payments",
+            "predicted": null,
+            "matched": false,
+            "similarity_score": null
+          },
+          {
+            "field_name": "subcategory",
+            "field_type": "categorical",
+            "expected": "billing dispute",
+            "predicted": null,
+            "matched": false,
+            "similarity_score": null
+          },
+          {
+            "field_name": "priority",
+            "field_type": "categorical",
+            "expected": "Medium",
+            "predicted": null,
+            "matched": false,
+            "similarity_score": null
+          },
+          {
+            "field_name": "disposition",
+            "field_type": "categorical",
+            "expected": "Unresolved \u2014 pending",
+            "predicted": null,
+            "matched": false,
+            "similarity_score": null
+          },
+          {
+            "field_name": "sentiment",
+            "field_type": "categorical",
+            "expected": "Neutral",
+            "predicted": null,
+            "matched": false,
+            "similarity_score": null
+          },
+          {
+            "field_name": "escalation_recommended",
+            "field_type": "boolean",
+            "expected": null,
+            "predicted": null,
+            "matched": false,
+            "similarity_score": null
+          },
+          {
+            "field_name": "decision",
+            "field_type": "categorical",
+            "expected": "HUMAN_REVIEW",
+            "predicted": null,
+            "matched": false,
+            "similarity_score": null
+          }
+        ]
+      },
+      {
+        "call_id": "K-015",
+        "expected": {
+          "summary": null,
+          "category": "Order & Delivery",
+          "subcategory": "order status",
+          "priority": "Low",
+          "disposition": "Unresolved \u2014 pending",
+          "sentiment": "Neutral",
+          "escalation_recommended": null,
+          "decision": "HUMAN_REVIEW"
+        },
+        "predicted": {
+          "summary": null,
+          "category": null,
+          "subcategory": null,
+          "priority": null,
+          "disposition": null,
+          "sentiment": null,
+          "escalation_recommended": null,
+          "decision": null
+        },
+        "matched_fields": [],
+        "mismatched_fields": [
+          "summary",
+          "category",
+          "subcategory",
+          "priority",
+          "disposition",
+          "sentiment",
+          "escalation_recommended",
+          "decision"
+        ],
+        "confidence": null,
+        "overall_result": "MISSING_GENERATED",
+        "field_comparisons": [
+          {
+            "field_name": "summary",
+            "field_type": "text",
+            "expected": null,
+            "predicted": null,
+            "matched": false,
+            "similarity_score": null
+          },
+          {
+            "field_name": "category",
+            "field_type": "categorical",
+            "expected": "Order & Delivery",
+            "predicted": null,
+            "matched": false,
+            "similarity_score": null
+          },
+          {
+            "field_name": "subcategory",
+            "field_type": "categorical",
+            "expected": "order status",
+            "predicted": null,
+            "matched": false,
+            "similarity_score": null
+          },
+          {
+            "field_name": "priority",
+            "field_type": "categorical",
+            "expected": "Low",
+            "predicted": null,
+            "matched": false,
+            "similarity_score": null
+          },
+          {
+            "field_name": "disposition",
+            "field_type": "categorical",
+            "expected": "Unresolved \u2014 pending",
+            "predicted": null,
+            "matched": false,
+            "similarity_score": null
+          },
+          {
+            "field_name": "sentiment",
+            "field_type": "categorical",
+            "expected": "Neutral",
+            "predicted": null,
+            "matched": false,
+            "similarity_score": null
+          },
+          {
+            "field_name": "escalation_recommended",
+            "field_type": "boolean",
+            "expected": null,
+            "predicted": null,
+            "matched": false,
+            "similarity_score": null
+          },
+          {
+            "field_name": "decision",
+            "field_type": "categorical",
+            "expected": "HUMAN_REVIEW",
+            "predicted": null,
+            "matched": false,
+            "similarity_score": null
+          }
+        ]
+      },
+      {
+        "call_id": "K-016",
+        "expected": {
+          "summary": null,
+          "category": "Complaint",
+          "subcategory": "repeated failure",
+          "priority": "Urgent",
+          "disposition": "Escalated",
+          "sentiment": "At-risk",
+          "escalation_recommended": null,
+          "decision": "ESCALATE"
+        },
+        "predicted": {
+          "summary": null,
+          "category": null,
+          "subcategory": null,
+          "priority": null,
+          "disposition": null,
+          "sentiment": null,
+          "escalation_recommended": null,
+          "decision": null
+        },
+        "matched_fields": [],
+        "mismatched_fields": [
+          "summary",
+          "category",
+          "subcategory",
+          "priority",
+          "disposition",
+          "sentiment",
+          "escalation_recommended",
+          "decision"
+        ],
+        "confidence": null,
+        "overall_result": "MISSING_GENERATED",
+        "field_comparisons": [
+          {
+            "field_name": "summary",
+            "field_type": "text",
+            "expected": null,
+            "predicted": null,
+            "matched": false,
+            "similarity_score": null
+          },
+          {
+            "field_name": "category",
+            "field_type": "categorical",
+            "expected": "Complaint",
+            "predicted": null,
+            "matched": false,
+            "similarity_score": null
+          },
+          {
+            "field_name": "subcategory",
+            "field_type": "categorical",
+            "expected": "repeated failure",
+            "predicted": null,
+            "matched": false,
+            "similarity_score": null
+          },
+          {
+            "field_name": "priority",
+            "field_type": "categorical",
+            "expected": "Urgent",
+            "predicted": null,
+            "matched": false,
+            "similarity_score": null
+          },
+          {
+            "field_name": "disposition",
+            "field_type": "categorical",
+            "expected": "Escalated",
+            "predicted": null,
+            "matched": false,
+            "similarity_score": null
+          },
+          {
+            "field_name": "sentiment",
+            "field_type": "categorical",
+            "expected": "At-risk",
+            "predicted": null,
+            "matched": false,
+            "similarity_score": null
+          },
+          {
+            "field_name": "escalation_recommended",
+            "field_type": "boolean",
+            "expected": null,
+            "predicted": null,
+            "matched": false,
+            "similarity_score": null
+          },
+          {
+            "field_name": "decision",
+            "field_type": "categorical",
+            "expected": "ESCALATE",
+            "predicted": null,
+            "matched": false,
+            "similarity_score": null
+          }
+        ]
+      },
+      {
+        "call_id": "K-017",
+        "expected": {
+          "summary": null,
+          "category": "Account Management",
+          "subcategory": "security concern",
+          "priority": "Urgent",
+          "disposition": "Escalated",
+          "sentiment": "Negative",
+          "escalation_recommended": null,
+          "decision": "ESCALATE"
+        },
+        "predicted": {
+          "summary": null,
+          "category": null,
+          "subcategory": null,
+          "priority": null,
+          "disposition": null,
+          "sentiment": null,
+          "escalation_recommended": null,
+          "decision": null
+        },
+        "matched_fields": [],
+        "mismatched_fields": [
+          "summary",
+          "category",
+          "subcategory",
+          "priority",
+          "disposition",
+          "sentiment",
+          "escalation_recommended",
+          "decision"
+        ],
+        "confidence": null,
+        "overall_result": "MISSING_GENERATED",
+        "field_comparisons": [
+          {
+            "field_name": "summary",
+            "field_type": "text",
+            "expected": null,
+            "predicted": null,
+            "matched": false,
+            "similarity_score": null
+          },
+          {
+            "field_name": "category",
+            "field_type": "categorical",
+            "expected": "Account Management",
+            "predicted": null,
+            "matched": false,
+            "similarity_score": null
+          },
+          {
+            "field_name": "subcategory",
+            "field_type": "categorical",
+            "expected": "security concern",
+            "predicted": null,
+            "matched": false,
+            "similarity_score": null
+          },
+          {
+            "field_name": "priority",
+            "field_type": "categorical",
+            "expected": "Urgent",
+            "predicted": null,
+            "matched": false,
+            "similarity_score": null
+          },
+          {
+            "field_name": "disposition",
+            "field_type": "categorical",
+            "expected": "Escalated",
+            "predicted": null,
+            "matched": false,
+            "similarity_score": null
+          },
+          {
+            "field_name": "sentiment",
+            "field_type": "categorical",
+            "expected": "Negative",
+            "predicted": null,
+            "matched": false,
+            "similarity_score": null
+          },
+          {
+            "field_name": "escalation_recommended",
+            "field_type": "boolean",
+            "expected": null,
+            "predicted": null,
+            "matched": false,
+            "similarity_score": null
+          },
+          {
+            "field_name": "decision",
+            "field_type": "categorical",
+            "expected": "ESCALATE",
+            "predicted": null,
+            "matched": false,
+            "similarity_score": null
+          }
+        ]
+      },
+      {
+        "call_id": "K-018",
+        "expected": {
+          "summary": null,
+          "category": "Other",
+          "subcategory": "welfare",
+          "priority": "Urgent",
+          "disposition": "Escalated",
+          "sentiment": "At-risk",
+          "escalation_recommended": null,
+          "decision": "ESCALATE"
+        },
+        "predicted": {
+          "summary": null,
+          "category": null,
+          "subcategory": null,
+          "priority": null,
+          "disposition": null,
+          "sentiment": null,
+          "escalation_recommended": null,
+          "decision": null
+        },
+        "matched_fields": [],
+        "mismatched_fields": [
+          "summary",
+          "category",
+          "subcategory",
+          "priority",
+          "disposition",
+          "sentiment",
+          "escalation_recommended",
+          "decision"
+        ],
+        "confidence": null,
+        "overall_result": "MISSING_GENERATED",
+        "field_comparisons": [
+          {
+            "field_name": "summary",
+            "field_type": "text",
+            "expected": null,
+            "predicted": null,
+            "matched": false,
+            "similarity_score": null
+          },
+          {
+            "field_name": "category",
+            "field_type": "categorical",
+            "expected": "Other",
+            "predicted": null,
+            "matched": false,
+            "similarity_score": null
+          },
+          {
+            "field_name": "subcategory",
+            "field_type": "categorical",
+            "expected": "welfare",
+            "predicted": null,
+            "matched": false,
+            "similarity_score": null
+          },
+          {
+            "field_name": "priority",
+            "field_type": "categorical",
+            "expected": "Urgent",
+            "predicted": null,
+            "matched": false,
+            "similarity_score": null
+          },
+          {
+            "field_name": "disposition",
+            "field_type": "categorical",
+            "expected": "Escalated",
+            "predicted": null,
+            "matched": false,
+            "similarity_score": null
+          },
+          {
+            "field_name": "sentiment",
+            "field_type": "categorical",
+            "expected": "At-risk",
+            "predicted": null,
+            "matched": false,
+            "similarity_score": null
+          },
+          {
+            "field_name": "escalation_recommended",
+            "field_type": "boolean",
+            "expected": null,
+            "predicted": null,
+            "matched": false,
+            "similarity_score": null
+          },
+          {
+            "field_name": "decision",
+            "field_type": "categorical",
+            "expected": "ESCALATE",
+            "predicted": null,
+            "matched": false,
+            "similarity_score": null
+          }
+        ]
+      },
+      {
+        "call_id": "K-019",
+        "expected": {
+          "summary": null,
+          "category": "Technical Support",
+          "subcategory": "service outage",
+          "priority": "Urgent",
+          "disposition": "Escalated",
+          "sentiment": "Negative",
+          "escalation_recommended": null,
+          "decision": "ESCALATE"
+        },
+        "predicted": {
+          "summary": null,
+          "category": null,
+          "subcategory": null,
+          "priority": null,
+          "disposition": null,
+          "sentiment": null,
+          "escalation_recommended": null,
+          "decision": null
+        },
+        "matched_fields": [],
+        "mismatched_fields": [
+          "summary",
+          "category",
+          "subcategory",
+          "priority",
+          "disposition",
+          "sentiment",
+          "escalation_recommended",
+          "decision"
+        ],
+        "confidence": null,
+        "overall_result": "MISSING_GENERATED",
+        "field_comparisons": [
+          {
+            "field_name": "summary",
+            "field_type": "text",
+            "expected": null,
+            "predicted": null,
+            "matched": false,
+            "similarity_score": null
+          },
+          {
+            "field_name": "category",
+            "field_type": "categorical",
+            "expected": "Technical Support",
+            "predicted": null,
+            "matched": false,
+            "similarity_score": null
+          },
+          {
+            "field_name": "subcategory",
+            "field_type": "categorical",
+            "expected": "service outage",
+            "predicted": null,
+            "matched": false,
+            "similarity_score": null
+          },
+          {
+            "field_name": "priority",
+            "field_type": "categorical",
+            "expected": "Urgent",
+            "predicted": null,
+            "matched": false,
+            "similarity_score": null
+          },
+          {
+            "field_name": "disposition",
+            "field_type": "categorical",
+            "expected": "Escalated",
+            "predicted": null,
+            "matched": false,
+            "similarity_score": null
+          },
+          {
+            "field_name": "sentiment",
+            "field_type": "categorical",
+            "expected": "Negative",
+            "predicted": null,
+            "matched": false,
+            "similarity_score": null
+          },
+          {
+            "field_name": "escalation_recommended",
+            "field_type": "boolean",
+            "expected": null,
+            "predicted": null,
+            "matched": false,
+            "similarity_score": null
+          },
+          {
+            "field_name": "decision",
+            "field_type": "categorical",
+            "expected": "ESCALATE",
+            "predicted": null,
+            "matched": false,
+            "similarity_score": null
+          }
+        ]
+      },
+      {
+        "call_id": "K-020",
+        "expected": {
+          "summary": null,
+          "category": "Complaint",
+          "subcategory": "staff conduct",
+          "priority": "High",
+          "disposition": "Escalated",
+          "sentiment": "Negative",
+          "escalation_recommended": null,
+          "decision": "ESCALATE"
+        },
+        "predicted": {
+          "summary": null,
+          "category": null,
+          "subcategory": null,
+          "priority": null,
+          "disposition": null,
+          "sentiment": null,
+          "escalation_recommended": null,
+          "decision": null
+        },
+        "matched_fields": [],
+        "mismatched_fields": [
+          "summary",
+          "category",
+          "subcategory",
+          "priority",
+          "disposition",
+          "sentiment",
+          "escalation_recommended",
+          "decision"
+        ],
+        "confidence": null,
+        "overall_result": "MISSING_GENERATED",
+        "field_comparisons": [
+          {
+            "field_name": "summary",
+            "field_type": "text",
+            "expected": null,
+            "predicted": null,
+            "matched": false,
+            "similarity_score": null
+          },
+          {
+            "field_name": "category",
+            "field_type": "categorical",
+            "expected": "Complaint",
+            "predicted": null,
+            "matched": false,
+            "similarity_score": null
+          },
+          {
+            "field_name": "subcategory",
+            "field_type": "categorical",
+            "expected": "staff conduct",
+            "predicted": null,
+            "matched": false,
+            "similarity_score": null
+          },
+          {
+            "field_name": "priority",
+            "field_type": "categorical",
+            "expected": "High",
+            "predicted": null,
+            "matched": false,
+            "similarity_score": null
+          },
+          {
+            "field_name": "disposition",
+            "field_type": "categorical",
+            "expected": "Escalated",
+            "predicted": null,
+            "matched": false,
+            "similarity_score": null
+          },
+          {
+            "field_name": "sentiment",
+            "field_type": "categorical",
+            "expected": "Negative",
+            "predicted": null,
+            "matched": false,
+            "similarity_score": null
+          },
+          {
+            "field_name": "escalation_recommended",
+            "field_type": "boolean",
+            "expected": null,
+            "predicted": null,
+            "matched": false,
+            "similarity_score": null
+          },
+          {
+            "field_name": "decision",
+            "field_type": "categorical",
+            "expected": "ESCALATE",
+            "predicted": null,
+            "matched": false,
+            "similarity_score": null
+          }
+        ]
+      },
+      {
+        "call_id": "K-021",
+        "expected": {
+          "summary": null,
+          "category": "Cancellation",
+          "subcategory": "retention",
+          "priority": "Urgent",
+          "disposition": "Escalated",
+          "sentiment": "At-risk",
+          "escalation_recommended": null,
+          "decision": "ESCALATE"
+        },
+        "predicted": {
+          "summary": null,
+          "category": null,
+          "subcategory": null,
+          "priority": null,
+          "disposition": null,
+          "sentiment": null,
+          "escalation_recommended": null,
+          "decision": null
+        },
+        "matched_fields": [],
+        "mismatched_fields": [
+          "summary",
+          "category",
+          "subcategory",
+          "priority",
+          "disposition",
+          "sentiment",
+          "escalation_recommended",
+          "decision"
+        ],
+        "confidence": null,
+        "overall_result": "MISSING_GENERATED",
+        "field_comparisons": [
+          {
+            "field_name": "summary",
+            "field_type": "text",
+            "expected": null,
+            "predicted": null,
+            "matched": false,
+            "similarity_score": null
+          },
+          {
+            "field_name": "category",
+            "field_type": "categorical",
+            "expected": "Cancellation",
+            "predicted": null,
+            "matched": false,
+            "similarity_score": null
+          },
+          {
+            "field_name": "subcategory",
+            "field_type": "categorical",
+            "expected": "retention",
+            "predicted": null,
+            "matched": false,
+            "similarity_score": null
+          },
+          {
+            "field_name": "priority",
+            "field_type": "categorical",
+            "expected": "Urgent",
+            "predicted": null,
+            "matched": false,
+            "similarity_score": null
+          },
+          {
+            "field_name": "disposition",
+            "field_type": "categorical",
+            "expected": "Escalated",
+            "predicted": null,
+            "matched": false,
+            "similarity_score": null
+          },
+          {
+            "field_name": "sentiment",
+            "field_type": "categorical",
+            "expected": "At-risk",
+            "predicted": null,
+            "matched": false,
+            "similarity_score": null
+          },
+          {
+            "field_name": "escalation_recommended",
+            "field_type": "boolean",
+            "expected": null,
+            "predicted": null,
+            "matched": false,
+            "similarity_score": null
+          },
+          {
+            "field_name": "decision",
+            "field_type": "categorical",
+            "expected": "ESCALATE",
+            "predicted": null,
+            "matched": false,
+            "similarity_score": null
+          }
+        ]
+      },
+      {
+        "call_id": "K-022",
+        "expected": {
+          "summary": null,
+          "category": "Non-interaction",
+          "subcategory": "wrong number",
+          "priority": "Low",
+          "disposition": "Non-interaction",
+          "sentiment": "Neutral",
+          "escalation_recommended": null,
+          "decision": "NON_INTERACTION"
+        },
+        "predicted": {
+          "summary": null,
+          "category": null,
+          "subcategory": null,
+          "priority": null,
+          "disposition": null,
+          "sentiment": null,
+          "escalation_recommended": null,
+          "decision": null
+        },
+        "matched_fields": [],
+        "mismatched_fields": [
+          "summary",
+          "category",
+          "subcategory",
+          "priority",
+          "disposition",
+          "sentiment",
+          "escalation_recommended",
+          "decision"
+        ],
+        "confidence": null,
+        "overall_result": "MISSING_GENERATED",
+        "field_comparisons": [
+          {
+            "field_name": "summary",
+            "field_type": "text",
+            "expected": null,
+            "predicted": null,
+            "matched": false,
+            "similarity_score": null
+          },
+          {
+            "field_name": "category",
+            "field_type": "categorical",
+            "expected": "Non-interaction",
+            "predicted": null,
+            "matched": false,
+            "similarity_score": null
+          },
+          {
+            "field_name": "subcategory",
+            "field_type": "categorical",
+            "expected": "wrong number",
+            "predicted": null,
+            "matched": false,
+            "similarity_score": null
+          },
+          {
+            "field_name": "priority",
+            "field_type": "categorical",
+            "expected": "Low",
+            "predicted": null,
+            "matched": false,
+            "similarity_score": null
+          },
+          {
+            "field_name": "disposition",
+            "field_type": "categorical",
+            "expected": "Non-interaction",
+            "predicted": null,
+            "matched": false,
+            "similarity_score": null
+          },
+          {
+            "field_name": "sentiment",
+            "field_type": "categorical",
+            "expected": "Neutral",
+            "predicted": null,
+            "matched": false,
+            "similarity_score": null
+          },
+          {
+            "field_name": "escalation_recommended",
+            "field_type": "boolean",
+            "expected": null,
+            "predicted": null,
+            "matched": false,
+            "similarity_score": null
+          },
+          {
+            "field_name": "decision",
+            "field_type": "categorical",
+            "expected": "NON_INTERACTION",
+            "predicted": null,
+            "matched": false,
+            "similarity_score": null
+          }
+        ]
+      },
+      {
+        "call_id": "K-023",
+        "expected": {
+          "summary": null,
+          "category": "Non-interaction",
+          "subcategory": "silent/dropped",
+          "priority": "Low",
+          "disposition": "Non-interaction",
+          "sentiment": "Neutral",
+          "escalation_recommended": null,
+          "decision": "NON_INTERACTION"
+        },
+        "predicted": {
+          "summary": null,
+          "category": null,
+          "subcategory": null,
+          "priority": null,
+          "disposition": null,
+          "sentiment": null,
+          "escalation_recommended": null,
+          "decision": null
+        },
+        "matched_fields": [],
+        "mismatched_fields": [
+          "summary",
+          "category",
+          "subcategory",
+          "priority",
+          "disposition",
+          "sentiment",
+          "escalation_recommended",
+          "decision"
+        ],
+        "confidence": null,
+        "overall_result": "MISSING_GENERATED",
+        "field_comparisons": [
+          {
+            "field_name": "summary",
+            "field_type": "text",
+            "expected": null,
+            "predicted": null,
+            "matched": false,
+            "similarity_score": null
+          },
+          {
+            "field_name": "category",
+            "field_type": "categorical",
+            "expected": "Non-interaction",
+            "predicted": null,
+            "matched": false,
+            "similarity_score": null
+          },
+          {
+            "field_name": "subcategory",
+            "field_type": "categorical",
+            "expected": "silent/dropped",
+            "predicted": null,
+            "matched": false,
+            "similarity_score": null
+          },
+          {
+            "field_name": "priority",
+            "field_type": "categorical",
+            "expected": "Low",
+            "predicted": null,
+            "matched": false,
+            "similarity_score": null
+          },
+          {
+            "field_name": "disposition",
+            "field_type": "categorical",
+            "expected": "Non-interaction",
+            "predicted": null,
+            "matched": false,
+            "similarity_score": null
+          },
+          {
+            "field_name": "sentiment",
+            "field_type": "categorical",
+            "expected": "Neutral",
+            "predicted": null,
+            "matched": false,
+            "similarity_score": null
+          },
+          {
+            "field_name": "escalation_recommended",
+            "field_type": "boolean",
+            "expected": null,
+            "predicted": null,
+            "matched": false,
+            "similarity_score": null
+          },
+          {
+            "field_name": "decision",
+            "field_type": "categorical",
+            "expected": "NON_INTERACTION",
+            "predicted": null,
+            "matched": false,
+            "similarity_score": null
+          }
+        ]
+      },
+      {
+        "call_id": "K-024",
+        "expected": {
+          "summary": null,
+          "category": "Complaint",
+          "subcategory": "service quality",
+          "priority": "Medium",
+          "disposition": "Resolved",
+          "sentiment": "Negative",
+          "escalation_recommended": null,
+          "decision": "AUTO_SAVE"
+        },
+        "predicted": {
+          "summary": null,
+          "category": null,
+          "subcategory": null,
+          "priority": null,
+          "disposition": null,
+          "sentiment": null,
+          "escalation_recommended": null,
+          "decision": null
+        },
+        "matched_fields": [],
+        "mismatched_fields": [
+          "summary",
+          "category",
+          "subcategory",
+          "priority",
+          "disposition",
+          "sentiment",
+          "escalation_recommended",
+          "decision"
+        ],
+        "confidence": null,
+        "overall_result": "MISSING_GENERATED",
+        "field_comparisons": [
+          {
+            "field_name": "summary",
+            "field_type": "text",
+            "expected": null,
+            "predicted": null,
+            "matched": false,
+            "similarity_score": null
+          },
+          {
+            "field_name": "category",
+            "field_type": "categorical",
+            "expected": "Complaint",
+            "predicted": null,
+            "matched": false,
+            "similarity_score": null
+          },
+          {
+            "field_name": "subcategory",
+            "field_type": "categorical",
+            "expected": "service quality",
+            "predicted": null,
+            "matched": false,
+            "similarity_score": null
+          },
+          {
+            "field_name": "priority",
+            "field_type": "categorical",
+            "expected": "Medium",
+            "predicted": null,
+            "matched": false,
+            "similarity_score": null
+          },
+          {
+            "field_name": "disposition",
+            "field_type": "categorical",
+            "expected": "Resolved",
+            "predicted": null,
+            "matched": false,
+            "similarity_score": null
+          },
+          {
+            "field_name": "sentiment",
+            "field_type": "categorical",
+            "expected": "Negative",
+            "predicted": null,
+            "matched": false,
+            "similarity_score": null
+          },
+          {
+            "field_name": "escalation_recommended",
+            "field_type": "boolean",
+            "expected": null,
+            "predicted": null,
+            "matched": false,
+            "similarity_score": null
+          },
+          {
+            "field_name": "decision",
+            "field_type": "categorical",
+            "expected": "AUTO_SAVE",
+            "predicted": null,
+            "matched": false,
+            "similarity_score": null
+          }
+        ]
+      },
+      {
+        "call_id": "K-025",
+        "expected": {
+          "summary": null,
+          "category": "Cancellation",
+          "subcategory": "cancel service",
+          "priority": "Low",
+          "disposition": "Resolved",
+          "sentiment": "Neutral",
+          "escalation_recommended": null,
+          "decision": "AUTO_SAVE"
+        },
+        "predicted": {
+          "summary": null,
+          "category": null,
+          "subcategory": null,
+          "priority": null,
+          "disposition": null,
+          "sentiment": null,
+          "escalation_recommended": null,
+          "decision": null
+        },
+        "matched_fields": [],
+        "mismatched_fields": [
+          "summary",
+          "category",
+          "subcategory",
+          "priority",
+          "disposition",
+          "sentiment",
+          "escalation_recommended",
+          "decision"
+        ],
+        "confidence": null,
+        "overall_result": "MISSING_GENERATED",
+        "field_comparisons": [
+          {
+            "field_name": "summary",
+            "field_type": "text",
+            "expected": null,
+            "predicted": null,
+            "matched": false,
+            "similarity_score": null
+          },
+          {
+            "field_name": "category",
+            "field_type": "categorical",
+            "expected": "Cancellation",
+            "predicted": null,
+            "matched": false,
+            "similarity_score": null
+          },
+          {
+            "field_name": "subcategory",
+            "field_type": "categorical",
+            "expected": "cancel service",
+            "predicted": null,
+            "matched": false,
+            "similarity_score": null
+          },
+          {
+            "field_name": "priority",
+            "field_type": "categorical",
+            "expected": "Low",
+            "predicted": null,
+            "matched": false,
+            "similarity_score": null
+          },
+          {
+            "field_name": "disposition",
+            "field_type": "categorical",
+            "expected": "Resolved",
+            "predicted": null,
+            "matched": false,
+            "similarity_score": null
+          },
+          {
+            "field_name": "sentiment",
+            "field_type": "categorical",
+            "expected": "Neutral",
+            "predicted": null,
+            "matched": false,
+            "similarity_score": null
+          },
+          {
+            "field_name": "escalation_recommended",
+            "field_type": "boolean",
+            "expected": null,
+            "predicted": null,
+            "matched": false,
+            "similarity_score": null
+          },
+          {
+            "field_name": "decision",
+            "field_type": "categorical",
+            "expected": "AUTO_SAVE",
+            "predicted": null,
+            "matched": false,
+            "similarity_score": null
+          }
+        ]
+      },
+      {
+        "call_id": "K-026",
+        "expected": {
+          "summary": null,
+          "category": "Billing & Payments",
+          "subcategory": "billing dispute",
+          "priority": "Medium",
+          "disposition": "Resolved",
+          "sentiment": "Negative",
+          "escalation_recommended": null,
+          "decision": "AUTO_SAVE"
+        },
+        "predicted": {
+          "summary": null,
+          "category": null,
+          "subcategory": null,
+          "priority": null,
+          "disposition": null,
+          "sentiment": null,
+          "escalation_recommended": null,
+          "decision": null
+        },
+        "matched_fields": [],
+        "mismatched_fields": [
+          "summary",
+          "category",
+          "subcategory",
+          "priority",
+          "disposition",
+          "sentiment",
+          "escalation_recommended",
+          "decision"
+        ],
+        "confidence": null,
+        "overall_result": "MISSING_GENERATED",
+        "field_comparisons": [
+          {
+            "field_name": "summary",
+            "field_type": "text",
+            "expected": null,
+            "predicted": null,
+            "matched": false,
+            "similarity_score": null
+          },
+          {
+            "field_name": "category",
+            "field_type": "categorical",
+            "expected": "Billing & Payments",
+            "predicted": null,
+            "matched": false,
+            "similarity_score": null
+          },
+          {
+            "field_name": "subcategory",
+            "field_type": "categorical",
+            "expected": "billing dispute",
+            "predicted": null,
+            "matched": false,
+            "similarity_score": null
+          },
+          {
+            "field_name": "priority",
+            "field_type": "categorical",
+            "expected": "Medium",
+            "predicted": null,
+            "matched": false,
+            "similarity_score": null
+          },
+          {
+            "field_name": "disposition",
+            "field_type": "categorical",
+            "expected": "Resolved",
+            "predicted": null,
+            "matched": false,
+            "similarity_score": null
+          },
+          {
+            "field_name": "sentiment",
+            "field_type": "categorical",
+            "expected": "Negative",
+            "predicted": null,
+            "matched": false,
+            "similarity_score": null
+          },
+          {
+            "field_name": "escalation_recommended",
+            "field_type": "boolean",
+            "expected": null,
+            "predicted": null,
+            "matched": false,
+            "similarity_score": null
+          },
+          {
+            "field_name": "decision",
+            "field_type": "categorical",
+            "expected": "AUTO_SAVE",
+            "predicted": null,
+            "matched": false,
+            "similarity_score": null
+          }
+        ]
+      },
+      {
+        "call_id": "K-027",
+        "expected": {
+          "summary": null,
+          "category": "Billing & Payments",
+          "subcategory": "billing dispute",
+          "priority": "High",
+          "disposition": "Unresolved \u2014 pending",
+          "sentiment": "Negative",
+          "escalation_recommended": null,
+          "decision": "HUMAN_REVIEW"
+        },
+        "predicted": {
+          "summary": null,
+          "category": null,
+          "subcategory": null,
+          "priority": null,
+          "disposition": null,
+          "sentiment": null,
+          "escalation_recommended": null,
+          "decision": null
+        },
+        "matched_fields": [],
+        "mismatched_fields": [
+          "summary",
+          "category",
+          "subcategory",
+          "priority",
+          "disposition",
+          "sentiment",
+          "escalation_recommended",
+          "decision"
+        ],
+        "confidence": null,
+        "overall_result": "MISSING_GENERATED",
+        "field_comparisons": [
+          {
+            "field_name": "summary",
+            "field_type": "text",
+            "expected": null,
+            "predicted": null,
+            "matched": false,
+            "similarity_score": null
+          },
+          {
+            "field_name": "category",
+            "field_type": "categorical",
+            "expected": "Billing & Payments",
+            "predicted": null,
+            "matched": false,
+            "similarity_score": null
+          },
+          {
+            "field_name": "subcategory",
+            "field_type": "categorical",
+            "expected": "billing dispute",
+            "predicted": null,
+            "matched": false,
+            "similarity_score": null
+          },
+          {
+            "field_name": "priority",
+            "field_type": "categorical",
+            "expected": "High",
+            "predicted": null,
+            "matched": false,
+            "similarity_score": null
+          },
+          {
+            "field_name": "disposition",
+            "field_type": "categorical",
+            "expected": "Unresolved \u2014 pending",
+            "predicted": null,
+            "matched": false,
+            "similarity_score": null
+          },
+          {
+            "field_name": "sentiment",
+            "field_type": "categorical",
+            "expected": "Negative",
+            "predicted": null,
+            "matched": false,
+            "similarity_score": null
+          },
+          {
+            "field_name": "escalation_recommended",
+            "field_type": "boolean",
+            "expected": null,
+            "predicted": null,
+            "matched": false,
+            "similarity_score": null
+          },
+          {
+            "field_name": "decision",
+            "field_type": "categorical",
+            "expected": "HUMAN_REVIEW",
+            "predicted": null,
+            "matched": false,
+            "similarity_score": null
+          }
+        ]
+      }
+    ]
+  },
+  "failed_cases": {
+    "failed_calls": [],
+    "incorrect_categories": [],
+    "incorrect_priorities": [],
+    "incorrect_sentiments": [],
+    "incorrect_decisions": [],
+    "summary_similarity_scores": {}
+  },
+  "chart_paths": {
+    "category_distribution": "outputs\\dashboard\\charts\\category_distribution.png",
+    "priority_distribution": "outputs\\dashboard\\charts\\priority_distribution.png",
+    "sentiment_distribution": "outputs\\dashboard\\charts\\sentiment_distribution.png",
+    "decision_distribution": "outputs\\dashboard\\charts\\decision_distribution.png",
+    "confidence_histogram": "outputs\\dashboard\\charts\\confidence_histogram.png",
+    "calls_over_time": "outputs\\dashboard\\charts\\calls_over_time.png"
+  },
+  "warnings": []
+}
