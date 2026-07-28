@@ -1,38 +1,111 @@
 {
-  "call_id": "K-002",
-  "customer_id": "C-1002",
+  "metadata": {
+    "call_id": "K-002",
+    "created_at": "2026-07-28T09:42:55.738865+00:00",
+    "pipeline_version": "1.0"
+  },
   "documentation": {
-    "summary": "Synthetic summary for K-002.",
-    "issue": "Synthetic issue description.",
-    "root_cause": "Synthetic root cause.",
-    "resolution": "Synthetic resolution.",
+    "summary": "The customer called after being charged £400 instead of their normal £250 monthly plan amount. The agent found an add-on applied in error, removed it, and credited the £150 difference immediately. The customer was confirmed to have a £250 monthly charge going forward.",
+    "issue": "The customer was charged £400 on their monthly bill instead of the agreed £250 plan price due to an unexpected extra charge.",
+    "root_cause": "An add-on service was applied to the customer's account in error.",
+    "resolution": "The agent removed the erroneous add-on and issued a £150 credit to adjust the bill back to £250.",
     "pending_actions": [],
-    "category": "Billing",
-    "subcategory": "Refund",
-    "priority": "MEDIUM",
+    "category": "Account Management",
+    "subcategory": "add or remove service",
+    "priority": "Routine",
     "disposition": "Resolved",
-    "sentiment": "Negative",
+    "sentiment": "Satisfied",
     "keywords": [
-      "refund",
-      "upgrade",
-      "invoice"
+      "billing",
+      "charge",
+      "400 pounds",
+      "250 plan",
+      "add-on",
+      "credited"
     ],
     "tags": [
-      "callback_requested",
-      "first_contact"
+      "billing_dispute",
+      "add_on_error",
+      "credit_issued"
     ],
-    "confidence": 0.65,
-    "grounding": "handbook_chunk_ref",
-    "escalation_recommended": false
+    "escalation_recommended": false,
+    "confidence": 1.0,
+    "grounding": {
+      "summary": [
+        "Transcript Line 7",
+        "Transcript Line 8",
+        "Transcript Line 10"
+      ],
+      "issue": [
+        "Transcript Line 7"
+      ],
+      "root_cause": [
+        "Transcript Line 8"
+      ],
+      "resolution": [
+        "Transcript Line 8",
+        "Transcript Line 10"
+      ],
+      "pending_actions": [
+        "Transcript Line 8",
+        "Handbook Rule 4"
+      ],
+      "category": [
+        "Handbook Rule 5"
+      ],
+      "subcategory": [
+        "Handbook Rule 5",
+        "Transcript Line 8"
+      ],
+      "priority": [
+        "Handbook Rule 1",
+        "Handbook Rule 3"
+      ],
+      "disposition": [
+        "Handbook Rule 3",
+        "Transcript Line 8"
+      ],
+      "sentiment": [
+        "Transcript Line 9",
+        "Transcript Line 11"
+      ],
+      "keywords": [
+        "Transcript Line 6",
+        "Transcript Line 7",
+        "Transcript Line 8"
+      ],
+      "tags": [
+        "Transcript Line 7",
+        "Transcript Line 8"
+      ],
+      "escalation_recommended": [
+        "Handbook Rule 1",
+        "Handbook Rule 3"
+      ],
+      "confidence": [
+        "Handbook Rule 4"
+      ]
+    }
   },
   "decision": {
     "decision": "AUTO_SAVE",
-    "reasons": [
-      "synthetic"
-    ]
+    "reason": "Documentation is complete, grounded, unambiguous, and free of escalation or sensitive-content triggers.",
+    "triggered_rules": [
+      "Rule 1",
+      "Rule 3",
+      "Rule 10"
+    ],
+    "confidence": 1.0,
+    "timestamp": "2026-07-28T09:42:55.734049+00:00"
   },
   "review": {
-    "status": "READY_TO_SAVE"
-  },
-  "timestamp": "2026-01-03T09:00:00"
+    "review_id": "1289f525-45c5-4b04-9dc6-e85a59183946",
+    "status": "READY_TO_SAVE",
+    "queue": "SAVE_QUEUE",
+    "review_required": false,
+    "review_reason": null,
+    "assigned_to": null,
+    "created_at": "2026-07-28T09:42:55.736168+00:00",
+    "updated_at": "2026-07-28T09:42:55.736168+00:00"
+  }
 }

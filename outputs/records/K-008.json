@@ -1,37 +1,35 @@
 {
   "metadata": {
-    "call_id": "K-005",
-    "created_at": "2026-07-28T09:43:50.819142+00:00",
+    "call_id": "K-008",
+    "created_at": "2026-07-28T09:44:42.625606+00:00",
     "pipeline_version": "1.0"
   },
   "documentation": {
-    "summary": "The customer contacted StayEasy Hotels reservations to change their booking date from the 5th to the 12th. The agent updated the reservation for the 12th with the same room type and rate, and advised that a confirmation was on its way.",
-    "issue": "Customer needed to move their booking date from the 5th to the 12th.",
+    "summary": "The customer contacted SoukMart to update the email address associated with her account. Having verified her identity, the agent successfully updated her email address during the call.",
+    "issue": "The customer wanted to change the email address on her account.",
     "root_cause": "Not stated",
-    "resolution": "Booking successfully changed to the 12th for the same room and rate, with confirmation sent.",
+    "resolution": "The agent updated the email address on the customer's account.",
     "pending_actions": [],
-    "category": "Reservations",
-    "subcategory": "Booking Modification",
-    "priority": "Low",
+    "category": "Retail & e-commerce",
+    "subcategory": "Account Changes",
+    "priority": "Routine",
     "disposition": "Resolved",
     "sentiment": "Positive",
     "keywords": [
-      "booking",
-      "reservations",
-      "StayEasy Hotels",
-      "12th",
-      "confirmation"
+      "change email",
+      "account",
+      "identity confirmed",
+      "updated email"
     ],
     "tags": [
-      "booking_change",
-      "reservations",
-      "date_modification"
+      "email_update",
+      "account_management",
+      "soukmart"
     ],
     "escalation_recommended": false,
     "confidence": 1.0,
     "grounding": {
       "summary": [
-        "Transcript Line 6",
         "Transcript Line 7",
         "Transcript Line 8"
       ],
@@ -48,32 +46,35 @@
         "Transcript Line 8"
       ],
       "category": [
+        "Handbook Rule 2",
         "Transcript Line 6"
       ],
       "subcategory": [
+        "Handbook Rule 1",
         "Transcript Line 7"
       ],
       "priority": [
-        "Handbook Rule 5"
+        "Handbook Rule 2"
       ],
       "disposition": [
-        "Handbook Rule 5",
+        "Handbook Rule 2",
         "Transcript Line 8"
       ],
       "sentiment": [
         "Transcript Line 9"
       ],
       "keywords": [
-        "Transcript Line 6",
         "Transcript Line 7",
         "Transcript Line 8"
       ],
       "tags": [
         "Transcript Line 6",
-        "Transcript Line 7"
+        "Transcript Line 7",
+        "Handbook Rule 2"
       ],
       "escalation_recommended": [
-        "Handbook Rule 1"
+        "Handbook Rule 1",
+        "Handbook Rule 2"
       ],
       "confidence": [
         "Handbook Rule 3"
@@ -89,16 +90,16 @@
       "Rule 10"
     ],
     "confidence": 1.0,
-    "timestamp": "2026-07-28T09:43:50.811889+00:00"
+    "timestamp": "2026-07-28T09:44:42.623981+00:00"
   },
   "review": {
-    "review_id": "0e3893dd-8b03-44d5-98f8-30602ba40d00",
+    "review_id": "56bf994c-b7da-49e9-b8bc-feaec435c0f2",
     "status": "READY_TO_SAVE",
     "queue": "SAVE_QUEUE",
     "review_required": false,
     "review_reason": null,
     "assigned_to": null,
-    "created_at": "2026-07-28T09:43:50.813591+00:00",
-    "updated_at": "2026-07-28T09:43:50.813591+00:00"
+    "created_at": "2026-07-28T09:44:42.624525+00:00",
+    "updated_at": "2026-07-28T09:44:42.624525+00:00"
   }
 }

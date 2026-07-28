@@ -1,38 +1,104 @@
 {
-  "call_id": "K-004",
-  "customer_id": "C-1004",
+  "metadata": {
+    "call_id": "K-004",
+    "created_at": "2026-07-28T09:43:28.421746+00:00",
+    "pipeline_version": "1.0"
+  },
   "documentation": {
-    "summary": "Synthetic summary for K-004.",
-    "issue": "Synthetic issue description.",
-    "root_cause": "Synthetic root cause.",
-    "resolution": "Synthetic resolution.",
+    "summary": "The customer reported an inability to log into her account due to a wrong password error. The agent sent a password reset link to her registered number. The customer used the link and confirmed she was able to log in successfully.",
+    "issue": "Customer could not log into her account because it reported a wrong password.",
+    "root_cause": "Not stated",
+    "resolution": "Agent sent a password reset link to the customer's registered phone number, allowing her to successfully log in.",
     "pending_actions": [],
-    "category": "Account Management",
-    "subcategory": "Login Issue",
-    "priority": "HIGH",
+    "category": "Technical Support",
+    "subcategory": "cannot log in",
+    "priority": "Low",
     "disposition": "Resolved",
-    "sentiment": "Negative",
+    "sentiment": "Neutral",
     "keywords": [
-      "outage",
-      "upgrade",
-      "refund"
+      "log into",
+      "wrong password",
+      "reset link",
+      "registered number"
     ],
     "tags": [
-      "first_contact",
-      "vip"
+      "login_failure",
+      "password_reset"
     ],
-    "confidence": 0.79,
-    "grounding": "handbook_chunk_ref",
-    "escalation_recommended": false
+    "escalation_recommended": false,
+    "confidence": 1.0,
+    "grounding": {
+      "summary": [
+        "Transcript Line 7",
+        "Transcript Line 8",
+        "Transcript Line 9"
+      ],
+      "issue": [
+        "Transcript Line 7"
+      ],
+      "root_cause": [
+        "Transcript Line 7"
+      ],
+      "resolution": [
+        "Transcript Line 8",
+        "Transcript Line 9"
+      ],
+      "pending_actions": [
+        "Transcript Line 9",
+        "Transcript Line 10"
+      ],
+      "category": [
+        "Handbook Rule 3"
+      ],
+      "subcategory": [
+        "Handbook Rule 3"
+      ],
+      "priority": [
+        "Handbook Rule 5"
+      ],
+      "disposition": [
+        "Handbook Rule 4"
+      ],
+      "sentiment": [
+        "Transcript Line 9",
+        "Transcript Line 10"
+      ],
+      "keywords": [
+        "Transcript Line 7",
+        "Transcript Line 8"
+      ],
+      "tags": [
+        "Handbook Rule 3",
+        "Transcript Line 7"
+      ],
+      "escalation_recommended": [
+        "Handbook Rule 2"
+      ],
+      "confidence": [
+        "Transcript Line 1",
+        "Transcript Line 10"
+      ]
+    }
   },
   "decision": {
     "decision": "AUTO_SAVE",
-    "reasons": [
-      "synthetic"
-    ]
+    "reason": "Documentation is complete, grounded, unambiguous, and free of escalation or sensitive-content triggers.",
+    "triggered_rules": [
+      "Rule 1",
+      "Rule 3",
+      "Rule 10"
+    ],
+    "confidence": 1.0,
+    "timestamp": "2026-07-28T09:43:28.414632+00:00"
   },
   "review": {
-    "status": "READY_TO_SAVE"
-  },
-  "timestamp": "2026-01-05T14:00:00"
+    "review_id": "c8f10d74-219b-4d62-a4f9-14670a810b89",
+    "status": "READY_TO_SAVE",
+    "queue": "SAVE_QUEUE",
+    "review_required": false,
+    "review_reason": null,
+    "assigned_to": null,
+    "created_at": "2026-07-28T09:43:28.418070+00:00",
+    "updated_at": "2026-07-28T09:43:28.418070+00:00"
+  }
 }

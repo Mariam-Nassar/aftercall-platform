@@ -1,0 +1,109 @@
+{
+  "metadata": {
+    "call_id": "K-027",
+    "created_at": "2026-07-28T10:50:26.854339+00:00",
+    "pipeline_version": "1.0"
+  },
+  "documentation": {
+    "summary": "The customer called to complain that their bill is incorrect again. Although the customer demanded the issue be marked as resolved and not escalated, the agent explained that the charge cannot be confirmed as fixed yet and still needs to be checked.",
+    "issue": "The customer's bill is incorrect.",
+    "root_cause": "Not stated",
+    "resolution": "Not stated",
+    "pending_actions": [
+      "Check the disputed charge to confirm if it is fixed"
+    ],
+    "category": "Billing",
+    "subcategory": "Not stated",
+    "priority": "High",
+    "disposition": "Unresolved — pending",
+    "sentiment": "Negative",
+    "keywords": [
+      "bill",
+      "wrong again",
+      "resolved",
+      "VIP",
+      "charge"
+    ],
+    "tags": [
+      "billing dispute",
+      "repeat contact",
+      "frustrated customer"
+    ],
+    "escalation_recommended": false,
+    "confidence": 0.95,
+    "grounding": {
+      "summary": [
+        "Transcript Line 6",
+        "Transcript Line 7",
+        "Transcript Line 8",
+        "Transcript Line 9"
+      ],
+      "issue": [
+        "Transcript Line 7"
+      ],
+      "root_cause": [],
+      "resolution": [
+        "Transcript Line 8",
+        "Handbook Rule 2 (Clause 2.2)"
+      ],
+      "pending_actions": [
+        "Transcript Line 8"
+      ],
+      "category": [
+        "Transcript Line 6"
+      ],
+      "subcategory": [],
+      "priority": [
+        "Transcript Line 7",
+        "Handbook Rule 3 (Clause 2.4)"
+      ],
+      "disposition": [
+        "Transcript Line 8",
+        "Handbook Rule 1 (Clause 0.5)",
+        "Handbook Rule 2 (Clause 2.1, Clause 2.2)",
+        "Handbook Rule 4 (Clause 5.4)"
+      ],
+      "sentiment": [
+        "Transcript Line 7",
+        "Transcript Line 9",
+        "Handbook Rule 5 (Clause 3.3)"
+      ],
+      "keywords": [
+        "Transcript Line 7",
+        "Transcript Line 8"
+      ],
+      "tags": [
+        "Transcript Line 7"
+      ],
+      "escalation_recommended": [
+        "Transcript Line 7",
+        "Handbook Rule 1 (Clause 0.5)",
+        "Handbook Rule 3 (Clause 2.4)"
+      ],
+      "confidence": [
+        "Handbook Rule 4 (Clause 5.5)"
+      ]
+    }
+  },
+  "decision": {
+    "decision": "AUTO_SAVE",
+    "reason": "Documentation is complete, grounded, unambiguous, and free of escalation or sensitive-content triggers.",
+    "triggered_rules": [
+      "Rule 1",
+      "Rule 3",
+      "Rule 10"
+    ],
+    "confidence": 0.95,
+    "timestamp": "2026-07-28T10:50:26.850534+00:00"
+  },
+  "review": {
+    "review_id": "ae612bb5-9ac3-4e0b-9561-b394956deb67",
+    "status": "READY_TO_SAVE",
+    "queue": "SAVE_QUEUE",
+    "review_required": false,
+    "review_reason": null,
+    "assigned_to": null,
+    "created_at": "2026-07-28T10:50:26.852106+00:00",
+    "updated_at": "2026-07-28T10:50:26.852106+00:00"
+  }
+}

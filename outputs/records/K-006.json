@@ -1,0 +1,114 @@
+{
+  "metadata": {
+    "call_id": "K-006",
+    "created_at": "2026-07-28T09:44:08.055903+00:00",
+    "pipeline_version": "1.0"
+  },
+  "documentation": {
+    "summary": "The customer called to ask if the 65-inch TV was in stock and requested its price. The agent confirmed that it is available online and at the Maadi branch for 18,900 pounds. The customer decided to place the order online.",
+    "issue": "The customer inquired about the stock availability and price of a 65-inch TV.",
+    "root_cause": "Not stated",
+    "resolution": "The agent provided the price (18,900 pounds) and confirmed availability both at the Maadi branch and online.",
+    "pending_actions": [],
+    "category": "Product & Service Inquiry",
+    "subcategory": "availability",
+    "priority": "Low",
+    "disposition": "Resolved",
+    "sentiment": "Positive",
+    "keywords": [
+      "65-inch TV",
+      "stock",
+      "price",
+      "18,900 pounds",
+      "Maadi branch",
+      "online"
+    ],
+    "tags": [
+      "Inquiry",
+      "Stock",
+      "Pricing",
+      "TV"
+    ],
+    "escalation_recommended": false,
+    "confidence": 1.0,
+    "grounding": {
+      "summary": [
+        "Transcript Line 7",
+        "Transcript Line 8",
+        "Transcript Line 9"
+      ],
+      "issue": [
+        "Transcript Line 7"
+      ],
+      "root_cause": [],
+      "resolution": [
+        "Transcript Line 8"
+      ],
+      "pending_actions": [
+        "Transcript Line 8",
+        "Transcript Line 9"
+      ],
+      "category": [
+        "Handbook Rule 3",
+        "Handbook Rule 4"
+      ],
+      "subcategory": [
+        "Handbook Rule 3",
+        "Handbook Rule 4",
+        "Transcript Line 7"
+      ],
+      "priority": [
+        "Handbook Rule 1"
+      ],
+      "disposition": [
+        "Handbook Rule 5",
+        "Transcript Line 8",
+        "Transcript Line 9"
+      ],
+      "sentiment": [
+        "Transcript Line 9"
+      ],
+      "keywords": [
+        "Transcript Line 7",
+        "Transcript Line 8"
+      ],
+      "tags": [
+        "Transcript Line 7",
+        "Transcript Line 8"
+      ],
+      "escalation_recommended": [
+        "Handbook Rule 1",
+        "Handbook Rule 5"
+      ],
+      "confidence": [
+        "Handbook Rule 1",
+        "Handbook Rule 3",
+        "Handbook Rule 5",
+        "Transcript Line 7",
+        "Transcript Line 8",
+        "Transcript Line 9"
+      ]
+    }
+  },
+  "decision": {
+    "decision": "AUTO_SAVE",
+    "reason": "Documentation is complete, grounded, unambiguous, and free of escalation or sensitive-content triggers.",
+    "triggered_rules": [
+      "Rule 1",
+      "Rule 3",
+      "Rule 10"
+    ],
+    "confidence": 1.0,
+    "timestamp": "2026-07-28T09:44:08.050972+00:00"
+  },
+  "review": {
+    "review_id": "b0d885ad-e207-46a1-8181-27607e92dbac",
+    "status": "READY_TO_SAVE",
+    "queue": "SAVE_QUEUE",
+    "review_required": false,
+    "review_reason": null,
+    "assigned_to": null,
+    "created_at": "2026-07-28T09:44:08.052973+00:00",
+    "updated_at": "2026-07-28T09:44:08.052973+00:00"
+  }
+}

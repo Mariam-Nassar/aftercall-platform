@@ -1,0 +1,113 @@
+{
+  "metadata": {
+    "call_id": "K-012",
+    "created_at": "2026-07-28T09:46:04.037699+00:00",
+    "pipeline_version": "1.0"
+  },
+  "documentation": {
+    "summary": "Salma Farouk called MedCare Clinics to reschedule her post-surgery follow-up appointment. The agent moved the appointment to the following Tuesday at 10:00 AM. The agent confirmed that the customer will be seen by the same consultant.",
+    "issue": "The customer needed to reschedule her post-surgery follow-up appointment.",
+    "root_cause": "Not stated",
+    "resolution": "The agent moved the follow-up appointment to the following Tuesday at 10:00 AM with the same consultant.",
+    "pending_actions": [],
+    "category": "Healthcare",
+    "subcategory": "Appointment",
+    "priority": "Medium",
+    "disposition": "Resolved",
+    "sentiment": "Positive",
+    "keywords": [
+      "MedCare Clinics",
+      "follow-up appointment",
+      "surgery",
+      "Tuesday at 10am",
+      "consultant"
+    ],
+    "tags": [
+      "Healthcare",
+      "Appointment Reschedule",
+      "Sensitive Review Required"
+    ],
+    "escalation_recommended": false,
+    "confidence": 0.95,
+    "grounding": {
+      "summary": [
+        "Customer Record",
+        "Transcript Line 6",
+        "Transcript Line 7",
+        "Transcript Line 8",
+        "Transcript Line 10"
+      ],
+      "issue": [
+        "Transcript Line 7"
+      ],
+      "root_cause": [
+        "Handbook Rule 4"
+      ],
+      "resolution": [
+        "Transcript Line 8",
+        "Transcript Line 10"
+      ],
+      "pending_actions": [
+        "Transcript Line 8",
+        "Transcript Line 10"
+      ],
+      "category": [
+        "Handbook Rule 2",
+        "Transcript Line 6"
+      ],
+      "subcategory": [
+        "Handbook Rule 2",
+        "Transcript Line 7"
+      ],
+      "priority": [
+        "Handbook Rule 5"
+      ],
+      "disposition": [
+        "Transcript Line 8",
+        "Transcript Line 10"
+      ],
+      "sentiment": [
+        "Transcript Line 9"
+      ],
+      "keywords": [
+        "Transcript Line 6",
+        "Transcript Line 7",
+        "Transcript Line 8",
+        "Transcript Line 10"
+      ],
+      "tags": [
+        "Handbook Rule 1",
+        "Handbook Rule 2",
+        "Transcript Line 7"
+      ],
+      "escalation_recommended": [
+        "Handbook Rule 1",
+        "Handbook Rule 2"
+      ],
+      "confidence": [
+        "Handbook Rule 4"
+      ]
+    }
+  },
+  "decision": {
+    "decision": "AUTO_SAVE",
+    "reason": "Documentation is complete, grounded, unambiguous, and free of escalation or sensitive-content triggers.",
+    "triggered_rules": [
+      "Rule 1",
+      "Rule 3",
+      "Rule 10"
+    ],
+    "confidence": 0.95,
+    "timestamp": "2026-07-28T09:46:04.036555+00:00"
+  },
+  "review": {
+    "review_id": "37ba3fd7-b7f8-4eea-a7d5-afcf354e48e9",
+    "status": "READY_TO_SAVE",
+    "queue": "SAVE_QUEUE",
+    "review_required": false,
+    "review_reason": null,
+    "assigned_to": null,
+    "created_at": "2026-07-28T09:46:04.037081+00:00",
+    "updated_at": "2026-07-28T09:46:04.037081+00:00"
+  }
+}

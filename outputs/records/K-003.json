@@ -1,38 +1,103 @@
 {
-  "call_id": "K-003",
-  "customer_id": "C-1003",
+  "metadata": {
+    "call_id": "K-003",
+    "created_at": "2026-07-28T09:43:10.549958+00:00",
+    "pipeline_version": "1.0"
+  },
   "documentation": {
-    "summary": "Synthetic summary for K-003.",
-    "issue": "Synthetic issue description.",
-    "root_cause": "Synthetic root cause.",
-    "resolution": "Synthetic resolution.",
+    "summary": "The customer called to check the status of order 55231. The agent informed them that the order shipped yesterday and is expected by Thursday end of day. The customer acknowledged the update and ended the call.",
+    "issue": "Customer inquired about the status and delivery date of order 55231.",
+    "root_cause": "Not stated",
+    "resolution": "Provided delivery tracking information confirming the order shipped yesterday and is due Thursday by end of day.",
     "pending_actions": [],
-    "category": "Billing",
-    "subcategory": "Password Reset",
-    "priority": "CRITICAL",
-    "disposition": "Unresolved",
+    "category": "Order & Delivery",
+    "subcategory": "order status",
+    "priority": "Low",
+    "disposition": "Resolved",
     "sentiment": "Neutral",
     "keywords": [
-      "password",
-      "invoice",
-      "outage"
+      "order 55231",
+      "shipped",
+      "Thursday",
+      "delivery status"
     ],
     "tags": [
-      "vip",
-      "callback_requested"
+      "order_status",
+      "soukmart",
+      "delivery"
     ],
-    "confidence": 0.72,
-    "grounding": "handbook_chunk_ref",
-    "escalation_recommended": false
+    "escalation_recommended": false,
+    "confidence": 1.0,
+    "grounding": {
+      "summary": [
+        "Transcript Line 7",
+        "Transcript Line 8",
+        "Transcript Line 9"
+      ],
+      "issue": [
+        "Transcript Line 7"
+      ],
+      "root_cause": [
+        "Handbook Rule 1"
+      ],
+      "resolution": [
+        "Transcript Line 8"
+      ],
+      "pending_actions": [
+        "Transcript Line 8",
+        "Transcript Line 10",
+        "Handbook Rule 1"
+      ],
+      "category": [
+        "Handbook Rule 4"
+      ],
+      "subcategory": [
+        "Handbook Rule 4"
+      ],
+      "priority": [
+        "Handbook Rule 3"
+      ],
+      "disposition": [
+        "Handbook Rule 3"
+      ],
+      "sentiment": [
+        "Transcript Line 9"
+      ],
+      "keywords": [
+        "Transcript Line 7",
+        "Transcript Line 8"
+      ],
+      "tags": [
+        "Transcript Line 6",
+        "Transcript Line 7"
+      ],
+      "escalation_recommended": [
+        "Handbook Rule 5"
+      ],
+      "confidence": [
+        "Handbook Rule 1"
+      ]
+    }
   },
   "decision": {
     "decision": "AUTO_SAVE",
-    "reasons": [
-      "synthetic"
-    ]
+    "reason": "Documentation is complete, grounded, unambiguous, and free of escalation or sensitive-content triggers.",
+    "triggered_rules": [
+      "Rule 1",
+      "Rule 3",
+      "Rule 10"
+    ],
+    "confidence": 1.0,
+    "timestamp": "2026-07-28T09:43:10.539817+00:00"
   },
   "review": {
-    "status": "READY_TO_SAVE"
-  },
-  "timestamp": "2026-01-04T13:00:00"
+    "review_id": "8f17f813-990a-4c46-9588-014be877af8e",
+    "status": "READY_TO_SAVE",
+    "queue": "SAVE_QUEUE",
+    "review_required": false,
+    "review_reason": null,
+    "assigned_to": null,
+    "created_at": "2026-07-28T09:43:10.546955+00:00",
+    "updated_at": "2026-07-28T09:43:10.546955+00:00"
+  }
 }

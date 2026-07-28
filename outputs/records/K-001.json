@@ -1,38 +1,110 @@
 {
-  "call_id": "K-001",
-  "customer_id": "C-1001",
+  "metadata": {
+    "call_id": "K-001",
+    "created_at": "2026-07-28T09:42:35.696288+00:00",
+    "pipeline_version": "1.0"
+  },
   "documentation": {
-    "summary": "Synthetic summary for K-001.",
-    "issue": "Synthetic issue description.",
-    "root_cause": "Synthetic root cause.",
-    "resolution": "Synthetic resolution.",
+    "summary": "The customer called to check on the status of a refund for a returned blender. The agent verified receipt of the return and processed an 850-pound refund directly to the customer's card during the call.",
+    "issue": "Customer inquiring about a refund for a blender returned last week.",
+    "root_cause": "Not stated",
+    "resolution": "Agent processed an 850-pound refund to the customer's card, expected to show within 2 to 3 days.",
     "pending_actions": [],
-    "category": "Billing",
-    "subcategory": "Upgrade",
-    "priority": "MEDIUM",
+    "category": "Returns & Refunds",
+    "subcategory": "refund request",
+    "priority": "Routine",
     "disposition": "Resolved",
     "sentiment": "Positive",
     "keywords": [
-      "invoice",
-      "cancel",
-      "billing"
+      "returned",
+      "blender",
+      "refund",
+      "850 pounds",
+      "card"
     ],
     "tags": [
-      "callback_requested",
-      "vip"
+      "Returns",
+      "Refunds",
+      "Blender"
     ],
-    "confidence": 0.81,
-    "grounding": "handbook_chunk_ref",
-    "escalation_recommended": false
+    "escalation_recommended": false,
+    "confidence": 1.0,
+    "grounding": {
+      "summary": [
+        "Transcript Line 7",
+        "Transcript Line 8",
+        "Transcript Line 10"
+      ],
+      "issue": [
+        "Transcript Line 7"
+      ],
+      "root_cause": [
+        "Handbook Rule 5"
+      ],
+      "resolution": [
+        "Transcript Line 8",
+        "Transcript Line 10",
+        "Handbook Rule 1"
+      ],
+      "pending_actions": [
+        "Transcript Line 8",
+        "Handbook Rule 5"
+      ],
+      "category": [
+        "Handbook Rule 2",
+        "Transcript Line 7"
+      ],
+      "subcategory": [
+        "Handbook Rule 2",
+        "Transcript Line 7"
+      ],
+      "priority": [
+        "Handbook Rule 1"
+      ],
+      "disposition": [
+        "Handbook Rule 1",
+        "Transcript Line 8"
+      ],
+      "sentiment": [
+        "Handbook Rule 3",
+        "Transcript Line 9",
+        "Transcript Line 11"
+      ],
+      "keywords": [
+        "Transcript Line 7",
+        "Transcript Line 8"
+      ],
+      "tags": [
+        "Transcript Line 7",
+        "Transcript Line 8"
+      ],
+      "escalation_recommended": [
+        "Handbook Rule 4"
+      ],
+      "confidence": [
+        "Handbook Rule 5"
+      ]
+    }
   },
   "decision": {
     "decision": "AUTO_SAVE",
-    "reasons": [
-      "synthetic"
-    ]
+    "reason": "Documentation is complete, grounded, unambiguous, and free of escalation or sensitive-content triggers.",
+    "triggered_rules": [
+      "Rule 1",
+      "Rule 3",
+      "Rule 10"
+    ],
+    "confidence": 1.0,
+    "timestamp": "2026-07-28T09:42:35.692950+00:00"
   },
   "review": {
-    "status": "READY_TO_SAVE"
-  },
-  "timestamp": "2026-01-02T10:00:00"
+    "review_id": "c7935345-0696-4916-8566-de8abdef7d6e",
+    "status": "READY_TO_SAVE",
+    "queue": "SAVE_QUEUE",
+    "review_required": false,
+    "review_reason": null,
+    "assigned_to": null,
+    "created_at": "2026-07-28T09:42:35.694288+00:00",
+    "updated_at": "2026-07-28T09:42:35.694288+00:00"
+  }
 }
