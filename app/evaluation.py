@@ -50,7 +50,7 @@ logger = logging.getLogger(__name__)
 SUMMARY_SIMILARITY_THRESHOLD: float = 0.75
 REPORT_DIRECTORY: Path = Path("outputs/evaluation")
 ANSWER_KEY_PATH: Path = Path("data/answer_key.json")
-GENERATED_RECORDS_PATH: Path = Path("outputs/records")
+GENERATED_RECORDS_PATH: Path = Path("outputs")
 
 JSON_REPORT_FILENAME: str = "evaluation_report.json"
 MARKDOWN_REPORT_FILENAME: str = "evaluation_report.md"
@@ -193,12 +193,20 @@ class MatchedPair:
 def _extract_field(record: dict[str, Any], field_name: str) -> Any:
     """Look up a field in a record, tolerating nested record structures.
 
-    Checks the top level first, then searches one level into any nested
-    dict values. Returns None if the field cannot be located. This keeps
-    the module independent of any specific storage schema.
+    Checks the top level first. If the top-level value is itself a
+    dict that also contains `field_name` as a key (a "self-nesting"
+    wrapper, e.g. a top-level "decision" key whose value is
+    {"decision": "AUTO_SAVE", "reason": ..., ...}), the nested scalar
+    is preferred over the wrapper dict. Otherwise falls back to
+    searching one level into any nested dict values. Returns None if
+    the field cannot be located. This keeps the module independent of
+    any specific storage schema.
     """
     if field_name in record:
-        return record[field_name]
+        top_value = record[field_name]
+        if isinstance(top_value, dict) and field_name in top_value:
+            return top_value[field_name]
+        return top_value
 
     for value in record.values():
         if isinstance(value, dict) and field_name in value:
@@ -304,11 +312,23 @@ def load_answer_key(path: Path = ANSWER_KEY_PATH) -> dict[str, dict[str, Any]]:
 
 
 def load_generated_records(directory: Path = GENERATED_RECORDS_PATH) -> dict[str, dict[str, Any]]:
-    """Load all generated pipeline records from a directory, keyed by call_id."""
+    """Load all generated pipeline records from a directory, keyed by call_id.
+
+    Scans recursively so that records routed by review.py into any of
+    its output subfolders (records/, reviews/, escalations/, archive/)
+    are all picked up from a single `outputs/` root. Files under an
+    "evaluation" or "dashboard" subfolder are skipped, since those hold
+    this module's own generated reports rather than pipeline records.
+    """
     if not directory.exists() or not directory.is_dir():
         raise GeneratedRecordNotFoundError(f"Generated records directory not found: {directory}")
 
-    json_files = sorted(directory.glob("*.json"))
+    excluded_folder_names = {"evaluation", "dashboard"}
+    json_files = [
+        file_path
+        for file_path in sorted(directory.glob("**/*.json"))
+        if excluded_folder_names.isdisjoint(part for part in file_path.relative_to(directory).parts)
+    ]
     if not json_files:
         raise GeneratedRecordNotFoundError(f"No generated JSON records found in: {directory}")
 
