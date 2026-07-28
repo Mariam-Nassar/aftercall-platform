@@ -1,5 +1,5 @@
 # AI-Powered After-Call Automation Platform — dependencies
-# Generated for Python 3.12+
+# Python 3.12+
 
 # --- RAG / handbook retrieval (app/handbook_search.py) ---
 langchain-core>=1.5,<2.0
@@ -17,8 +17,11 @@ rapidfuzz>=3.14,<4.0
 # --- Dashboard (app/dashboard.py) ---
 matplotlib>=3.10,<4.0
 
-# --- Configuration (app/main.py, app/documentation_engine.py, app/handbook_search.py) ---
+# --- Human Review UI (app/ui.py) ---
+streamlit>=1.28.0
+
+# --- Configuration ---
 python-dotenv>=1.2,<2.0
 
-# --- Testing (tests/) ---
+# --- Testing ---
 pytest>=9.1,<10.0
