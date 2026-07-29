@@ -309,7 +309,7 @@ def main():
     )
 
     st.title("📞 Kalam CX — After-Call Automation")
-    st.caption("Human Review Screen + Operational Summary")
+    #st.caption("Human Review Screen + Operational Summary")
 
     tab1, tab2 = st.tabs(["👤 Review Queue", "📊 Operational Summary"])
 
