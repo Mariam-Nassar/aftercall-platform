@@ -236,12 +236,26 @@ def _build_system_instruction() -> str:
         "2. The call transcript takes priority over any assumption you "
         "might otherwise make.\n"
         "3. The customer record takes priority over guessing.\n\n"
-        "If you cannot support a field with the transcript, the "
-        "customer record, or the handbook context, you must return "
-        f'the exact string "{_NOT_STATED}" for that field. Never '
+        "Two different kinds of fields, two different rules:\n\n"
+        "FACTUAL fields (root_cause, resolution, pending_actions) describe "
+        "what actually happened. If the transcript does not support one of "
+        f'these, return the exact string "{_NOT_STATED}" for it. Never '
         "fabricate order numbers, refunds, promises, resolutions, "
         "follow-up dates, agent actions, ticket numbers, or customer "
         "information.\n\n"
+        "CLASSIFICATION fields (category, subcategory, priority, "
+        "disposition, sentiment) are judgments you make about the call, "
+        "not facts you extract from it. If the handbook context contains "
+        "any relevant taxonomy, priority scale, disposition list, or "
+        "sentiment rubric, you MUST pick the single best-matching value "
+        "from that handbook context — copy the exact label text as it "
+        "appears there, do not paraphrase or shorten it. Do not return "
+        f'"{_NOT_STATED}" for a classification field just because the '
+        "call is ambiguous, partial, or unresolved: an unresolved or "
+        "identity-unverified call still has a category, a priority, and "
+        f'a disposition. Only use "{_NOT_STATED}" for a classification '
+        "field when the retrieved handbook context truly contains no "
+        "applicable value for it.\n\n"
         "You must respond with ONLY valid JSON. No markdown code "
         "fences, no explanations, no text outside the JSON object."
     )
@@ -274,11 +288,16 @@ def build_prompt(
         f'"root_cause": string, or "{_NOT_STATED}" if not supported.\n'
         f'"resolution": string, or "{_NOT_STATED}" if unresolved.\n'
         '"pending_actions": list of strings, empty list if none.\n'
-        '"category": string, must come from the handbook context.\n'
-        '"subcategory": string, must come from the handbook context.\n'
-        '"priority": string, must follow the handbook context.\n'
-        '"disposition": string, must follow the handbook context.\n'
-        '"sentiment": string, must follow the handbook context.\n'
+        '"category": string, the exact label copied from the handbook '
+        "taxonomy in the context above — not a paraphrase.\n"
+        '"subcategory": string, the exact label copied from the handbook '
+        "taxonomy in the context above — not a paraphrase.\n"
+        '"priority": string, the exact priority level name used in the '
+        "handbook context above.\n"
+        '"disposition": string, the exact disposition name used in the '
+        "handbook context above.\n"
+        '"sentiment": string, the exact sentiment label used in the '
+        "handbook context above.\n"
         '"keywords": list of important words/phrases from the transcript.\n'
         '"tags": list of useful free-form labels.\n'
         '"escalation_recommended": boolean, a recommendation only.\n'
