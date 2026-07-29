@@ -72,7 +72,7 @@ DEFAULT_CUSTOMERS_FILE: Path = Path("data/customers.json")
 DEFAULT_HANDBOOK_DIR: Path = Path("data/handbook")
 DEFAULT_VECTOR_STORE_DIR: Path = Path("data/vector_db")
 DEFAULT_OUTPUTS_DIR: Path = DEFAULT_STORAGE_DIR
-DEFAULT_TOP_K: int = 5
+DEFAULT_TOP_K: int = 10  # kept in sync with handbook_search._DEFAULT_TOP_K
 
 _STATUS_SUCCESS: str = "SUCCESS"
 
