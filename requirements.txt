@@ -17,6 +17,10 @@ rapidfuzz>=3.14,<4.0
 # --- Dashboard (app/dashboard.py) ---
 matplotlib>=3.10,<4.0
 
+# --- Operations Console (app/dashboard_streamlit.py) ---
+pandas>=2.2,<3.0
+plotly>=5.24,<6.0
+
 # --- Human Review UI (app/ui.py) ---
 streamlit>=1.28.0
 
