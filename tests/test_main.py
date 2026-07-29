@@ -67,18 +67,39 @@ def _patch_happy_path(monkeypatch, transcript, customer, handbook_context, docum
     monkeypatch.setattr(pipeline, "evaluate_record", lambda *a, **k: decision)
 
 
-def test_run_pipeline_success(monkeypatch, fake_transcript, fake_customer, fake_handbook_context, fake_documentation, fake_decision):
+def test_run_pipeline_success(
+    monkeypatch, tmp_path, fake_transcript, fake_customer, fake_handbook_context, fake_documentation, fake_decision
+):
     _patch_happy_path(monkeypatch, fake_transcript, fake_customer, fake_handbook_context, fake_documentation, fake_decision)
-    result = pipeline.run_pipeline(Path("data/transcripts/K-001.txt"))
+    # outputs_dir=tmp_path: the storage stage is real here (not mocked), so
+    # without this the test would write into the real outputs/ directory
+    # and overwrite committed deliverable records.
+    result = pipeline.run_pipeline(Path("data/transcripts/K-001.txt"), outputs_dir=tmp_path)
     assert result.status == "SUCCESS"
     assert result.transcript is fake_transcript
     assert result.decision is fake_decision
+    assert result.storage_path is not None
+    assert tmp_path in result.storage_path.parents
 
 
-def test_process_transcript_delegates_to_run_pipeline(monkeypatch, fake_transcript, fake_customer, fake_handbook_context, fake_documentation, fake_decision):
+def test_process_transcript_delegates_to_run_pipeline(
+    monkeypatch, tmp_path, fake_transcript, fake_customer, fake_handbook_context, fake_documentation, fake_decision
+):
     _patch_happy_path(monkeypatch, fake_transcript, fake_customer, fake_handbook_context, fake_documentation, fake_decision)
+    # process_transcript() has no outputs_dir parameter of its own and always
+    # calls the real save_record(); force its base_dir to an isolated
+    # tmp_path so this test can't write into the real outputs/ directory.
+    real_save_record = pipeline.save_record
+    monkeypatch.setattr(
+        pipeline, "save_record",
+        lambda review_result, call_id=None, base_dir=None: real_save_record(
+            review_result, call_id=call_id, base_dir=tmp_path
+        ),
+    )
     result = pipeline.process_transcript("data/transcripts/K-001.txt")
     assert result.status == "SUCCESS"
+    assert result.storage_path is not None
+    assert tmp_path in result.storage_path.parents
 
 
 def test_pipeline_stops_after_intake_failure(monkeypatch):
@@ -110,16 +131,30 @@ def test_pipeline_stops_after_customer_lookup_failure(monkeypatch, fake_transcri
     assert called["handbook_search"] is False
 
 
-def test_pipeline_stops_when_transcript_has_no_customer_id(monkeypatch, fake_transcript):
+def test_pipeline_uses_placeholder_customer_when_transcript_has_no_customer_id(
+    monkeypatch, tmp_path, fake_transcript, fake_handbook_context, fake_documentation, fake_decision
+):
+    # _stage_customer_lookup() deliberately does NOT fail when customer_id is
+    # missing/unknown (e.g. non-interaction calls): it falls back to a
+    # placeholder Customer so the pipeline can still complete without
+    # inventing an identity. This replaces the older expectation that the
+    # pipeline would stop at customer_lookup in this case.
     transcript_without_id = pipeline.TranscriptInput(
         call_id=fake_transcript.call_id, customer_id=None, timestamp=fake_transcript.timestamp,
         transcript_text=fake_transcript.transcript_text, file_name=fake_transcript.file_name,
         file_path=fake_transcript.file_path, loaded_at=fake_transcript.loaded_at,
     )
     monkeypatch.setattr(pipeline, "load_transcript", lambda path: transcript_without_id)
-    result = pipeline.run_pipeline(Path("data/transcripts/K-001.txt"))
-    assert result.status.startswith("FAILED: customer_lookup")
-    assert "customer_id" in result.status
+    monkeypatch.setattr(pipeline, "retrieve_rules", lambda *a, **k: fake_handbook_context)
+    monkeypatch.setattr(pipeline, "create_documentation", lambda *a, **k: fake_documentation)
+    monkeypatch.setattr(pipeline, "evaluate_record", lambda *a, **k: fake_decision)
+
+    result = pipeline.run_pipeline(Path("data/transcripts/K-001.txt"), outputs_dir=tmp_path)
+
+    assert result.status == "SUCCESS"
+    assert result.customer is not None
+    assert result.customer.customer_id == "unknown"
+    assert result.customer.name is None
 
 
 def test_pipeline_stops_after_documentation_failure(monkeypatch, fake_transcript, fake_customer, fake_handbook_context):
@@ -142,7 +177,8 @@ def test_pipeline_stops_after_documentation_failure(monkeypatch, fake_transcript
 def test_print_summary_success(capsys, fake_transcript, fake_customer, fake_handbook_context, fake_documentation, fake_decision):
     result = pipeline.PipelineResult(
         transcript=fake_transcript, customer=fake_customer, handbook_context=fake_handbook_context,
-        documentation=fake_documentation, decision=fake_decision, execution_time=1.234, status="SUCCESS",
+        documentation=fake_documentation, decision=fake_decision, review=None, storage_path=None,
+        execution_time=1.234, status="SUCCESS",
     )
     pipeline.print_summary(result)
     captured = capsys.readouterr()
@@ -154,6 +190,7 @@ def test_print_summary_success(capsys, fake_transcript, fake_customer, fake_hand
 def test_print_summary_failure_only_shows_available_fields(capsys):
     result = pipeline.PipelineResult(
         transcript=None, customer=None, handbook_context=None, documentation=None, decision=None,
+        review=None, storage_path=None,
         execution_time=0.05, status="FAILED: intake - Transcript file not found",
     )
     pipeline.print_summary(result)
@@ -162,8 +199,20 @@ def test_print_summary_failure_only_shows_available_fields(capsys):
     assert "Customer:" not in captured.out
 
 
-def test_main_uses_default_path_when_no_arg(monkeypatch, fake_transcript, fake_customer, fake_handbook_context, fake_documentation, fake_decision):
+def test_main_uses_default_path_when_no_arg(
+    monkeypatch, tmp_path, fake_transcript, fake_customer, fake_handbook_context, fake_documentation, fake_decision
+):
     _patch_happy_path(monkeypatch, fake_transcript, fake_customer, fake_handbook_context, fake_documentation, fake_decision)
+    # main() -> process_transcript() -> run_pipeline() with no outputs_dir
+    # override, so it would otherwise persist into the real outputs/
+    # directory. Redirect save_record's base_dir to an isolated tmp_path.
+    real_save_record = pipeline.save_record
+    monkeypatch.setattr(
+        pipeline, "save_record",
+        lambda review_result, call_id=None, base_dir=None: real_save_record(
+            review_result, call_id=call_id, base_dir=tmp_path
+        ),
+    )
     monkeypatch.setattr(sys, "argv", ["main.py"])
     pipeline.main()
 
