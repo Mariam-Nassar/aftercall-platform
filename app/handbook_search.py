@@ -49,7 +49,18 @@ logger = logging.getLogger(__name__)
 _DEFAULT_EMBEDDING_MODEL = "models/gemini-embedding-001"
 _DEFAULT_CHUNK_SIZE = 1000
 _DEFAULT_CHUNK_OVERLAP = 150
-_DEFAULT_TOP_K = 5
+_DEFAULT_TOP_K = 10
+"""
+Raised from 5 to 10: a single semantic search over the whole handbook
+tends to favor chunks topically similar to the call (e.g. category
+clauses) and can miss structural/classification clauses (priority
+scale, disposition codes, sentiment rubric) that every call needs
+regardless of topic. With only ~40 clauses across 7 files, retrieving
+more chunks is cheap and meaningfully raises the odds that the model
+sees the actual priority/disposition/sentiment taxonomy instead of
+inventing its own label (e.g. "routine" instead of the handbook's
+real "Low/Medium/High/Urgent" scale).
+"""
 _COLLECTION_NAME = "handbook"
 _MARKDOWN_SEPARATORS = ["\n## ", "\n### ", "\n#### ", "\n\n", "\n", " ", ""]
 
